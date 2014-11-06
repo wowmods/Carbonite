@@ -700,7 +700,7 @@ function Nx:SetTooltipText (str)
 
 		local t = { Nx.Split ("\n", str) }
 
-		GameTooltip:SetText (t[1], 1, 1, 1, 1, 1)		-- Wrap text
+		GameTooltip:SetText (t[1], 1, 1, 1, 1, true)		-- Wrap text
 		tremove (t, 1)
 
 		for _, line in ipairs (t) do
@@ -709,22 +709,22 @@ function Nx:SetTooltipText (str)
 			if s2 then
 				GameTooltip:AddDoubleLine (s1, s2, 1, 1, 1, 1, 1, 1)
 			else
-				GameTooltip:AddLine (line, 1, 1, 1, 1)		-- Wrap text
+				GameTooltip:AddLine (line, 1, 1, 1, true)		-- Wrap text
 			end
 		end
 
 --[[
 		local s = strsub (str, 1, s1 - 1)
 --		Nx.prt ("Tool %s", s)
-		GameTooltip:SetText (s, 1, 1, 1, 1, 1)
+		GameTooltip:SetText (s, 1, 1, 1, 1, true)
 
 		s = strsub (str, s2 + 1)
-		GameTooltip:AddLine (s, 1, 1, 1, 1, 1)
+		GameTooltip:AddLine (s, 1, 1, 1, true)
 --]]
 		GameTooltip:Show()
 
 	else
-		GameTooltip:SetText (str, 1, 1, 1, 1, 1)	-- Wrap text
+		GameTooltip:SetText (str, 1, 1, 1, 1, true)	-- Wrap text
 	end
 end
 
