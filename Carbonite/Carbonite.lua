@@ -3697,18 +3697,18 @@ function Nx.NXMiniMapBut:NXOnEnter (frm)
 	--V4 this
 	tip:SetOwner (frm, "ANCHOR_LEFT")
 	tip:SetText (NXTITLEFULL .. " " .. Nx.VERMAJOR .. "." .. Nx.VERMINOR*10)	
-	tip:AddLine (L["Left click toggle Map"], 1, 1, 1, 1)
+	tip:AddLine (L["Left click toggle Map"], 1, 1, 1, true)
 
 	if mmown then
-		tip:AddLine (L["Shift left click toggle minimize"], 1, 1, 1, 1)
+		tip:AddLine (L["Shift left click toggle minimize"], 1, 1, 1, true)
 	end
 
-	tip:AddLine (L["Alt left click toggle Watch List"], 1, 1, 1, 1)
-	tip:AddLine (L["Middle click toggle Guide"], 1, 1, 1, 1)
-	tip:AddLine (L["Right click for Menu"], 1, 1, 1, 1)
+	tip:AddLine (L["Alt left click toggle Watch List"], 1, 1, 1, true)
+	tip:AddLine (L["Middle click toggle Guide"], 1, 1, 1, true)
+	tip:AddLine (L["Right click for Menu"], 1, 1, 1, true)
 
 	if not mmown then
-		tip:AddLine (L["Shift drag to move"], 1, 1, 1, 1)
+		tip:AddLine (L["Shift drag to move"], 1, 1, 1, true)
 	end
 	tip:AppendText ("")
 end

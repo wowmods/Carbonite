@@ -7151,7 +7151,7 @@ function Nx.Util_c2rgb (colors)
 
 	local r = tonumber (strsub (colors, 1, 2), 16) / 255
 	local g = tonumber (strsub (colors, 3, 4), 16) / 255
-	local b = tonumber (strsub (colors, 5, 6), 16) / 255	
+	local b = tonumber (strsub (colors, 5, 6), 16) / 255
 	return r, g, b
 end
 
