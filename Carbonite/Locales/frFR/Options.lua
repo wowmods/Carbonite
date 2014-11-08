@@ -335,7 +335,7 @@ L["Skin"] = "apparence"
 L["Tracking HUD"] = "Poursuite HUD"
 
 -- General Text
-L["Reload UI"] = "Redémarrer UI (user inteface)"
+L["Reload UI"] = "Redémarrer UI (user interface)"
 L["Reset options"] = "Remettre à zéro les options (reset)"
 L["Reset global options"] = "Remettre à zéro les options globales (reset)"
 L["Reset window layouts"] = "Remettre à zéro modèle des fenêtres (reset)"
