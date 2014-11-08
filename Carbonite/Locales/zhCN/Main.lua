@@ -1,4 +1,8 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "zhCN", true)
+if ( GetLocale() ~= "zhCN" ) then
+	return
+end
+
+local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "zhCN")
 if not L then return end
 
 NXClassLocToCap = {		-- Convert localized class name to generic caps
@@ -20,7 +24,7 @@ L["Carbonite"] = true
 L["CARBONITE"] = true
 L["Loading"] = "载入中"
 L["Loading Done"] = "载入完成"
-L["None"] = "无"
+L["None"] = true
 L["Goto"] = "前往"
 L["Show Player Zone"] = "显示玩家区域"
 L["Menu"] = "菜单"
