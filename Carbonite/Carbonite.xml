@@ -132,10 +132,13 @@
 		<Scripts>
 			<OnLoad function="QuestObjectiveItem_OnLoad"/>
 			<OnEvent function="QuestObjectiveItem_OnEvent"/>
-			<OnUpdate function="QuestObjectiveItem_OnUpdate"/>
+			<OnUpdate function="NxWatchListItem_OnUpdate"/>
 			<OnShow function="QuestObjectiveItem_OnShow"/>
 			<OnHide function="QuestObjectiveItem_OnHide"/>
-			<OnEnter function="QuestObjectiveItem_OnEnter"/>
+			<OnEnter>
+				GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+				GameTooltip:SetQuestLogSpecialItem(self.questLogIndex);
+			</OnEnter>
 			<OnLeave>
 				GameTooltip:Hide();
 			</OnLeave>
