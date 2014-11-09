@@ -4002,17 +4002,15 @@ function Nx.Quest:RecordQuestAcceptOrFinish()
 
 	local guid = UnitGUID ("npc")
 	if guid then
-		local typ = tonumber (strsub (guid, 3, 5), 16)
-		if typ == 0 then	-- Player
+        local typ, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit ("-", guid)
+		if typ == "Player" then
 			giver = "p"
 
-		elseif bit.band (typ, 0xf) == 1 then
-			local id = tonumber (strsub (guid, 6, 12), 16)
-			giver = format ("%s#o%x", giver, id)
+		elseif typ == "GameObject" then
+			giver = format ("%s#o%x", giver, npc_id)
 
-		elseif bit.band (typ, 0xf) == 3 then		-- NPC?
-			local id = tonumber (strsub (guid, 7, 10), 16)
-			giver = format ("%s#%x", giver, id)
+		elseif typ == "Creature" then		-- NPC
+			giver = format ("%s#%x", giver, npc_id)
 		end
 	end
 
