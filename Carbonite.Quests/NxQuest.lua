@@ -2586,6 +2586,26 @@ function Nx.Quest:Init()
 	self.QInit = true
 	hooksecurefunc ("ShowUIPanel", CarboniteQuest.ShowUIPanel)
 	hooksecurefunc ("HideUIPanel", CarboniteQuest.HideUIPanel)
+	Nx.Quest.OldWindow = ToggleQuestLog
+	function ToggleQuestLog(...)
+		local orig = IsAltKeyDown() and not self.IgnoreAlt
+		if Nx.qdb.profile.Quest.UseAltLKey then
+			orig = not orig
+		end	
+		if orig then
+			if self.IsOrigOpen then
+				HideUIPanel(QuestMapFrame)
+			else
+				ShowUIPanel(QuestMapFrame)
+			end
+		else
+			if self.IsOpen then
+				HideUIPanel(QuestMapFrame)
+			else
+				ShowUIPanel(QuestMapFrame)
+			end
+		end
+	end
 	Nx.QInit = true
 end
 
@@ -3549,30 +3569,25 @@ function Nx.Quest:ScanBlizzQuestDataTimer()
 
 	local Map = Nx.Map
 	local curMapId = Map:GetCurrentMapId()			
-
-	for a,b in pairs(Nx.Map.MapZones[self.ScanBlizzMapId]) do
-		local mapId = b
-		if InCombatLockdown() then			
-			ObjectiveTrackerFrame:RegisterEvent ("WORLD_MAP_UPDATE")	-- Back on when done
-			Nx.Quest.WorldUpdate = false
-			return
+	for curcont = 1,Nx.Map.ContCnt do
+		for a,b in pairs(Nx.Map.MapZones[curcont]) do
+			local mapId = b		
+			if InCombatLockdown() then			
+				ObjectiveTrackerFrame:RegisterEvent ("WORLD_MAP_UPDATE")	-- Back on when done
+				Nx.Quest.WorldUpdate = false
+				return
+			end
+			if mapId ~= curMapId then
+				Map:SetCurrentMap (mapId)			-- Triggers WORLD_MAP_UPDATE, which calls MapChanged									
+			end
+			local cont = Nx.Map.MapWorldInfo[mapId].Cont	
+			local info = Map.MapInfo[cont]		
 		end
-		if mapId ~= curMapId then
-			Map:SetCurrentMap (mapId)			-- Triggers WORLD_MAP_UPDATE, which calls MapChanged									
-		end
-
-		local cont = Nx.Map.MapWorldInfo[mapId].Cont	
-		local info = Map.MapInfo[cont]		
 	end
-	if self.ScanBlizzMapId > Nx.Map.ContCnt then
-		ObjectiveTrackerFrame:RegisterEvent ("WORLD_MAP_UPDATE")	-- Back on when done
-		Map:SetCurrentMap (curMapId)
-		IS_BACKGROUND_WORLD_CACHING = false
-		self:RecordQuestsLog()			
-		return
-	else
-		self.ScanBlizzMapId = self.ScanBlizzMapId + 1
-	end
+	ObjectiveTrackerFrame:RegisterEvent ("WORLD_MAP_UPDATE")	-- Back on when done
+	Map:SetCurrentMap (curMapId)
+	IS_BACKGROUND_WORLD_CACHING = false
+	self:RecordQuestsLog()					
 end
 
 --------
@@ -4005,10 +4020,8 @@ function Nx.Quest:RecordQuestAcceptOrFinish()
 		local typ, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit ("-", guid)
 		if typ == "Player" then
 			giver = "p"
-
 		elseif typ == "GameObject" then
 			giver = format ("%s#o%x", giver, npc_id)
-
 		elseif typ == "Creature" then		-- NPC
 			giver = format ("%s#%x", giver, npc_id)
 		end
@@ -5392,8 +5405,7 @@ end
 function Nx.Quest:ShowUIPanel (frame)
 	if self.InShowUIPanel then
 		return
-	end
-
+	end		
 	self.InShowUIPanel = true
 
 	frame:Hide()
@@ -5406,22 +5418,20 @@ function Nx.Quest:ShowUIPanel (frame)
 	local opts = self.GOpts
 	if Nx.qdb.profile.Quest.UseAltLKey then
 		orig = not orig
-	end
-
+	end	
 	if orig then	-- Show original quest log?
-
+		self.IsOrigOpen = true	
 		frame:SetScale (1)
 
 		QuestMapFrame:SetAttribute ("UIPanelLayout-enabled", true)
-		ShowUIPanel (frame)
-
+		Nx.Quest.OldWindow()
 		if detailFrm then
 			detailFrm:SetScale (1)
 		end
 
 		self:LightHeadedAttach (frame)
 	else
-
+		self.IsOpen = true
 		local win = self.List.Win
 
 		if win and not GameMenuFrame:IsShown() then
@@ -5460,26 +5470,36 @@ end
 --------
 
 function Nx.Quest:HideUIPanel (frame)
-
-	QuestMapFrame:SetAttribute ("UIPanelLayout-enabled", false)
-
-	local detailFrm = QuestLogDetailFrame
-	if detailFrm then
-		detailFrm:Hide()
-	end
+	
+	local orig = IsAltKeyDown() and not self.IgnoreAlt
+	if Nx.qdb.profile.Quest.UseAltLKey then
+		orig = not orig
+	end	
+	if orig then		
+		Nx.Quest.OldWindow()
+		Nx.Quest.OldWindow()
+		self.IsOrigOpen = false
+		QuestMapFrame:SetAttribute ("UIPanelLayout-enabled", false)				
+	else
+		self.IsOpen = false		
+		local detailFrm = QuestLogDetailFrame
+		if detailFrm then
+			detailFrm:Hide()
+		end
 
 --	self.List:DetailsSetWidth (285)
 
-	self.List.Win:Show (false)
+		self.List.Win:Show (false)
 
-	if self.List.List:ItemGetNum() > 0 then
-		self.List.List:Empty()
-		collectgarbage ("collect")
+		if self.List.List:ItemGetNum() > 0 then
+			self.List.List:Empty()
+			collectgarbage ("collect")
+		end
+
+		self:RestoreExpandQuests()		-- Hide window first, then restore
+
+		self.LHAttached = nil
 	end
-
-	self:RestoreExpandQuests()		-- Hide window first, then restore
-
-	self.LHAttached = nil
 end
 
 function Nx.Quest:LightHeadedAttach (frm, attach, onlyLevels)
