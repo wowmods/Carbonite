@@ -4938,7 +4938,7 @@ function Nx.List:GetFrame (list, typ)
 
 		elseif typ == "WatchItem" then
 
-			f = CreateFrame ("Button", "NxListFrms" .. self.FrmsUniqueI, list.Frm, "WatchFrameItemButtonTemplate")
+			f = CreateFrame ("Button", "NxListFrms" .. self.FrmsUniqueI, list.Frm, "QuestObjectiveItemButtonTemplate")
 
 		elseif typ == "Info" then
 
@@ -5694,7 +5694,8 @@ function Nx.List:Update (showLast)
 
 					local _, dur = GetQuestLogSpecialItemCooldown (id)
 					if dur then
-						WatchFrameItem_UpdateCooldown (f)
+						f["questLogIndex"] = id
+						QuestObjectiveItem_UpdateCooldown (f)
 					end
 
 					if doBind then

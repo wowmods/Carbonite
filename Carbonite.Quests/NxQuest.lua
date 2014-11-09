@@ -4002,7 +4002,7 @@ function Nx.Quest:RecordQuestAcceptOrFinish()
 
 	local guid = UnitGUID ("npc")
 	if guid then
-        local typ, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit ("-", guid)
+		local typ, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit ("-", guid)
 		if typ == "Player" then
 			giver = "p"
 
