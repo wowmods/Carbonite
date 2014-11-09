@@ -23,7 +23,7 @@ L["Delete a Profile"] = "Effacer un Profil"
 L["Deletes a profile from the database."] = "Effacer un profil de la database"
 
 -- Main Menu
-L["Main Options"] = "Options Principales"
+L["Main Options"] = true
 L["\nCarbonite is a full featured, powerful map addon providing a versitile easy to use google style map which either can replace or work with the current blizzard maps.\n\nThrough modules it can also be expanded to do even more to help make your game easier."] = "\nCarbonite est très complet, puissant addon facile à utiliser qui peu employer des map de style google, il peut remplacer les map courantes blizzard ou simplement travailler avec celle-ci. \n\nThrough il peut également être agrandi pour faire plus et rendre votre jeu plus facile"
 L["Release Version"] = "Version du Logiciel"
 L["Maintained by"] = "Maintenu Par"
@@ -150,11 +150,12 @@ L["When enabled, Carbonite will change the minimap shape from circle to square"]
 L["Minimap is drawn above icons"] = "La MiniMap est dessinée au dessus des icônes"
 L["When enabled, Carbonite will draw the minimap above your map icons, you can use the CTRL key on your keyboard to toggle which layer is top"] = "Quand activé, Carbonite va dessiner la MiniMap au dessus des icônes de la map, vous pouvez utiliser la touche CTRL pour basculer le mode"
 L["Minimap Icon Scale"] = "Echelle des icônes de la MiniMap"
-L["Sets the scale of the icons drawn in the minimap portion of the map"] = "Défini l'échelle des icônes établies dans la partie de la MiniMap de la map"
-L["Sets the scale of the icons drawn in the minimap portion of the map" = "Défini l'échelle des icônes établies dans la partie de la MiniMap de la map"
-L["Minimap "] = true
+L["Sets the scale of the icons drawn in the minimap portion of the map"] = "Défini l'échelle des icônes établies dans la partie de la MiniMap dans la Map"
+L["Docked Minimap Icon Scale"] = "Echelle des icônes d'ancrage MiniMap"
+L["Sets the scale of the icons drawn in the minimap portion of the map while docked"] = "Défini l'échelle des icônes dessinées dans la MiniMap quand ancrée"
+L["Minimap Node Glow Delay"] = "Délai de modification d'éclat des noeuds"
 L["Sets the delay (in seconds) between the glow change on gathering nodes (0 is off)"] = "Défini le délai 'en secondes) entre la modification d'éclat sur les noeuds de collecte (0 désactivé)"
-L["Always dock minimap"] = "toujours ancrer la MiniMap"
+L["Always dock minimap"] = "Toujours ancrer Minimap"
 L["When enabled, The minimap will always dock into the corner of the carbonite map."] = "Quand activé, la MiniMap s'ancre toujours dans le coin de la carte Carbonite"
 L["Dock The Minimap when indoors"] = "Ancrer la MiniMap quand à l'intérieur"
 L["When enabled, The minimap will dock if wow says your indoors"] = "Quand activé, la MiniMap s'ancre quand wow dit que vous êtes à l'intérieur"
@@ -186,7 +187,7 @@ L["Show Old Nameplates"] = "Afficher les anciennes plaques"
 L["When enabled, The minimap will display the old nameplates above the map."] = "Quand activé, la MiniMap affiche les anciennes plaques au-dessus de la map"
 
 -- Minimap Button Options
-L["Minimap Button Options"] = "Options des boutons de la MiniMap"
+L["Minimap Button Options"] = "Options boutons MiniMap"
 L["Move Minimap Buttons into Carbonite Minimap Frame"] = "Déplacer les boutons dans le cadre de la MiniMap"
 L["When enabled, Carbonite will pull all minimap icons into it's own button frame (RELOAD REQUIRED)"] = "Quand activé, Carbonite place toutes les icônes de la MiniMap dans son propre cadre qui peut être déplacé et réduit au minimum en cas de besoin (NECESSITE REDEMARRAGE)"
 L["Hide Minimap Button Window"] = "Cacher MiniMap fenêtre/bouton" 
@@ -267,7 +268,7 @@ L["Center Menus Vertically On Cursor"] = "Center les menus verticalement au curs
 L["When Enabled, Carbonite Menus Will Be Drawn Vertically Centered On The Mouse"] = "Quand activé, les menus de Carbonite seront dessinés verticalement et centrés sur le curseur de souris"
 
 -- Privacy Options
-L["Privacy Options"] = "Options Vie Privée (Privacy)"
+L["Privacy Options"] = "Options Vie Privée"
 L["Send Position & Level Ups To Friends"] = "Envoyer ma position & montée de niveau à mes amis"
 L["When Enabled, Carbonite will send your current location and any levelups you get to your other friends using carbonite"] = "Quand activé, Carbonite envoie ma position courante et mes montées de niveau à mes amis utilisant Carbonite"
 L["Send Position & Level Ups To Guild"] = "Envoie ma position & montée de niveau à ma guilde"
@@ -282,7 +283,7 @@ L["Enable Zone Channel (Used for locations of others in your zone)"] = "Activer 
 L["When Enabled, Carbonite will send your current location and listen for messages from others who are in the same zone as you"] = "Quand activé, Carbonite envoie votre position courante et écoute les messages des autres situés dans la même zone que vous"
 
 -- Skin Options
-L["Skin Options"] = "Options d'apparence (skin)"
+L["Skin Options"] = "Options d'apparence"
 L["Current Skin"] = "Apparence courante"
 L["Sets the current skin for carbonite windows"] = "défini l'apparence courante pour les fenêtres de Carbonite"
 L["Border Color of Windows"] = "Couleur de bordure des fenêtres"
@@ -290,17 +291,17 @@ L["Background Color of Fixed Sized Windows"] = "Couleur de fond des fenêtred fi
 L["Background Color of Resizable Windows"] = "Couleur de fond des fenêtres redimensionnables"
 
 -- Track Options
-L["Tracking Options"] = "Options de poursuite (tracking)"
-L["Hide Tracking HUD"] = "Cacher le HUD de poursuite"
-L["When Enabled, Carbonite will hide the tracking hud from display"] = "Quand activé, Carbonite cache le HUD de poursuite de l'écran"
-L["Hide Tracking HUD in BG's"] = "Cacher le HUD de poursuite en champ de bataille"
-L["When Enabled, Carbonite will hide the tracking hud from display in Battlegrounds"] = "Quand activé, Carbonite cachera le HUD de poursuite de l'écran durant le champ de bataille"
-L["Lock Tracking HUD Position"] = "Verrouiller la position du HUD de poursuite"
-L["When Enabled, Carbonite will lock the Tracking HUD in position"] = "Quand activé, Carbonite verrouille la position du HUD de poursuite"
+L["Tracking Options"] = "Options Pistage"
+L["Hide Tracking HUD"] = "Cacher le HUD de pistage"
+L["When Enabled, Carbonite will hide the tracking hud from display"] = "Quand activé, Carbonite cache le HUD de pistage de l'écran"
+L["Hide Tracking HUD in BG's"] = "Cacher le HUD de pistage en champ de bataille"
+L["When Enabled, Carbonite will hide the tracking hud from display in Battlegrounds"] = "Quand activé, Carbonite cachera le HUD de pistage de l'écran durant le champ de bataille"
+L["Lock Tracking HUD Position"] = "Verrouiller la position du HUD de pistage"
+L["When Enabled, Carbonite will lock the Tracking HUD in position"] = "Quand activé, Carbonite verrouille la position du HUD de pistage"
 L["Tracking HUD Arrow Graphic"] = "Graphique de flèche HUD"
 L["Sets the current arrow to be used in the tracking hud"] = "Défini le graphisme courant à utiliser dans le HUD"
 L["Arrow Size"] = "Taille de la flèche"
-L["Sets the number of size of the tracking hud arrow."] = "défini le nombre et taille pour la flèche du HUD"
+L["Sets the number of size of the tracking hud arrow."] = "défini le nombre & taille pour la flèche du HUD"
 L["Arrow X Offset"] = true
 L["Sets the X offset of the tracking hud arrow."] = true
 L["Arrow Y Offset"] = true
@@ -323,8 +324,8 @@ L["Enable TomTom Emulation"] = "Activer l'émulation TomTom"
 L["When Enabled, Attempts to emulate tomtom's features (requires reload)"] = "Quand activé, essaie d'émuler les fonctions de tomTom (NECESSITE REDEMARRAGE)" 
 
 -- Configuration Headers
-L["General"] = true
-L["Battlegrounds"] = "Champ de bataille"
+L["General"] = "Général"
+L["Battlegrounds"] = "Champs de bataille"
 L["Fonts"] = "Polices"
 L["Guide & Gather"] = "Guide & récolte"
 L["Maps"] = true
@@ -332,7 +333,7 @@ L["Menus"] = true
 L["Privacy"] = "Vie Privée"
 L["Profiles"] = "Profils"
 L["Skin"] = "apparence"
-L["Tracking HUD"] = "Poursuite HUD"
+L["Tracking HUD"] = "HUD Pistage"
 
 -- General Text
 L["Reload UI"] = "Redémarrer UI (user interface)"
