@@ -1,4 +1,8 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "zhCN", true)
+if ( GetLocale() ~= "zhCN" ) then
+	return
+end
+
+local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "zhCN")
 if not L then return end
 -- zhCN locale by Raka@Raka.Rocks
 -- Profiles Menu
@@ -202,7 +206,7 @@ L["Enable Calendar Minimap Button"] = "启用日历按钮"
 L["Shows the calendar minimap button in the button panel"] = "在按钮窗口显示日历按钮"
 L["Enable Clock Minimap Button"] = "启用时钟按钮"
 L["Shows the clock minimap button in the button panel"] = "在按钮窗口显示时钟按钮"
-L["Enable World Map Minimap Button"] = "启用世界地图按钮",
+L["Enable World Map Minimap Button"] = "启用世界地图按钮"
 L["Shows the world map minimap button in the button panel"] = "在按钮窗口显示世界地图按钮"
 
 -- Font Options

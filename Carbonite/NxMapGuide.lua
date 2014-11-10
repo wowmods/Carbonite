@@ -729,6 +729,7 @@ function Nx.Map.Guide:OnEditBox (editbox, message)
 		self:Update()
 	end
 end
+
 function Nx.Map.Guide:PatchFolder (folder, parent)
 	local trainer
 	if folder.Name == L["Trainer"] and folder.Pre then
@@ -1433,7 +1434,10 @@ function Nx.Map.Guide:UpdateMapGeneralIcons (cont, showType, hideFac, tx, name, 
 							for c,d in pairs(temp_arr) do
 								local fac,x,y = Nx.Split(",",d)							
 								fac,x,y = tonumber(fac), tonumber(x), tonumber(y)								
-								if fac ~= hideFac then									
+								if fac ~= hideFac then			
+									if mapId == 748 then
+										Nx.prt(showType)
+									end
 									local wx, wy = map:GetWorldPos(mapId, x, y)									
 									local icon = map:AddIconPt (iconType, wx, wy, nil, tx)			
 									if not GetMapNameByID(mapId) then
@@ -1452,12 +1456,12 @@ function Nx.Map.Guide:UpdateMapGeneralIcons (cont, showType, hideFac, tx, name, 
 	end
 end
 Nx.GuidePOI = {
-	"Auctioneer~Racial_Dwarf_FindTreasure",
-	"Banker~INV_Misc_Coin_02",
-	"Flight Master~Ability_Mount_Wyvern_01",
-	"Innkeeper~Spell_Shadow_Twilight",
-	"Mailbox~INV_Letter_15",
-    "Arcane Reforger~INV_Sword_67",	
+	L["Auctioneer"] .. "~Racial_Dwarf_FindTreasure",
+	L["Banker"] .. "~INV_Misc_Coin_02",
+	L["Flight Master"] .. "~Ability_Mount_Wyvern_01",
+	L["Innkeeper"] .. "~Spell_Shadow_Twilight",
+	L["Mailbox"] .. "~INV_Letter_15",
+    L["Arcane Reforger"] .. "~INV_Sword_67",	
 }
 
 function Nx.Map.Guide:UpdateZonePOIIcons()	
