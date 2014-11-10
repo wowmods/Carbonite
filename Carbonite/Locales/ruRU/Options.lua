@@ -6,58 +6,58 @@ local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "ruRU", true)
 if not L then return end
 
 -- Profiles Menu
-L["Profiles"] = true
-L["New"] = true
-L["You can change the active database profile, so you can have different settings for every character."] = true
-L["Reset the current profile back to it's default values, in case your configuration is broken, or you simply want to start over."] = true
-L["Reset Profile"] = true
-L["Reset the current profile to the defaults"] = true
-L["Current Profile"] = true
-L["You can either create a new profile by entering a name in the editbox, or choose one of the already existing profiles."] = true
-L["Create a new empty profile"] = true
-L["Select one of your currently available profiles"] = true
-L["Existing Profiles"] = true
-L["Copy the settings from one existing profile into the currently active profile."] = true
-L["Delete existing and unused profiles from the database to save space, and cleanup the SavedVariables file."] = true
-L["Delete a Profile"] = true
-L["Deletes a profile from the database."] = true
+L["Profiles"] = "Профили"
+L["New"] = "Новый"
+L["You can change the active database profile, so you can have different settings for every character."] = "Вы можете изменить активный профиль базы, чтобы иметь различные настройки для каждого персонажа."
+L["Reset the current profile back to it's default values, in case your configuration is broken, or you simply want to start over."] = "Сбрасывает текущий профиль обратно к значениям по умолчанию, если ваши настройки повреждены или вы решили настроить все с нуля."
+L["Reset Profile"] = "Сбросить профиль"
+L["Reset the current profile to the defaults"] = "Сбросить текущий профиль на установки по умолчанию."
+L["Current Profile"] = "Текущий профиль"
+L["You can either create a new profile by entering a name in the editbox, or choose one of the already existing profiles."] = "Вы можете создать новый профиль, введя его имя в окно, или выбрать один из уже существующих."
+L["Create a new empty profile"] = "Создать новый пустой профиль"
+L["Select one of your currently available profiles"] = "Выбрать один из доступных профилей"
+L["Existing Profiles"] = "Существующие профили"
+L["Copy the settings from one existing profile into the currently active profile."] = "Копировать настройки из одного из существующих профилей в активный."
+L["Delete existing and unused profiles from the database to save space, and cleanup the SavedVariables file."] = "Удалить существующие и не используемые профили из базы данных, чтобы сэкономить место и почистить файл SavedVariables"
+L["Delete a Profile"] = "Удалить профиль"
+L["Deletes a profile from the database."] = "Удалить профиль из базы данных"
 
 -- Main Menu
-L["Main Options"] = true
-L["\nCarbonite is a full featured, powerful map addon providing a versitile easy to use google style map which either can replace or work with the current blizzard maps.\n\nThrough modules it can also be expanded to do even more to help make your game easier."] = true
-L["Release Version"] = true
-L["Maintained by"] = true
+L["Main Options"] = "Главные Настройки"
+L["\nCarbonite is a full featured, powerful map addon providing a versitile easy to use google style map which either can replace or work with the current blizzard maps.\n\nThrough modules it can also be expanded to do even more to help make your game easier."] = "\nCarbonite многофункциональное дополнение предоставляющее доступ к удобной и функциональной карте в стиле карты google, которое можно использовать совместно со стандартной кратой или полностью заменить ее. \n\nС помощью модулей ее можно улучшить, чтобы вам стало еще проще играть."
+L["Release Version"] = "Версия"
+L["Maintained by"] = "Разрабатывается"
 L["Website"] = true
-L["For support, please visit the forums for Carbonite on WoW Interface."] = true
-L["Special thanks to"] = true
-L["Cirax for Carbonite2 Logo"] = true
-L["JimboBlue for guide location updates and checking"] = true
+L["For support, please visit the forums for Carbonite on WoW Interface."] = "По всем вопросам и предложениям добро пожаловать на форум WoW Interface"
+L["Special thanks to"] = "Отдельные благодарности"
+L["Cirax for Carbonite2 Logo"] = "Cirax'у за логотип для Carbonite2"
+L["JimboBlue for guide location updates and checking"] = "JimboBlue за обновление зон модуля слежения и их проверку"
 
 -- Battlegrounds Menu
-L["Battlegrounds"] = true
-L["Show Battleground Stats"] = true
-L["Turns on or off displaying your battleground k/d and honor gained in chat during a match."] = true
+L["Battlegrounds"] = "Поля битв"
+L["Show Battleground Stats"] = "Показывать сводку с Поля битвы"
+L["Turns on or off displaying your battleground k/d and honor gained in chat during a match."] = "Вкл/Выкл отображение соотношения смерти/убийства и очков чести во время боя."
 
 -- General Menu
-L["General Options"] = true
-L["Show Login Message"] = true
-L["When Enabled, displays the Carbonite loading messages in chat."] = true
-L["Show Login Graphic"] = true
-L["When Enabled, displays the Carbonite graphic during initialization."] = true
-L["Play Login Sound"] = true
-L["When Enabled, plays a sound when Carbonite is loaded."] = true
-L["Default Chat Channel"] = true
-L["Allows selection of which chat window to display Carbonite messages"] = true
-L["Force Max Camera Distance"] = true
-L["When enabled, sets the max camera distance higher then Blizzards options normally allows."] = true
-L["Hide Action Bar Gryphon Graphics"] = true
-L["Attempts to hide the two gryphons on your action bar."] = true
+L["General Options"] = "Основные настройки"
+L["Show Login Message"] = "Отображать сообщение при запуске"
+L["When Enabled, displays the Carbonite loading messages in chat."] = "Когда Вкл., отображает сообщение о загрузке Carbonite в чат."
+L["Show Login Graphic"] = "Отображать логотип при загрузке"
+L["When Enabled, displays the Carbonite graphic during initialization."] = "Когда Вкл., отображает логотип Carbonite при загрузке"
+L["Play Login Sound"] = "Проигрывать звук при загрузке"
+L["When Enabled, plays a sound when Carbonite is loaded."] = "Когда Вкл., проигрывает звук когда Carbonite загружается."
+L["Default Chat Channel"] = "Канал чата по умолчанию"
+L["Allows selection of which chat window to display Carbonite messages"] = "Позволяет выбрать в какое окно выводить сообщения Carbonite"
+L["Force Max Camera Distance"] = "Увеличить максимальную дистанцию камеры"
+L["When enabled, sets the max camera distance higher then Blizzards options normally allows."] = "Когда Вкл., позволяет отдалять камеру дальше чем установленно по умолчанию Blizzard"
+L["Hide Action Bar Gryphon Graphics"] = "Скрыть грифонов на панели способностей"
+L["Attempts to hide the two gryphons on your action bar."] = "Пытается скрыть двух грифонов по бокам от панели способностей"
 
 -- Map Options
-L["Map Options"] = true
-L["Use Carbonite Map instead of Blizzards (Alt-M will open world map)"] = true
-L["When enabled, pressing 'M' will maximize the carbonite map instead of opening the world map."] = true
-L["Enable Compatability Mode"] = true
+L["Map Options"] = "Настройки карты"
+L["Use Carbonite Map instead of Blizzards (Alt-M will open world map)"] = "Использовать карту Carbonite вместо карты Blizzard (Alt-ь(M) откроет карту мира)"
+L["When enabled, pressing 'M' will maximize the carbonite map instead of opening the world map."] = "Когда Вкл., ь(M) откроет карту Carbonite вместо обычной карты."
+L["Enable Compatability Mode"] = "Включить режим совместимости"
 L["When Enabled, Carbonite will performe combat checks before any map/window functions. This eliminates other UI's from causing protected mode errors."] = true
 L["Center map when maximizing"] = true
 L["When enabled, the map will center on your current zone when you maximize it"] = true
