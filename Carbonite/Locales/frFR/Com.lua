@@ -6,10 +6,10 @@ local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "frFR", true)
 if not L then return end
 
 L["reached level"] = "Niveau Atteint"
-L["Monitor Error: All 10 chat channels are in use"] = "Erreur les 10 cannaux du chat sont utilisés"
+L["Monitor Error: All 10 chat channels are in use"] = "Monitor Erreur : les 10 canaux du chat sont utilisés"
 L["This will disable some communication features"] = "Ceci désactivera certaines fonctions de communication"
 L["You may free channels using the chat tab"] = "Vous pouvez libérer les canaux en utilisant l'onglet du chat"
-L["chat channel(s)!"] = "Canaux de discussion"
+L["chat channel(s)!"] = "Canaux de discussion (s)"
 L["Need"] = "Besoin"
 L["Monitored:"] = "Modérateur"
 L["Druid"] = "Druide"
