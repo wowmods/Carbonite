@@ -5,7 +5,7 @@ end
 local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "frFR", true)
 if not L then return end
 
-L["Acherus: The Ebon Hold"] = "Achérus : le fort d'Ébène"
+L["Acherus: The Ebon Hold"] = "Achérus: le fort d'Ébène"
 L["Aerie Peak, The Hinterlands"] = "Nid-de-l'Aigle, les Hinterlands"
 L["Agmar's Hammer, Dragonblight"] = "Marteau d'Agmar, Désolation des dragons"
 L["Allerian Stronghold, Terokkar Forest"] = "Bastion allérien, forêt de Terokkar"
@@ -20,7 +20,7 @@ L["Astranaar, Ashenvale"] = "Astranaar, Orneval"
 L["Azure Watch, Azuremyst Isle"] = "Guet d'azur, île de Brume-azur"
 L["Bambala, Stranglethorn"] = "Bambala, Strangleronce"
 L["Bilgewater Harbor, Azshara"] = "Havre Baille-Fonds, Azshara"
-L["Binan Village, Kun-Lai Summit"] = true
+L["Binan Village, Kun-Lai Summit"] = "Village de Binan, Sommet de Kun-Lai"
 L["Blackfathom Camp, Ashenvale"] = "Camp de Brassenoire, Orneval"
 L["Blood Watch, Bloodmyst Isle"] = "Guet du sang, île de Brume-sang"
 L["Bloodgulch, Twilight Highlands"] = "Goulet Sanglant, hautes-terres du Crépuscule"
@@ -45,7 +45,7 @@ L["Chiselgrip, Burning Steppes"] = "Cisepoigne, steppes Ardentes"
 L["Cliffwalker Post, Stonetalon Mountains"] = "Poste de Rôde-falaise, Serres-rocheuses"
 L["Conquest Hold, Grizzly Hills"] = "Bastion de la Conquête, les Grisonnes"
 L["Cosmowrench, Netherstorm"] = "Cosmovrille, Raz-de-Néant"
-L["Cradle of Chi-Ji, Krasarang Wilds"] = true
+L["Cradle of Chi-Ji, Krasarang Wilds"] = "Berceau de Chi-Ji, Etendues sauvages de Krasarang"
 L["Crown Guard Tower, Eastern Plaguelands"] = "Tour de garde de la couronne, Maleterres de l'Est"
 L["Crusaders' Pinnacle, Icecrown"] = "Cime des Croisés, Couronne de glace"
 L["Crushblow, Twilight Highlands"] = "Frakass, hautes-terres du Crépuscule"
@@ -53,8 +53,8 @@ L["Dalaran"] = true
 L["Darkbreak Cove, Vashj'ir"] = "Crique du Sombre brisant, Vashj'ir"
 L["Darkshire, Duskwood"] = "Sombre-comté, bois de la Pénombre"
 L["Darnassus, Teldrassil"] = true
-L["Dawn's Blossom, Jade Forest"] = true
-L["Dawnchaser Retreat, Krasarang Wilds"] = true
+L["Dawn's Blossom, Jade Forest"] = "Fleur-de-l'aurore, La forêt de Jade"
+L["Dawnchaser Retreat, Krasarang Wilds"] = "Retraite des Chasselaube, Etendues sauvages de Krasarang"
 L["Dawnrise Expedition, Tanaris"] = "Expédition Montelaube, Tanaris"
 L["Death's Rise, Icecrown"] = "Cime de la Mort, Couronne de glace"
 L["Desolation Hold, Southern Barrens"] = "Fort de la désolation, Tarides du Sud"
