@@ -8,9 +8,9 @@ if not L then return end
 -- Profiles Menu
 L["Profiles"] = "Profils"
 L["New"] = "Nouveau"
-L["You can change the active database profile, so you can have different settings for every character."] = "Vous pouvez changer le profil actif de la database, comme cela vous aurez différents paramètres pour chaque personnage."
-L["Reset the current profile back to it's default values, in case your configuration is broken, or you simply want to start over."] = "Réinitialise le profil courant par les paramètres par défaut, dans le cas ou votre configuration est corrompue, ou vous désirez simplement démarrer en ignorant celle-ci."
-L["Reset Profile"] = "Réinitialiser Profil"
+L["You can change the active database profile, so you can have different settings for every character."] = "Vous pouvez changer le profil actif de la database, comme cela vous aurez diff\195\169rents param\195\168tres pour chaque personnage."
+L["Reset the current profile back to it's default values, in case your configuration is broken, or you simply want to start over."] = "R\195\169initialise le profil courant par les param\195\169tres par d\195\169faut, dans le cas ou votre configuration est corrompue, ou vous d\195\169sirez simplement d\195\169marrer en ignorant celle-ci."
+L["Reset Profile"] = "R\195\169initialiser Profil"
 L["Reset the current profile to the defaults"] = "Réinitialiser Profil par les paramètres courants par défaut"
 L["Current Profile"] = "Profil Courant"
 L["You can either create a new profile by entering a name in the editbox, or choose one of the already existing profiles."] = "Vous pouvez soit créer un nouveau profil en entrant un nom dans la boite d'édition, ou choisir un profil déjà existant."
