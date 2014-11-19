@@ -32,6 +32,7 @@ Nx.GuideAbr = {
 	["N"] = L["Northrend"],
 	["M"] = L["The Maelstrom"],
 	["P"] = L["Pandaria"],
+	["D"] = L["Draenor"],
 }
 Nx.GuideInfo = {
 	Name = L["All"],
@@ -332,6 +333,10 @@ Nx.GuideInfo = {
 			Name = "@P",
 			Inst = 6
 		},
+		{
+			Name = "@D",
+			Inst = 7
+		},
 	},
 	{
 		Name = L["Zone"],
@@ -363,6 +368,10 @@ Nx.GuideInfo = {
 		{
 			Name = "@P",
 			Map = 6
+		},
+		{
+			Name = "@D",
+			Map = 7
 		},
 	},
 	{
@@ -866,10 +875,6 @@ function Nx.Map.Guide:PatchFolder (folder, parent)
 				if not Map.MapWorldInfo[id] then
 				Nx.prt("err: " .. id)
 				end
-				local fish = Map.MapWorldInfo[id].Fish
-				if fish then
-					f.Column3 = format ("Fish %s, %s", max (1, fish - 95), fish) 
-				end
 				f.T = "#Map" .. id
 				f.Tx = parent.Tx
 				f.MId = id
@@ -899,15 +904,25 @@ function Nx.Map.Guide:PatchFolder (folder, parent)
 						local f = {}						
 						local numPlyrStr = numPlyr
 						if tonumber (numPlyr) == 1025 then
-							numPlyrStr = "10/25"
+							numPlyrStr = "Raid"
 						end
+						if tonumber (numPlyr) == 1 then
+							numPlyrStr = "Solo"
+						end
+						if tonumber (numPlyr) == 3 then
+							numPlyrStr = "Scenario"
+						end						
+						if tonumber (numPlyr) == 5 then
+							numPlyrStr = "Dungeon"
+						end						
 						local plStr = ""
 						if (numPlyrStr) then
-							plStr = format ("|cffff4040 %s-Man", numPlyrStr)
+							plStr = format ("|cffff4040%s", numPlyrStr)
 						else
 							Nx.prt("err: " .. nxid)
 						end
-						f.Name = format ("%s %s", longname, plStr)
+						f.Name = format ("%s", longname)
+						f.Column3 = plStr
 						f.Column2 = "?"
 						if minLvl ~= "0" then
 							if minLvl == maxLvl then
@@ -1242,8 +1257,8 @@ function Nx.Map.Guide:UpdateMapIcons()
 		elseif mode == 37 then		
 			local mapId = folder.InstMapId
 			local winfo = Map.MapWorldInfo[mapId]
-			local wx = winfo[2]
-			local wy = winfo[3]
+			local wx = winfo.X
+			local wy = winfo.Y
 			local icon = map:AddIconPt ("!GIn", wx, wy, nil, tx)
 			map:SetIconTip (icon, folder.InstTip)
 			map:SetIconUserData (icon, folder.InstMapId)
@@ -1529,8 +1544,8 @@ function Nx.Map.Guide:UpdateInstanceIcons (cont)
 			local mapId = folder.InstMapId						
 			local winfo = Map.MapWorldInfo[mapId]		
 			if winfo and winfo.EntryMId == map.MapId then
-				local wx = winfo[2]
-				local wy = winfo[3]			
+				local wx = winfo.X
+				local wy = winfo.Y
 				local icon = map:AddIconPt ("!POIIn", wx, wy, nil, "Interface\\Icons\\INV_Misc_ShadowEgg")
 				map:SetIconTip (icon, folder.InstTip)			
 				map:SetIconUserData (icon, folder.InstMapId)
@@ -1703,8 +1718,8 @@ function Nx.Map.Guide:FindClosest (findType)
 			elseif mode == 37 then		
                 local mapId=folder.InstMapId
                 local win1=Nx.Map.MapWorldInfo[mapId]
-                local wx=win1[2]
-                local wy=win1[3]
+                local wx=win1.X
+                local wy=win1.Y
                 close, closeMapId, closeX, closeY = 0, folder.InstMapId, wx, wy
 				
 			elseif mode == 38 then		

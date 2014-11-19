@@ -4928,32 +4928,21 @@ function Nx.List:GetFrame (list, typ)
 
 	local frms = self.Frms[typ]
 	local f = tremove (frms, 1)
-
 	if not f then
-
 		self.FrmsUniqueI = self.FrmsUniqueI + 1
-
 		if typ == "Color" then
 			f = CreateFrame ("ColorSelect", nil, list.Frm)
-
 		elseif typ == "WatchItem" then
-
-			f = CreateFrame ("Button", "NxListFrms" .. self.FrmsUniqueI, list.Frm, "WatchFrameItemButtonTemplate")
-
+			f = CreateFrame ("Button", "NxListFrms" .. self.FrmsUniqueI, list.Frm, "NxWatchListItem")
+			f:SetAttribute ("type1", "item")
 		elseif typ == "Info" then
-
 			f = Nx.Info:CreateFrame (list.Frm)
-
 		end
-
 		f.NXListFType = typ
 	end
-
 	f:Show()
 	f:SetParent (list.Frm)
-
 	tinsert (list.UsedFrms, f)
-
 	return f
 end
 
@@ -5692,11 +5681,21 @@ function Nx.List:Update (showLast)
 					SetItemButtonCount (f, tonumber (v3));
 					f["charges"] = tonumber (v3);
 
-					local _, dur = GetQuestLogSpecialItemCooldown (id)
-					if dur then
-						WatchFrameItem_UpdateCooldown (f)
-					end
+					f["questLogIndex"] = id
 
+					local start, duration, enable = GetQuestLogSpecialItemCooldown (id)
+					if start then
+						CooldownFrame_SetTimer (f.Cooldown, start, duration, enable)
+						if duration > 0 and enable == 0 then
+							SetItemButtonTextureVertexColor (itemButton, 0.4, 0.4, 0.4)
+						else
+							SetItemButtonTextureVertexColor (itemButton, 1, 1, 1)
+						end
+ 					end					
+
+					local link, item, charges, showItemWhenComplete = GetQuestLogSpecialItemInfo (id)
+					f:SetAttribute ("item", link)
+					
 					if doBind then
 						doBind = false						
 						local key = GetBindingKey ("NxWATCHUSEITEM")
@@ -7646,6 +7645,34 @@ function Nx.Graph:OnLeave (motion)
 
 	if GameTooltip:IsOwned (self) then
 		GameTooltip:Hide()
+	end
+end
+
+function NxWatchListItem_OnUpdate(self, elapsed)
+	-- Handle range indicator
+	local rangeTimer = self.rangeTimer;
+	if ( rangeTimer ) then	
+		rangeTimer = rangeTimer - elapsed;		
+		if ( rangeTimer <= 0 ) then
+			local link, item, charges, showItemWhenComplete = GetQuestLogSpecialItemInfo(self.questLogIndex);
+			if ( not charges or charges ~= self.charges ) then
+				--ObjectiveTracker_Update(OBJECTIVE_TRACKER_UPDATE_MODULE_QUEST);
+				return;
+			end
+			local count = self.HotKey;
+			local valid = IsQuestLogSpecialItemInRange(self.questLogIndex);
+			if ( valid == 0 ) then
+				count:Show();
+				count:SetVertexColor(1.0, 0.1, 0.1);
+			elseif ( valid == 1 ) then
+				count:Show();
+				count:SetVertexColor(0.6, 0.6, 0.6);
+			else
+				count:Hide();
+			end
+			rangeTimer = TOOLTIP_UPDATE_TIME;
+		end		
+		self.rangeTimer = rangeTimer;
 	end
 end
 
