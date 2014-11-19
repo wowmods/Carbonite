@@ -3035,6 +3035,13 @@ Nx.GatherInfo = {
 		{ 575, "inv_misc_herb_shaherb",L["Sha-Touched Herb"]},
 		{ 545, "inv_misc_herb_silkweed",L["Silkweed"]},
 		{ 575, "inv_misc_herb_snowlily",L["Snow Lily"]},		
+		{ 600, "inv_misc_herb_chamlotus",L["Chameleon Lotus"]},		
+		{ 600, "inv_misc_herb_frostweed",L["Frostweed"]},				
+		{ 600, "inv_misc_herb_flytrap",L["Gorgrond Flytrap"]},			
+		{ 600, "inv_misc_herb_starflower",L["Starflower"]},			
+		{ 600, "inv_misc_herb_arrowbloom",L["Nagrand Arrowbloom"]},			
+		{ 600, "inv_misc_herb_taladororchid",L["Talador Orchid"]},			
+		{ 600, "inv_misc_herb_fireweed",L["Fireweed"]},				
 	},
 	["M"] = {	-- Mine node
 		{ 325,	"INV_Ore_Adamantium", L["Adamantite Deposit"]},
@@ -3075,6 +3082,11 @@ Nx.GatherInfo = {
 		{ 575, "inv_ore_manticyte", L["Rich Kyparite Deposit"]},
 		{ 600, "inv_ore_trilliumwhite", L["Trillium Vein"]},
 		{ 600, "INV_Ore_TrilliumWhite", L["Rich Trillium Vein"]},
+		{ 600, "inv_ore_trueironore", L["Rich True Iron Deposit"]},
+		{ 600, "inv_ore_trueironore", L["Smoldering True Iron Deposit"]},
+		{ 600, "inv_ore_trueironore", L["True Iron Deposit"]},
+		{ 600, "inv_ore_blackrock_ore", L["Blackrock Deposit"]},		
+		{ 600, "inv_ore_blackrock_ore", L["Rich Blackrock Deposit"]},
 	}	
 }
 

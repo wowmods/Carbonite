@@ -4928,33 +4928,21 @@ function Nx.List:GetFrame (list, typ)
 
 	local frms = self.Frms[typ]
 	local f = tremove (frms, 1)
-
 	if not f then
-
 		self.FrmsUniqueI = self.FrmsUniqueI + 1
-
 		if typ == "Color" then
 			f = CreateFrame ("ColorSelect", nil, list.Frm)
-
 		elseif typ == "WatchItem" then
-
 			f = CreateFrame ("Button", "NxListFrms" .. self.FrmsUniqueI, list.Frm, "NxWatchListItem")
 			f:SetAttribute ("type1", "item")
-
 		elseif typ == "Info" then
-
 			f = Nx.Info:CreateFrame (list.Frm)
-
 		end
-
 		f.NXListFType = typ
 	end
-
 	f:Show()
 	f:SetParent (list.Frm)
-
 	tinsert (list.UsedFrms, f)
-
 	return f
 end
 
@@ -5692,6 +5680,7 @@ function Nx.List:Update (showLast)
 					SetItemButtonTexture (f, v2);
 					SetItemButtonCount (f, tonumber (v3));
 					f["charges"] = tonumber (v3);
+
 					f["questLogIndex"] = id
 
 					local start, duration, enable = GetQuestLogSpecialItemCooldown (id)
@@ -5702,11 +5691,11 @@ function Nx.List:Update (showLast)
 						else
 							SetItemButtonTextureVertexColor (itemButton, 1, 1, 1)
 						end
-					end
-					
+ 					end					
+
 					local link, item, charges, showItemWhenComplete = GetQuestLogSpecialItemInfo (id)
 					f:SetAttribute ("item", link)
-
+					
 					if doBind then
 						doBind = false						
 						local key = GetBindingKey ("NxWATCHUSEITEM")
@@ -7659,9 +7648,6 @@ function Nx.Graph:OnLeave (motion)
 	end
 end
 
------------------------------------------------------------------------------
-
-
 function NxWatchListItem_OnUpdate(self, elapsed)
 	-- Handle range indicator
 	local rangeTimer = self.rangeTimer;
@@ -7685,13 +7671,12 @@ function NxWatchListItem_OnUpdate(self, elapsed)
 				count:Hide();
 			end
 			rangeTimer = TOOLTIP_UPDATE_TIME;
-		end
-		
+		end		
 		self.rangeTimer = rangeTimer;
 	end
 end
 
-
+-----------------------------------------------------------------------------
 --EOF
 
 

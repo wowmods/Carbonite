@@ -1611,7 +1611,7 @@ function Nx.Social.List:Update()
 			if punk.Class then
 				list:ItemSet (4, punk.Class)
 			end
-			local mapName = Nx.MapIdToName[punk.MId] or "?"
+			local mapName = GetMapNameByID(punk.MId) or "?"
 			list:ItemSet (5, format ("%s %d %d", mapName, punk.X, punk.Y))
 
 			list:ItemSet (6, format ("Near %s", punk.FinderName))
@@ -1654,7 +1654,7 @@ function Nx.Social.List:Update()
 			end
 
 			if mId then
-				local name = Nx.MapIdToName[tonumber (mId, 16)] or "?"
+				local name = GetMapNameById(tonumber (mId, 16)) or "?"
 				list:ItemSet (5, name)
 			end
 
@@ -1904,8 +1904,7 @@ function Nx.Social:UpdateIcons (map)
 	local math = math
 	local alt = IsAltKeyDown()
 	local tm = GetTime()
-
-	local idToName = Nx.MapIdToName
+	
 	local punks = self.Punks
 	local punksA = self.PunksActive
 
@@ -2097,7 +2096,7 @@ function Nx.Social:GetPunkPasteInfo (name)
 
 		local lvl = punk.Lvl > 0 and punk.Lvl or "?"
 		local class = punk.Class or "?"
-		return format ("Punk: %s, %s %s at %s %d %d", name, lvl, class, Nx.MapIdToName[punk.MId] or "?", punk.X, punk.Y)
+		return format ("Punk: %s, %s %s at %s %d %d", name, lvl, class, GetMapNameById(punk.MId) or "?", punk.X, punk.Y)
 	end
 
 	return ""
