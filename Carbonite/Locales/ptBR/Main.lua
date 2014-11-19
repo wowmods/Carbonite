@@ -127,6 +127,6 @@ L["Searching for Artifacts"] = "Artefatos" 		-- NXlARTIFACTS
 L["Extract Gas"] = "Extrair Gás"					-- NXlEXTRACTGAS
 L["Herb Gathering"] = "Colheita de ervas"					-- NXlHERBGATHERING
 L["In Conflict"] = "Em batalha"						-- NXlINCONFLICT
-L["Opening"] = "Abertura"							-- NXlOpening	
+L["Opening"] = "Abertura"							-- NXlOpening
 L["Opening - No Text"] = "Abertura - Sem texto"				-- NXlOpeningNoText
 L["Everfrost Chip"] = "Everfrost"					-- NXlEverfrost

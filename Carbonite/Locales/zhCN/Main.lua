@@ -16,7 +16,7 @@ NXClassLocToCap = {		-- Convert localized class name to generic caps
 	["潜行者"] = "ROGUE",
 	["萨满祭司"] = "SHAMAN",
 	["术士"] = "WARLOCK",
-	["战士"] = "WARRIOR",	
+	["战士"] = "WARRIOR",
 }
 
 -- Main Carbonite
@@ -117,6 +117,6 @@ L["Searching for Artifacts"] = "寻找考古点" 		-- NXlARTIFACTS
 L["Extract Gas"] = "精炼气体"						-- NXlEXTRACTGAS
 L["Herb Gathering"] = "草药采集"					-- NXlHERBGATHERING
 L["In Conflict"] = "争夺中"						-- NXlINCONFLICT
-L["Opening"] = "打开"							-- NXlOpening	
+L["Opening"] = "打开"							-- NXlOpening
 L["Opening - No Text"] = true				-- NXlOpeningNoText
 L["Everfrost Chip"] = "永冻薄片"					-- NXlEverfrost
