@@ -54,7 +54,7 @@ local function WarehouseOptions()
 		warehouseopts = {
 			type = "group",
 			name = "Warehouse Options",
-			args = {	
+			args = {
 				toolTip = {
 					order = 1,
 					type = "toggle",
@@ -66,7 +66,7 @@ local function WarehouseOptions()
 					end,
 					set = function()
 						Nx.wdb.profile.Warehouse.AddTooltip = not Nx.wdb.profile.Warehouse.AddTooltip
-					end,				
+					end,
 				},
 				WareFont = {
 					order = 3,
@@ -84,17 +84,17 @@ local function WarehouseOptions()
 					end,
 					set	= function(info, name)
 						local vals = Nx.Opts:CalcChoices("FontFace","Get")
-						Nx.wdb.profile.Warehouse.WarehouseFont = vals[name]						
+						Nx.wdb.profile.Warehouse.WarehouseFont = vals[name]
 						Nx.Opts:NXCmdFontChange()
 					end,
 					values	= function()
 						return Nx.Opts:CalcChoices("FontFace","Get")
-					end,					
+					end,
 				},
 				WareFontSize = {
 					order = 4,
-					type = "range",							
-					name = "Warehouse Font Size",						
+					type = "range",
+					name = "Warehouse Font Size",
 					desc = "Sets the size of the warehouse font",
 					min = 6,
 					max = 14,
@@ -106,12 +106,12 @@ local function WarehouseOptions()
 					set = function(info,value)
 						Nx.wdb.profile.Warehouse.WarehouseFontSize = value
 						Nx.Opts:NXCmdFontChange()
-					end,				
-				},		
+					end,
+				},
 				WareFontSpacing = {
 					order = 5,
-					type = "range",							
-					name = "Warehouse Font Spacing",						
+					type = "range",
+					name = "Warehouse Font Spacing",
 					desc = "Sets the spacing of the warehouse font",
 					min = -10,
 					max = 20,
@@ -123,8 +123,8 @@ local function WarehouseOptions()
 					set = function(info,value)
 						Nx.wdb.profile.Warehouse.WarehouseFontSpacing = value
 						Nx.Opts:NXCmdFontChange()
-					end,				
-				},									
+					end,
+				},
 			},
 		}
 	end
@@ -136,16 +136,16 @@ function CarboniteWarehouse:OnInitialize()
 		CarbWHInit = Nx:ScheduleTimer(CarboniteWarehouse.OnInitialize,1)
 		return
 	end
-	Nx.wdb = LibStub("AceDB-3.0"):New("NXWhouse",defaults, true)	
+	Nx.wdb = LibStub("AceDB-3.0"):New("NXWhouse",defaults, true)
 	Nx.wdb:SetProfile(Nx.db:GetCurrentProfile())
-	tinsert(Nx.dbs,Nx.wdb)	
-	Nx.Font:ModuleAdd("Warehouse.WarehouseFont",{ "NxFontWHI", "GameFontNormal","wdb" })	
+	tinsert(Nx.dbs,Nx.wdb)
+	Nx.Font:ModuleAdd("Warehouse.WarehouseFont",{ "NxFontWHI", "GameFontNormal","wdb" })
 	Nx.Warehouse:Init()
 	Nx.Warehouse:Login()
 	local function func ()
 		Nx.Warehouse:ToggleShow()
-	end	
-	Nx.NXMiniMapBut.Menu:AddItem(0, "Show Warehouse", func, Nx.NXMiniMapBut)			
+	end
+	Nx.NXMiniMapBut.Menu:AddItem(0, "Show Warehouse", func, Nx.NXMiniMapBut)
 	CarboniteWarehouse:RegisterEvent("BAG_UPDATE","EventHandler")
 	CarboniteWarehouse:RegisterEvent("PLAYERBANKSLOTS_CHANGED", "EventHandler")
 	CarboniteWarehouse:RegisterEvent("PLAYERBANKBAGSLOTS_CHANGED", "EventHandler")
@@ -164,7 +164,7 @@ function CarboniteWarehouse:OnInitialize()
 	CarboniteWarehouse:RegisterEvent("CHAT_MSG_SKILL", "EventHandler")
 	CarboniteWarehouse:RegisterEvent("SKILL_LINES_CHANGED", "EventHandler")
 	CarboniteWarehouse:RegisterEvent("TRADE_SKILL_UPDATE", "EventHandler")
-	CarboniteWarehouse:RegisterEvent("PLAYER_LOGIN","EventHandler")	
+	CarboniteWarehouse:RegisterEvent("PLAYER_LOGIN","EventHandler")
 	CarboniteWarehouse:RegisterEvent("TIME_PLAYED_MSG","EventHandler")
 	CarboniteWarehouse:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED", "EventHandler")
 	CarboniteWarehouse:RegisterEvent("UNIT_SPELLCAST_FAILED", "EventHandler")
@@ -197,17 +197,17 @@ function CarboniteWarehouse:OnInitialize()
 	}
 	tinsert (Nx.BarData,{"MapWarehouse", "-Warehouse-", Nx.Warehouse.OnButToggleWarehouse, false })
 	Nx.Map.Maps[1]:CreateToolBar()
-	
+
 	local ttHooks = {
 		"SetAction", "SetAuctionItem", "SetBagItem", "SetGuildBankItem", "SetHyperlink", "SetInboxItem", "SetInventoryItem", "SetLootItem",
 		"SetLootRollItem", "SetMerchantItem", "SetQuestItem", "SetQuestLogItem", "SetTradeSkillItem", "SetTradeTargetItem",
 	}
 
 	for k, name in ipairs (ttHooks) do
-			hooksecurefunc (GameTooltip, name, Nx.Warehouse.TooltipProcess)		
+			hooksecurefunc (GameTooltip, name, Nx.Warehouse.TooltipProcess)
 			hooksecurefunc (ItemRefTooltip, name, Nx.Warehouse.ReftipProcess)
 	end
-	
+
 	Nx:AddToConfig("Warehouse Module",WarehouseOptions(),"Warehouse Module")
 	tinsert(Nx.BrokerMenuTemplate,{ text = "Toggle Warehouse", func = function() Nx.Warehouse:ToggleShow() end })
 	if Nx.RequestTime then
@@ -262,7 +262,7 @@ function CarboniteWarehouse:EventHandler(event, arg1, arg2, arg3)
 		Nx.Warehouse:OnUnit_spellcast_succeeded(event, arg1, arg2, arg3)
 	else
 		Nx.prt("ERROR: Event " .. event .. " triggered without function.")
-	end	
+	end
 end
 
 function Nx.Warehouse:OnTime_played_msg (event, arg1, arg2)
@@ -277,7 +277,7 @@ function Nx.Warehouse:OnTime_played_msg (event, arg1, arg2)
 	if Nx.Warehouse.TimePlayed then
 		ch["TimePlayed"] = Nx.Warehouse.TimePlayed
 		Nx.Warehouse.TimePlayed = nil
-	end		
+	end
 end
 
 function Nx.Warehouse:OnUnit_spellcast_interrupted (event, arg1)
@@ -314,7 +314,7 @@ function Nx.Warehouse:Init()
 		Nx.wdb.profile.WarehouseData = ware
 		ware.Version = Nx.VERSIONWare
 	end
-	
+
 	self.Enabled = Nx.wdb.profile.Warehouse.Enable
 
 	self.SkillRiding = 0
@@ -339,7 +339,7 @@ function Nx.Warehouse:Init()
 		"HandsSlot", "WaistSlot", "LegsSlot", "FeetSlot",
 		"Finger0Slot", "Finger1Slot", "Trinket0Slot", "Trinket1Slot",
 		"MainHandSlot", "SecondaryHandSlot", "AmmoSlot",	-- "RangedSlot" removed 5.0
-		"Bag0Slot", "Bag1Slot", "Bag2Slot", "Bag3Slot" 
+		"Bag0Slot", "Bag1Slot", "Bag2Slot", "Bag3Slot"
 	}
 
 --	self.LProfessions = TRADE_SKILLS
@@ -373,7 +373,7 @@ function Nx.Warehouse:Login(event, arg1)
 			ChatFrame_DisplayTimePlayed = Nx.BlizzChatFrame_DisplayTimePlayed		-- Restore
 			Nx.BlizzChatFrame_DisplayTimePlayed = nil
 		end
-	end	
+	end
 end
 
 function Nx.Warehouse:prtdb (...)
@@ -713,7 +713,7 @@ function Nx.Warehouse:OnItemListEvent (eventName, sel, val2, click)
 
 --	Nx.prt ("List event "..eventName)
 
-	local list = self.ItemList	
+	local list = self.ItemList
 
 	local id = list:ItemGetData (sel) or 0
 
@@ -983,7 +983,7 @@ function Nx.Warehouse:Update()
 				end
 				if ch["Valor"] and ch["Justice"] then
 					list:ItemAdd(cnum)
-					list:ItemSet(2, format (" Valor: %s%s|r  Justice: %s%s", hicol, ch["Valor"], hicol, ch["Justice"])) 
+					list:ItemSet(2, format (" Valor: %s%s|r  Justice: %s%s", hicol, ch["Valor"], hicol, ch["Justice"]))
 				end
 --[[
 				if ch["Professions"] then
@@ -1328,7 +1328,7 @@ function Nx.Warehouse:UpdateItem (pre, name, bagCnt, bankCnt, mailCnt, link, sho
 	local istr = pre .. col .. str
 
 	if showILvl and lvl then
-		istr = istr .. ",  |ri" .. lvl 
+		istr = istr .. ",  |ri" .. lvl
 	end
 
 	local filterStr = self.EditBox:GetText()
@@ -1487,7 +1487,7 @@ function Nx.Warehouse:FindCharsWithItem (link, specific)
 				if bankCnt > 0 then
 					s = format ("|cFFFFFF00%s#|cFFFFFF00%d |cFFFF0000[|cFF00FF00Bags:%d|cFFFF0000]|cFFFF0000[|cFF00FF00Bank:%d|cFFFF0000]",cname,bagCnt+bankCnt,bagCnt,bankCnt)
 				else
-					s = format ("|cFFFFFF00%s#|cFFFF0000[|cFF00FF00Bags:%d|cFFFF0000]",cname,bagCnt)				
+					s = format ("|cFFFFFF00%s#|cFFFF0000[|cFF00FF00Bags:%d|cFFFF0000]",cname,bagCnt)
 				end
 			end
 			if not str then
@@ -1502,7 +1502,7 @@ function Nx.Warehouse:FindCharsWithItem (link, specific)
 		end
 	end
 
---	Nx.prt ("FindCharsWithItem %f secs", GetTime() - tm)	
+--	Nx.prt ("FindCharsWithItem %f secs", GetTime() - tm)
 	return str, charCnt, totalCnt
 end
 
@@ -1633,10 +1633,10 @@ function Nx.Warehouse:ReftipProcess()
 	if not Nx.wdb.profile.Warehouse.AddTooltip then
 		return
 	end
-	
+
 	local tip = ItemRefTooltip
-	local name, link = tip:GetItem()	
-	if name then	
+	local name, link = tip:GetItem()
+	if name then
 --		Nx.prt ("TTItem %s", name or "nil")
 
 		local titleStr = format ("|cffffffffW%sarehouse:", Nx.TXTBLUE)
@@ -1655,17 +1655,17 @@ function Nx.Warehouse:ReftipProcess()
 			str = gsub (str, "\n", "\n ")
 			local temparray = { strsplit("#",str) }
 			local a = false
-			local char			
+			local char
 			tip:AddLine(titleStr)
 			for i, j in pairs (temparray) do
 				if a == false then
-					a = true					
+					a = true
 					char = j
 				else
 					a = false
 					tip:AddDoubleLine(char,j)
 				end
-			end			
+			end
 			tip:Show()
 		end
 	end
@@ -1676,10 +1676,10 @@ function Nx.Warehouse:TooltipProcess()
 	if not Nx.wdb.profile.Warehouse.AddTooltip then
 		return
 	end
-	
+
 	local tip = GameTooltip
-	local name, link = tip:GetItem()	
-	if name then	
+	local name, link = tip:GetItem()
+	if name then
 --		Nx.prt ("TTItem %s", name or "nil")
 
 		local titleStr = format ("|cffffffffW%sarehouse:", Nx.TXTBLUE)
@@ -1698,17 +1698,17 @@ function Nx.Warehouse:TooltipProcess()
 			str = gsub (str, "\n", "\n ")
 			local temparray = { strsplit("#",str) }
 			local a = false
-			local char			
+			local char
 			tip:AddLine(titleStr)
 			for i, j in pairs (temparray) do
 				if a == false then
-					a = true					
+					a = true
 					char = j
 				else
 					a = false
 					tip:AddDoubleLine(char,j)
 				end
-			end			
+			end
 			tip:Show()
 		end
 	end
@@ -1904,7 +1904,7 @@ function Nx.Warehouse:CaptureUpdate()
 	self:CaptureItems()
 
 	if self.Win then
-		self:Update()		
+		self:Update()
 	end
 end
 
@@ -2169,7 +2169,7 @@ end
 --]]
 
 function Nx.Warehouse:Capture (link)
-  
+
 end
 
 function Nx.Warehouse:CaptureGet (t, key)
@@ -2397,17 +2397,3 @@ end
 
 -------------------------------------------------------------------------------
 -- EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
