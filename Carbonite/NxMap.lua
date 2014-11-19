@@ -1327,7 +1327,7 @@ function Nx.Map:AttachWorldMap()
 	local f = _G["WorldMapButton"]
 	if f then
 		
-		Nx.prt ("AttachWorldMap")
+--		Nx.prt ("AttachWorldMap")
 
 		self.WorldMapFrm = f		
 		self.WorldMapFrmParent = f:GetParent()
@@ -8354,8 +8354,10 @@ function Nx.Map:InitTables()
 					if winfo.X ~= nil and winfo.Y ~= nil then
 						winfo[4] = cx + winfo.X
 						winfo[5] = cy + winfo.Y
-					else
-						Nx.prt("Map Error: " .. tostring(n))
+					else						
+						if n ~= nil and n ~= 0 then
+							Nx.prt("Map Error: " .. tostring(n))
+						end					
 					end
 				else					
 				end
@@ -8374,7 +8376,9 @@ function Nx.Map:InitTables()
 					winfo[4] = cx + winfo.X
 					winfo[5] = cy + winfo.Y
 				else
-					Nx.prt("Map Error: " .. tostring(n))
+					if n ~= nil and n ~= 0 then
+						Nx.prt("Map Error: " .. tostring(n))
+					end					
 				end
 				winfo.Cont = 90
 				winfo.Zone = id				
