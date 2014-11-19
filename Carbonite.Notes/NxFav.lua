@@ -1375,10 +1375,10 @@ function Nx.Notes:UpdateIcons()
 	end
 
 	local cont = map:IdToContZone (mapId)
-
+	cont = tonumber(cont)
 --	Nx.prt ("mapid %s, cont %s", mapId, cont)
 
-	if cont > 0 and cont < 9 then
+	if cont > 0 and cont < 90 then
 
 		local notes = self:FindFolder (L["My Notes"])
 
