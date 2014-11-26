@@ -1596,7 +1596,7 @@ function Nx.Map.Guide:UpdateTravelIcons (hideFac)
 				mapId1, x1, y1, name1 = mapId2, x2, y2, name2
 			end
 			local wx, wy = Map:GetWorldPos (mapId1, x1, y1)
-			local icon = map:AddIconPt ("!POI", wx, wy, nil, "Interface\\Icons\\" .. folder.Tx)
+			local icon = map:AddIconPt ("!POI", wx, wy, nil, "Interface\\Icons\\" .. (folder.Tx or "INV_Misc_Note_02"))
 			map:SetIconTip (icon, format ("%s\n%s %.1f %.1f", name1, GetMapNameByID(mapId1), x1, y1))
 		end
 	end

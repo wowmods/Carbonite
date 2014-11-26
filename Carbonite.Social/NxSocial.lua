@@ -1611,7 +1611,7 @@ function Nx.Social.List:Update()
 			if punk.Class then
 				list:ItemSet (4, punk.Class)
 			end
-			local mapName = Nx.MapIdToName[punk.MId] or "?"
+			local mapName = GetMapNameByID(punk.MId) or "?"
 			list:ItemSet (5, format ("%s %d %d", mapName, punk.X, punk.Y))
 
 			list:ItemSet (6, format ("Near %s", punk.FinderName))
@@ -1654,7 +1654,7 @@ function Nx.Social.List:Update()
 			end
 
 			if mId then
-				local name = Nx.MapIdToName[tonumber (mId, 16)] or "?"
+				local name = GetMapNameByID(tonumber (mId, 16)) or "?"
 				list:ItemSet (5, name)
 			end
 
@@ -2018,7 +2018,7 @@ function Nx.Social:UpdateIcons (map)
 			if map:ClipFrameW (f, x, y, 14, 14, 0) then
 
 				local lvl = punk.Lvl > 0 and punk.Lvl or "?"
-				local mapName = idToName[punkMId] or "?"
+				local mapName = GetMapNameByID(punkMId) or "?"
 
 				f.NxTip = format ("*|cffff0000%s %s, %d:%02d ago\n%s (%d,%d)", pName, lvl, dur / 60 % 60, dur % 60, mapName, punk.X, punk.Y)
 				f.NXType = 3001
@@ -2042,7 +2042,7 @@ function Nx.Social:UpdateIcons (map)
 				if map:ClipFrameW (f, x, y, 10, 10, 0) then
 
 					local lvl = punk.Lvl > 0 and punk.Lvl or "?"
-					local mapName = idToName[punkMId] or "?"
+					local mapName = GetMapNameByID(punkMId) or "?"
 
 					f.NxTip = format ("|cffff6060%s %s, %d:%02d ago\n%s (%d,%d)", pName, lvl, dur / 60 % 60, dur % 60, mapName, punk.X, punk.Y)
 					f.NXType = 3001

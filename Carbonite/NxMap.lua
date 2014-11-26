@@ -1908,11 +1908,11 @@ end
 
 function Nx.Map:MinimapOwnInit()
 	self.MMScales = {}
-	for n = 1, 6 do
+	for n = 1, 7 do
 		self.MMScales[n] = (8 - n) * 66.6666666666666 / 5.0
 	end
 	self.MMScalesC = { 300, 240, 180, 120, 80, 50 }
-	for n = 1, 6 do
+	for n = 1, 7 do
 		self.MMScalesC[n] = self.MMScalesC[n] / 5.0
 	end
 	--
@@ -2248,7 +2248,7 @@ function Nx.Map:MinimapUpdate()
 		self.MMScale = 0
 		local sc = self.DebugScale
 
-		for n = 1, 6 do
+		for n = 1, 7 do
 			self.MMScales[n] = (8 - n) * 66.6666666666666 / sc
 		end
 	end

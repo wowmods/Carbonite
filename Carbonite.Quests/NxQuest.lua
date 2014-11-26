@@ -7129,14 +7129,16 @@ end
 -- Update map icons (called by map)
 
 function Nx.Quest:UpdateIcons (map)
-
+	if not Nx.QInit then
+		return
+	end
 	local Nx = Nx
 	local Quest = Nx.Quest
 	local Map = Nx.Map
 	local qLocColors = Quest.QLocColors
 	local ptSz = 4 * map.ScaleDraw
 
-	local navscale = Map.Maps[1].IconNavScale * 16
+	local navscale = Map.Maps[1].IconNavScale * 16	
 	local showOnMap = Quest.Watch.ButShowOnMap:GetPressed()
 
 	local opts = self.GOpts
