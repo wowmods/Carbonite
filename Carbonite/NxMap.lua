@@ -1801,7 +1801,7 @@ function Nx.Map:InitHotspots()
 			end
 
 			local color, infoStr = self:GetMapNameDesc (zoneN)
-			local tipStr = format ("%s, %s%s (%s)", cname, color, zname, infoStr)
+			local tipStr = format ("%s, %s%s (%s)", L[cname], color, zname, infoStr)
 
 			local loc = Nx.MapWorldHotspots[nxz]	-- Old way
 			local locSize = 4
@@ -1908,11 +1908,11 @@ end
 
 function Nx.Map:MinimapOwnInit()
 	self.MMScales = {}
-	for n = 1, 7 do
+	for n = 1, 6 do
 		self.MMScales[n] = (8 - n) * 66.6666666666666 / 5.0
 	end
 	self.MMScalesC = { 300, 240, 180, 120, 80, 50 }
-	for n = 1, 7 do
+	for n = 1, 6 do
 		self.MMScalesC[n] = self.MMScalesC[n] / 5.0
 	end
 	--
@@ -2248,7 +2248,7 @@ function Nx.Map:MinimapUpdate()
 		self.MMScale = 0
 		local sc = self.DebugScale
 
-		for n = 1, 7 do
+		for n = 1, 6 do
 			self.MMScales[n] = (8 - n) * 66.6666666666666 / sc
 		end
 	end
@@ -2284,7 +2284,7 @@ function Nx.Map:MinimapUpdate()
 			return
 		end
 
-		for n = 1, 7 do
+		for n = 1, 6 do
 
 			local sz = scales[n]
 
