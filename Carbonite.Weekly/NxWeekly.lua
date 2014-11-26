@@ -270,7 +270,7 @@ function CarboniteWeekly:OnInitialize()
 	local function func ()
 		Nx.Weekly:ToggleShow()
 	end
-	Nx.NXMiniMapBut.Menu:AddItem(0, L["Show Weekly Objectives"], func, Nx.NXMiniMapBut)			
+	Nx.NXMiniMapBut.Menu:AddItem(0, L["Show Weekly Objectives"], func, Nx.NXMiniMapBut)
 
 	CarboniteWeekly:RegisterEvent("PLAYER_LOGIN", "EventHandler")
 	CarboniteWeekly:RegisterEvent("PLAYER_LOGOUT", "EventHandler")
@@ -568,7 +568,7 @@ function Nx.Weekly:DisplayWeekly()
 		if ch.Weekly and ch.Weekly.Galleon then
 			strng = "|cff00ff00" .. L["Killed"]
 		elseif ch.Weekly and not ch.Weekly.Galleon then
-			strng = "|cffff0000" .. L["Not Killed"]			
+			strng = "|cffff0000" .. L["Not Killed"]
 		else
 			strng = "|cffffffff" .. L["Unknown"]
 		end
@@ -582,7 +582,7 @@ function Nx.Weekly:DisplayWeekly()
 		if ch.Weekly and ch.Weekly.Nalak then
 			strng = "|cff00ff00" .. L["Killed"]
 		elseif ch.Weekly and not ch.Weekly.Nalak then
-			strng = "|cffff0000" .. L["Not Killed"]			
+			strng = "|cffff0000" .. L["Not Killed"]
 		else
 			strng = "|cffffffff" .. L["Unknown"]
 		end
@@ -596,7 +596,7 @@ function Nx.Weekly:DisplayWeekly()
 		if ch.Weekly and ch.Weekly.Oondasta then
 			strng = "|cff00ff00" .. L["Killed"]
 		elseif ch.Weekly and not ch.Weekly.Oondasta then
-			strng = "|cffff0000" .. L["Not Killed"]			
+			strng = "|cffff0000" .. L["Not Killed"]
 		else
 			strng = "|cffffffff" .. L["Unknown"]
 		end
@@ -644,7 +644,7 @@ function Nx.Weekly:DisplayWeekly()
 		if ch.Weekly and ch.Weekly.Ritual then
 			strng = "|cff00ff00" .. L["Looted"]
 		elseif ch.Weekly and not ch.Weekly.Ritual then
-			strng = "|cffff0000" .. L["Not Looted"]			
+			strng = "|cffff0000" .. L["Not Looted"]
 		else
 			strng = "|cffffffff" .. L["Unknown"]
 		end
@@ -658,7 +658,7 @@ function Nx.Weekly:DisplayWeekly()
 		if ch.Weekly and ch.Weekly.LootKey then
 			strng = "|cff00ff00" .. L["Looted"]
 		elseif ch.Weekly and not ch.Weekly.LootKey then
-			strng = "|cffff0000" .. L["Not Looted"]			
+			strng = "|cffff0000" .. L["Not Looted"]
 		else
 			strng = "|cffffffff" .. L["Unknown"]
 		end
@@ -672,7 +672,7 @@ function Nx.Weekly:DisplayWeekly()
 		if ch.Weekly and ch.Weekly.OutdoorChest then
 			strng = "|cff00ff00" .. L["Looted"]
 		elseif ch.Weekly and not ch.Weekly.OutdoorChest then
-			strng = "|cffff0000" .. L["Not Looted"]			
+			strng = "|cffff0000" .. L["Not Looted"]
 		else
 			strng = "|cffffffff" .. L["Unknown"]
 		end
@@ -705,7 +705,7 @@ function Nx.Weekly:DisplayWeekly()
 		if ch.Weekly and ch.Weekly.Chamberlain then
 			strng = "|cff00ff00" .. L["Completed"]
 		elseif ch.Weekly and not ch.Weekly.Chamberlain then
-			strng = "|cffff0000" .. L["Not Completed"]			
+			strng = "|cffff0000" .. L["Not Completed"]
 		else
 			strng = "|cffffffff" .. L["Unknown"]
 		end

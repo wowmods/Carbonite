@@ -25,17 +25,17 @@ local L = LibStub("AceLocale-3.0"):GetLocale("Carbonite")
 Nx.WebSite = "wowinterface.com"
 NXTITLEFULL = L["Carbonite"]
 
-Nx.VERMAJOR			= 6.0
-Nx.VERMINOR			= .0				-- Not 0 is a test version
+Nx.VERMAJOR				= 6.0
+Nx.VERMINOR				= .0				-- Not 0 is a test version
 Nx.BUILD				= 118
 
-Nx.VERSION			= Nx.VERMAJOR + Nx.VERMINOR / 100
+Nx.VERSION				= Nx.VERMAJOR + Nx.VERMINOR / 100
 
 Nx.VERSIONDATA			= .02				-- Main data
 Nx.VERSIONCHAR			= .02				-- Character data
-Nx.VERSIONCharData	= .4					-- Character specific saved data
+Nx.VERSIONCharData		= .4				-- Character specific saved data
 Nx.VERSIONGATHER		= .8				-- Gathered data
-Nx.VERSIONGOPTS		= .102				-- Global options
+Nx.VERSIONGOPTS			= .102				-- Global options
 Nx.VERSIONHUDOPTS		= .03				-- HUD options
 Nx.VERSIONList			= .1				-- List header data
 Nx.VERSIONTaxiCap		= .5				-- Taxi capture data
@@ -44,8 +44,8 @@ Nx.VERSIONWin			= .31				-- Window layouts
 Nx.VERSIONTOOLBAR		= .1				-- Tool Bar data
 Nx.VERSIONCAP			= .75				-- Captured data (quest recording)
 Nx.VERSIONVENDORV		= .56				-- Visited vendor data
-Nx.VERSIONTransferData = .1				-- Transfer data
-Nx.TXTBLUE			= "|cffc0c0ff"
+Nx.VERSIONTransferData	= .1				-- Transfer data
+Nx.TXTBLUE				= "|cffc0c0ff"
 
 Nx.Tick = 0
 
@@ -3009,7 +3009,7 @@ Nx.GatherInfo = {
 		{ 1,   "INV_Misc_Herb_10", L["Silverleaf"]},
 		{ 85,  "INV_Misc_Herb_11", L["Stranglekelp"]},
 		{ 230, "INV_Misc_Herb_18", L["Sungrass"]},
-		{ 325, "INV_Misc_Herb_Terrocone", L["Terrocone"]},
+		{ 325, "INV_Misc_Herb_Terrocone", L["Terocone"]},	-- Someone should check if INV_Misc_Herb_Terrocone needs to be changed to Terocone (http://www.wowhead.com/item=22789)
 		{ 115, "INV_Misc_Flower_01", L["Wild Steelbloom"]},
 		{ 195, "inv_misc_flower_03", L["Dragon's Teeth"]},
 		{ 1,   "INV_Mushroom_02", L["Glowcap"]},

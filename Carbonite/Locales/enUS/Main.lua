@@ -109,7 +109,7 @@ L["Transparency"] = true
 L["Reset Layout"] = true
 
 -- Stuff from old localization
-L["Searching for Artifacts"] = true 		-- NXlARTIFACTS
+L["Searching for Artifacts"] = true			-- NXlARTIFACTS
 L["Extract Gas"] = true						-- NXlEXTRACTGAS
 L["Herb Gathering"] = true					-- NXlHERBGATHERING
 L["In Conflict"] = true						-- NXlINCONFLICT

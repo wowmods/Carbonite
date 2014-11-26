@@ -74,7 +74,6 @@ L["Alchemy Lab"] = "Алхимическая лаборатория"
 L["Altar Of Shadows"] = "Алтарь Теней"
 L["Mana Loom"] = true
 L["Moonwell"] = "Лунный колодец"
-L["Quest Givers"] = "Мастера заданий"
 
 -- Menus
 L["Delete"] = "Удалить"

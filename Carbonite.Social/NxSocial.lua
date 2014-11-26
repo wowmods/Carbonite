@@ -164,7 +164,7 @@ local function socialConfig()
 						maxtargets = {
 							order = 6,
 							type = "range",
-							name = L["Max punk target buttons"],			
+							name = L["Max punk target buttons"],
 							desc = L["Sets the number of punks that will show in the punk window. (REQUIRES RELOAD)"],
 							min = 0,
 							max = 15,
@@ -309,7 +309,7 @@ local function socialConfig()
 						pnkareasize = {
 							order = 17,
 							type = "range",
-							name = L["Punk Area Size"],						
+							name = L["Punk Area Size"],
 							desc = L["Sets the size of the punk area notify on the map."],
 							min = 0,
 							max = 5000,
@@ -344,7 +344,7 @@ local function socialConfig()
 						pnkmareasize = {
 							order = 19,
 							type = "range",
-							name = L["Others Punk Area Size"],						
+							name = L["Others Punk Area Size"],
 							desc = L["Sets the size of the punk area notify on the map from other carbonite users."],
 							min = 0,
 							max = 5000,
@@ -443,7 +443,7 @@ local function socialConfig()
 						teamtargets = {
 							order = 2,
 							type = "range",
-							name = L["number of target buttons"],						
+							name = L["number of target buttons"],
 							desc = L["Sets the number of buttons for team members in the teamhud (RELOAD REQUIRED)"],
 							min = 0,
 							max = 40,

@@ -267,7 +267,7 @@ local function QuestOptions ()
 						qtscale = {
 							order = 9,
 							type = "range",
-							name = L["Quest Details Scale"],						
+							name = L["Quest Details Scale"],
 							desc = L["Sets the size of the quest details"],
 							min = .5,
 							max = 2,
@@ -378,7 +378,7 @@ local function QuestOptions ()
 						qbroadnum = {
 							order = 19,
 							type = "range",
-							name = L["Broadcast after number of changes"],						
+							name = L["Broadcast after number of changes"],
 							desc = L["Sets the number of objective changes before it sends the group/raid message"],
 							min = 1,
 							max = 999,
@@ -499,7 +499,7 @@ local function QuestOptions ()
 						},
 						qmgraph = {
 							order = 28,
-							type	= "select",
+							type = "select",
 							name = L["Watched Area Graphic"],
 							desc = L["Sets the graphic to be used for watched areas"],
 							get	= function()
@@ -542,7 +542,7 @@ local function QuestOptions ()
 						qttlcols = {
 							order = 30,
 							type = "range",
-							name = L["Total Colors To Use"],						
+							name = L["Total Colors To Use"],
 							desc = L["Sets the number of possible colors to use for quest watching"],
 							min = 1,
 							max = 12,
@@ -792,7 +792,7 @@ local function QuestOptions ()
 						},
 						QuestFont = {
 							order = 44,
-							type	= "select",
+							type = "select",
 							name = L["Quest Font"],
 							desc = L["Sets the font to be used on the quest window"],
 							get	= function()
@@ -816,7 +816,7 @@ local function QuestOptions ()
 						QuestFontSize = {
 							order = 45,
 							type = "range",
-							name = L["Quest Font Size"],						
+							name = L["Quest Font Size"],
 							desc = L["Sets the size of the quest window font"],
 							min = 6,
 							max = 20,
@@ -833,7 +833,7 @@ local function QuestOptions ()
 						QuestFontSpacing = {
 							order = 46,
 							type = "range",
-							name = L["Quest Font Spacing"],						
+							name = L["Quest Font Spacing"],
 							desc = L["Sets the spacing of the quest window font"],
 							min = -10,
 							max = 20,
@@ -953,7 +953,7 @@ local function QuestOptions ()
 						qwtextsize = {
 							order = 8,
 							type = "range",
-							name = L["Object Text Length Before Linewrap"],						
+							name = L["Object Text Length Before Linewrap"],
 							desc = L["Sets the number of characters before an objective wraps"],
 							min = 20,
 							max = 999,
@@ -1309,7 +1309,7 @@ local function QuestOptions ()
 						qwiconsize = {
 							order = 34,
 							type = "range",
-							name = L["Clickable Icon Size (0 disables)"],						
+							name = L["Clickable Icon Size (0 disables)"],
 							desc = L["If a quest has an item to be used, will draw it beside the quest at the size defined here"],
 							min = 0,
 							max = 50,
@@ -1357,7 +1357,7 @@ local function QuestOptions ()
 						},
 						QuestWatchFont = {
 							order = 38,
-							type	= "select",
+							type = "select",
 							name = L["Quest Watch Font"],
 							desc = L["Sets the font to be used on the quest watch window"],
 							get	= function()
@@ -1381,7 +1381,7 @@ local function QuestOptions ()
 						QuestWatchFontSize = {
 							order = 39,
 							type = "range",
-							name = L["Watch Font Size"],						
+							name = L["Watch Font Size"],
 							desc = L["Sets the size of the quest watch font"],
 							min = 6,
 							max = 20,
@@ -1398,7 +1398,7 @@ local function QuestOptions ()
 						QuestWatchFontSpacing = {
 							order = 40,
 							type = "range",
-							name = L["Watch Font Spacing"],						
+							name = L["Watch Font Spacing"],
 							desc = L["Sets the spacing of the quest watch font"],
 							min = -10,
 							max = 20,
@@ -1442,7 +1442,7 @@ local function QuestOptions ()
 							order = 3,
 							type = "toggle",
 							width = "full",
-							name = L["Carbonite Quest Complete"],							
+							name = L["Carbonite Quest Complete"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd1
 							end,
@@ -1457,7 +1457,7 @@ local function QuestOptions ()
 							order = 4,
 							type = "toggle",
 							width = "full",
-							name = L["Peon Work Complete"],							
+							name = L["Peon Work Complete"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd2
 							end,
@@ -1472,7 +1472,7 @@ local function QuestOptions ()
 							order = 5,
 							type = "toggle",
 							width = "full",
-							name = L["Undead Well Done"],							
+							name = L["Undead Well Done"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd3
 							end,
@@ -1487,7 +1487,7 @@ local function QuestOptions ()
 							order = 6,
 							type = "toggle",
 							width = "full",
-							name = L["Female Congratulations"],							
+							name = L["Female Congratulations"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd4
 							end,
@@ -1502,7 +1502,7 @@ local function QuestOptions ()
 							order = 7,
 							type = "toggle",
 							width = "full",
-							name = L["Dwarven Well Done"],							
+							name = L["Dwarven Well Done"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd5
 							end,
@@ -1517,7 +1517,7 @@ local function QuestOptions ()
 							order = 8,
 							type = "toggle",
 							width = "full",
-							name = L["Gnome Good Job"],							
+							name = L["Gnome Good Job"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd6
 							end,
@@ -1532,7 +1532,7 @@ local function QuestOptions ()
 							order = 9,
 							type = "toggle",
 							width = "full",
-							name = L["Tauren Well Done"],							
+							name = L["Tauren Well Done"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd7
 							end,
@@ -1547,7 +1547,7 @@ local function QuestOptions ()
 							order = 10,
 							type = "toggle",
 							width = "full",
-							name = L["Undead What Now"],							
+							name = L["Undead What Now"],
 							get = function()
 								return Nx.qdb.profile.Quest.Snd8
 							end,
@@ -1568,7 +1568,7 @@ local function QuestOptions ()
 						title = {
 							order = 1,
 							type = "description",
-							name = L["Reload the UI with the button at the bottom to change which quests are loaded."],							
+							name = L["Reload the UI with the button at the bottom to change which quests are loaded."],
 						},
 						spacer1 = {
 							order = 2,
@@ -1730,7 +1730,7 @@ local function QuestOptions ()
 							func = function()
 								Nx.Opts.NXCmdReload()
 							end,
-							name = L["Reload UI"]						
+							name = L["Reload UI"]
 						},
 					},
 				},
@@ -7138,7 +7138,7 @@ function Nx.Quest:UpdateIcons (map)
 	local qLocColors = Quest.QLocColors
 	local ptSz = 4 * map.ScaleDraw
 
-	local navscale = Map.Maps[1].IconNavScale * 16	
+	local navscale = Map.Maps[1].IconNavScale * 16
 	local showOnMap = Quest.Watch.ButShowOnMap:GetPressed()
 
 	local opts = self.GOpts
@@ -8610,7 +8610,7 @@ function Nx.Quest.Watch:UpdateList()
 							s = "  |cffff0000[|cffffffffComplete|cffff0000]"
 						end
 						list:ItemAdd(0)
-						list:ItemSet(2,s)		
+						list:ItemSet(2,s)
 					end
 				end
 				if Nx.qdb.profile.QuestWatch.AchTrack then

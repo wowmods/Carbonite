@@ -94,7 +94,7 @@ local function WarehouseOptions()
 				WareFontSize = {
 					order = 4,
 					type = "range",
-					name = L["Warehouse Font Size"],						
+					name = L["Warehouse Font Size"],
 					desc = L["Sets the size of the warehouse font"],
 					min = 6,
 					max = 14,
@@ -111,7 +111,7 @@ local function WarehouseOptions()
 				WareFontSpacing = {
 					order = 5,
 					type = "range",
-					name = L["Warehouse Font Spacing"],						
+					name = L["Warehouse Font Spacing"],
 					desc = L["Sets the spacing of the warehouse font"],
 					min = -10,
 					max = 20,

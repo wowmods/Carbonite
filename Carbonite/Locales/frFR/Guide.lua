@@ -74,7 +74,6 @@ L["Alchemy Lab"] = "Laboratoire d'alchimie"
 L["Altar Of Shadows"] = "Autel des Ombres"
 L["Mana Loom"] = "Tisse Mana"
 L["Moonwell"] = "Puis de Lune"
-L["Quest Givers"] = "Donneur de Qu\195\170tes"
 
 -- Menus
 L["Delete"] = "Effacer"
