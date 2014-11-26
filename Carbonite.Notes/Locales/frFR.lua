@@ -35,6 +35,7 @@ L["Name"] = "Nom"
 L["Nothing to paste"] = "Rien \195\160 Coller"
 L["Can't paste that on the left side"] = "Impossible de coller ceci au c\195\160t\195\169 Gauche"
 L["Can't paste that on the right side"] = "Impossible de coller ceci au c\195\160t\195\169 Droit"
+L["Note"] = true
 L["Notes"] = true
 L["Note Addons"] = true
 L["My Notes"] = "Mes Notes"

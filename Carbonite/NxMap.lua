@@ -2342,7 +2342,7 @@ function Nx.Map:MinimapUpdate()
 				lOpts.NXMMFull=false
 			end
 			self.MMMenuIFull:SetChecked(lOpts.NXMMFull)
-			Nx.Menu:CheckUpdate(self.MMMenuIFull)	
+			Nx.Menu:CheckUpdate(self.MMMenuIFull)
 		end
 		if zoomType == 0 then
 			al = 1

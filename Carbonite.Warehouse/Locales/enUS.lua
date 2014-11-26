@@ -22,5 +22,5 @@ L["Show Lowest Rarity"] = true
 L["Sort By Slot"] = true
 L["Import %s's character data and reload?"] = true
 L["Overwrite all character settings and reload?"] = true
-L["Warehouse: %d characters"] = true 
+L["Warehouse: %d characters"] = true
 L["DurPattern"] = "^Durability (%d+) / (%d+)"

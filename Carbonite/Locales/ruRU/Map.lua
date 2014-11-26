@@ -4,7 +4,6 @@ end
 
 local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "ruRU")
 if not L then return end
-
 L["None"] = "Нет"
 L["Goto"] = "Идти к"
 L["Clear Goto"] = "Очистить маршрут"

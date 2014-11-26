@@ -1095,7 +1095,7 @@ local function mapConfig ()
 								Nx.db.profile.MiniMap.Own = not Nx.db.profile.MiniMap.Own
 								Nx.Opts:NXCmdMMOwnChange(_,Nx.db.profile.MiniMap.Own)
 							end,
-						},							
+						},
 						spacer1 = {
 							order = 3,
 							type = "description",
@@ -2469,8 +2469,8 @@ local function guidegatherConfig ()
 							order = 37,
 							type = "toggle",
 							width = "full",
-							name = L["Terrocone"],
-							desc = L["Display"] .. " " .. L["Terrocone"] .. " " .. L["Nodes On Map"],
+							name = L["Terocone"],
+							desc = L["Display"] .. " " .. L["Terocone"] .. " " .. L["Nodes On Map"],
 							get = function()
 								return Nx.db.profile.Guide.ShowHerbs[37]
 							end,

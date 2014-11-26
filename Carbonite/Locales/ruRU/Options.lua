@@ -74,6 +74,7 @@ L["When enabled, will attempt to draw a marker on the map for friends & guildmat
 L["Show Other people in Cities"] = "Показывать других людей в городах"
 L["When enabled, will attempt to draw a marker on the map for other Carbonite users."] = "Когда Вкл., будет совершена попытка отобразить значки для для других пользователей Carbonite на карте."
 L["Show Other people In Zone"] = "Отображать других людей на локации"
+L["When enabled, will attempt to draw a marker on the map for other Carbonite users."] = true
 L["Restore map scale after track"] = "Вернуть маштаб карты после слежения"
 L["When enabled, restores your previous map scale when tracking is cleared."] = "Когда Вкл., Возвращает размер карты после слежение прекращено."
 L["Use Travel Routing"] = "Использовать маршрут путешествия"
@@ -104,6 +105,7 @@ L["Show Second Title Line"] = "Отображать вторую строку з
 L["When enabled, Shows a second line of info in the titlebar with PVP & subzone info. (REQUIRES RELOAD)"] = "Когда Вкл., отображает вторую строку в заглавии карты с информацией о PVP и текущей локации. (Нужен перезапуск ПИ)"
 L["Show Map POI"] = "Отображать POI на карте"
 L["When enabled, shows Points of Interest on the map."] = "Когда Вкл., отображает Достопримечательности(POI) на карте."
+L["Player Arrow Size"] = true
 L["Sets the size of the player arrow on the map"] = "Задает размер стрелочки игрока на карте"
 L["Icon Scale Min"] = "Минимальный размер иконок"
 L["Sets the smallest size for icons on the map while zooming (-1 disabled any size changes)"] = "Задает минимальный размер иконок на карте при изменении маштаба (-1 отключает изменения размеров)"
