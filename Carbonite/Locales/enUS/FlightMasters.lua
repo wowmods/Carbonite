@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "enUS", true)
+﻿local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite", "enUS", true)
 if not L then return end
 
 L["Acherus: The Ebon Hold"] = true
@@ -16,7 +16,7 @@ L["Argent Tournament Grounds, Icecrown"] = true
 L["Astranaar, Ashenvale"] = true
 L["Azure Watch, Azuremyst Isle"] = true
 L["Bambala, Stranglethorn"] = true
-L["Beeble's Wreck, Isle Of Giants"] = true
+L["Beeble's Wreck, Isle of Giants"] = true
 L["Bilgewater Harbor, Azshara"] = true
 L["Binan Village, Kun-Lai Summit"] = true
 L["Blackfathom Camp, Ashenvale"] = true
@@ -32,6 +32,7 @@ L["Bouldercrag's Refuge, The Storm Peaks"] = true
 L["Bozzle's Wreck, Isle Of Giants"] = true
 L["Brackenwall Village, Dustwallow Marsh"] = true
 L["Brill, Tirisfal Glades"] = true
+L["Buzzle's Wreck, Isle of Giants"] = true
 L["Camp Ataya, Feralas"] = true
 L["Camp Everstill, Redridge"] = true
 L["Camp Mojache, Feralas"] = true

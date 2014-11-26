@@ -53,14 +53,14 @@ local function WarehouseOptions()
 	if not warehouseopts then
 		warehouseopts = {
 			type = "group",
-			name = "Warehouse Options",
+			name = L["Warehouse Options"],
 			args = {
 				toolTip = {
 					order = 1,
 					type = "toggle",
 					width = "full",
-					name = "Add Warehouse Tooltip",
-					desc = "When enabled, will show warehouse information in hover tooltips of items",
+					name = L["Add Warehouse Tooltip"],
+					desc = L["When enabled, will show warehouse information in hover tooltips of items"],
 					get = function()
 						return Nx.wdb.profile.Warehouse.AddTooltip
 					end,
@@ -71,8 +71,8 @@ local function WarehouseOptions()
 				WareFont = {
 					order = 3,
 					type	= "select",
-					name	= "Warehouse Font",
-					desc	= "Sets the font to be used for warehouse windows",
+					name	= L["Warehouse Font"],
+					desc	= L["Sets the font to be used for warehouse windows"],
 					get	= function()
 						local vals = Nx.Opts:CalcChoices("FontFace","Get")
 						for a,b in pairs(vals) do
@@ -94,8 +94,8 @@ local function WarehouseOptions()
 				WareFontSize = {
 					order = 4,
 					type = "range",
-					name = "Warehouse Font Size",
-					desc = "Sets the size of the warehouse font",
+					name = L["Warehouse Font Size"],						
+					desc = L["Sets the size of the warehouse font"],
 					min = 6,
 					max = 14,
 					step = 1,
@@ -111,8 +111,8 @@ local function WarehouseOptions()
 				WareFontSpacing = {
 					order = 5,
 					type = "range",
-					name = "Warehouse Font Spacing",
-					desc = "Sets the spacing of the warehouse font",
+					name = L["Warehouse Font Spacing"],						
+					desc = L["Sets the spacing of the warehouse font"],
 					min = -10,
 					max = 20,
 					step = 1,
@@ -209,7 +209,7 @@ function CarboniteWarehouse:OnInitialize()
 	end
 
 	Nx:AddToConfig("Warehouse Module",WarehouseOptions(),"Warehouse Module")
-	tinsert(Nx.BrokerMenuTemplate,{ text = "Toggle Warehouse", func = function() Nx.Warehouse:ToggleShow() end })
+	tinsert(Nx.BrokerMenuTemplate,{ text = L["Toggle Warehouse"], func = function() Nx.Warehouse:ToggleShow() end })
 	if Nx.RequestTime then
 		RequestTimePlayed()
 	end
@@ -474,35 +474,35 @@ function Nx.Warehouse:CreateMenu()
 	local menu = Nx.Menu:Create (self.List.Frm, 250)
 	self.Menu = menu
 
-	local item = menu:AddItem (0, "Remove Character or Guild", self.Menu_OnRemoveChar, self)
+	local item = menu:AddItem (0, L["Remove Character or Guild"], self.Menu_OnRemoveChar, self)
 
 	menu:AddItem (0, "", nil, self)
-	menu:AddItem (0, "Import settings from selected character", self.Menu_OnImport, self)
-	menu:AddItem (0, "Export current settings to all characters", self.Menu_OnExport, self)
+	menu:AddItem (0, L["Import settings from selected character"], self.Menu_OnImport, self)
+	menu:AddItem (0, L["Export current settings to all characters"], self.Menu_OnExport, self)
 
 	menu:AddItem (0, "", nil, self)
-	menu:AddItem (0, "Sync account transfer file", self.Menu_OnSyncAccount, self)
+	menu:AddItem (0, L["Sync account transfer file"], self.Menu_OnSyncAccount, self)
 
 	local menu = Nx.Menu:Create (self.List.Frm, 250)
 	self.IListMenu = menu
 
 	self.NXEqRarityMin = 7
 
-	local item = menu:AddItem (0, "Show Lowest Equipped Rarity", self.Menu_OnRarityMin, self)
+	local item = menu:AddItem (0, L["Show Lowest Equipped Rarity"], self.Menu_OnRarityMin, self)
 	item:SetSlider (self, 0, 7, 1, "NXEqRarityMin")
 
-	local item = menu:AddItem (0, "Show Item Headers", self.Menu_OnShowItemCat, self)
+	local item = menu:AddItem (0, L["Show Item Headers"], self.Menu_OnShowItemCat, self)
 	item:SetChecked (true)
 
-	local item = menu:AddItem (0, "Sort By Rarity", self.Menu_OnSortByRarity, self)
+	local item = menu:AddItem (0, L["Sort By Rarity"], self.Menu_OnSortByRarity, self)
 	item:SetChecked (false)
 
 	self.NXRarityMin = 0
 
-	local item = menu:AddItem (0, "Show Lowest Rarity", self.Menu_OnRarityMin, self)
+	local item = menu:AddItem (0, L["Show Lowest Rarity"], self.Menu_OnRarityMin, self)
 	item:SetSlider (self, 0, 7, 1, "NXRarityMin")
 
-	local item = menu:AddItem (0, "Sort By Slot", self.Menu_OnSortBySlot, self)
+	local item = menu:AddItem (0, L["Sort By Slot"], self.Menu_OnSortBySlot, self)
 	item:SetChecked (false)
 end
 
@@ -537,7 +537,7 @@ function Nx.Warehouse:Menu_OnImport (item)
 		local rname, sname = strsplit (".", rc)
 		self.ImportChar = sname
 
-		local s = format ("Import %s's character data and reload?", sname)
+		local s = format (L["Import %s's character data and reload?"], sname)
 		Nx:ShowMessage (s, "Import", Nx.Warehouse.ImportDo, "Cancel")
 	end
 end
@@ -553,7 +553,7 @@ function Nx.Warehouse.ImportDo()
 end
 
 function Nx.Warehouse:Menu_OnExport (item)
-	local s = format ("Overwrite all character settings and reload?", sname)
+	local s = format (L["Overwrite all character settings and reload?"], sname)
 	Nx:ShowMessage (s, "Export", Nx.Warehouse.ExportDo, "Cancel")
 end
 
@@ -818,7 +818,7 @@ function Nx.Warehouse:Update()
 
 	-- Title
 
-	self.Win:SetTitle (format ("Warehouse: %d characters", #Nx.RealmChars))
+	self.Win:SetTitle (format (L["Warehouse: %d characters"], #Nx.RealmChars))
 
 	-- List
 

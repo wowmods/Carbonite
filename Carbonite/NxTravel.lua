@@ -34,7 +34,7 @@ function Nx.Travel:Init()
 	TakeTaxiNode = self.TakeTaxiNode		-- Hook it
 
 	local tr = {}
-	for n = 1, 6 do
+	for n = 1, 7 do
 		tr[n] = {}
 	end
 	self.Travel = tr

@@ -149,25 +149,25 @@ local function QuestOptions ()
 	if not questoptions then
 		questoptions = {
 			type = "group",
-			name = "Quest Options",
+			name = L["Quest Options"],
 			childGroups	= "tab",
 			args = {
 				quest = {
 					type = "group",
-					name = "Quest Options",
+					name = L["Quest Options"],
 					order = 1,
 					args = {
 						name = {
 							order = 1,
 							type = "description",
-							name = "Quest Window Options",
+							name = L["Quest Window Options"],
 						},
 						qaltl = {
 							order = 2,
 							type = "toggle",
 							width = "full",
-							name = "Use Alt-L instead of L for Carbonite Quests",
-							desc = "When enabled, leaves L as the default blizzard window and Alt-L for carbonite quests",
+							name = L["Use Alt-L instead of L for Carbonite Quests"],
+							desc = L["When enabled, leaves L as the default blizzard window and Alt-L for carbonite quests"],
 							get = function()
 								return Nx.qdb.profile.Quest.UseAltLKey
 							end,
@@ -179,8 +179,8 @@ local function QuestOptions ()
 							order = 3,
 							type = "toggle",
 							width = "full",
-							name = "Show Quests Side by Side",
-							desc = "When enabled, shows the quest details to the right side of the quest window",
+							name = L["Show Quests Side by Side"],
+							desc = L["When enabled, shows the quest details to the right side of the quest window"],
 							get = function()
 								return Nx.qdb.profile.Quest.SideBySide
 							end,
@@ -193,8 +193,8 @@ local function QuestOptions ()
 							order = 4,
 							type = "toggle",
 							width = "full",
-							name = "Show Daily Reset Time",
-							desc = "When enabled, shows the time until dailies reset",
+							name = L["Show Daily Reset Time"],
+							desc = L["When enabled, shows the time until dailies reset"],
 							get = function()
 								return Nx.qdb.profile.Quest.ShowDailyReset
 							end,
@@ -206,8 +206,8 @@ local function QuestOptions ()
 							order = 5,
 							type = "toggle",
 							width = "full",
-							name = "Show Daily Quest Count",
-							desc = "When enabled, shows the number of daily quests you've done",
+							name = L["Show Daily Quest Count"],
+							desc = L["When enabled, shows the number of daily quests you've done"],
 							get = function()
 								return Nx.qdb.profile.Quest.ShowDailyCount
 							end,
@@ -219,8 +219,8 @@ local function QuestOptions ()
 							order = 6,
 							type = "toggle",
 							width = "full",
-							name = "Show Quest ID",
-							desc = "When enabled, shows the quest ID beside the quest",
+							name = L["Show Quest ID"],
+							desc = L["When enabled, shows the quest ID beside the quest"],
 							get = function()
 								return Nx.qdb.profile.Quest.ShowId
 							end,
@@ -232,7 +232,7 @@ local function QuestOptions ()
 							order = 7,
 							type = "color",
 							width = "full",
-							name = "Quest Details Background Color",
+							name = L["Quest Details Background Color"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.DetailBC) }
@@ -250,7 +250,7 @@ local function QuestOptions ()
 							order = 8,
 							type = "color",
 							width = "full",
-							name = "Quest Details Text Color",
+							name = L["Quest Details Text Color"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.DetailTC) }
@@ -267,8 +267,8 @@ local function QuestOptions ()
 						qtscale = {
 							order = 9,
 							type = "range",
-							name = "Quest Details Scale",
-							desc = "Sets the size of the quest details",
+							name = L["Quest Details Scale"],						
+							desc = L["Sets the size of the quest details"],
 							min = .5,
 							max = 2,
 							step = .01,
@@ -295,14 +295,14 @@ local function QuestOptions ()
 						questdesc = {
 							order = 12,
 							type = "description",
-							name = "Quest Options",
+							name = L["Quest Options"],
 						},
 						qtool = {
 							order = 13,
 							type = "toggle",
 							width = "full",
-							name = "Show Quest Tooltips",
-							desc = "When enabled, adds quest information to tooltips",
+							name = L["Show Quest Tooltips"],
+							desc = L["When enabled, adds quest information to tooltips"],
 							get = function()
 								return Nx.qdb.profile.Quest.AddTooltip
 							end,
@@ -314,8 +314,8 @@ local function QuestOptions ()
 							order = 14,
 							type = "toggle",
 							width = "full",
-							name = "Share Quest Progress",
-							desc = "When enabled, shares your quest progress to group members and accepts thier shares",
+							name = L["Share Quest Progress"],
+							desc = L["When enabled, shares your quest progress to group members and accepts thier shares"],
 							get = function()
 								return Nx.qdb.profile.Quest.PartyShare
 							end,
@@ -327,8 +327,8 @@ local function QuestOptions ()
 							order = 15,
 							type = "toggle",
 							width = "full",
-							name = "Auto Accept Quests",
-							desc = "When enabled, will auto accept quests that get offered to you",
+							name = L["Auto Accept Quests"],
+							desc = L["When enabled, will auto accept quests that get offered to you"],
 							get = function()
 								return Nx.qdb.profile.Quest.AutoAccept
 							end,
@@ -340,8 +340,8 @@ local function QuestOptions ()
 							order = 16,
 							type = "toggle",
 							width = "full",
-							name = "Auto Turn In Quests",
-							desc = "When enabled, automatically turns in quests",
+							name = L["Auto Turn In Quests"],
+							desc = L["When enabled, automatically turns in quests"],
 							get = function()
 								return Nx.qdb.profile.Quest.AutoTurnIn
 							end,
@@ -353,8 +353,8 @@ local function QuestOptions ()
 							order = 17,
 							type = "toggle",
 							width = "full",
-							name = "Auto Turn In Self-Completion Quests",
-							desc = "When enabled, auto turns in quests that are self-completing",
+							name = L["Auto Turn In Self-Completion Quests"],
+							desc = L["When enabled, auto turns in quests that are self-completing"],
 							get = function()
 								return Nx.qdb.profile.Quest.AutoTurnInAC
 							end,
@@ -366,8 +366,8 @@ local function QuestOptions ()
 							order = 18,
 							type = "toggle",
 							width = "double",
-							name = "Broadcast Quest Changes",
-							desc = "When enabled, will send a group/raid message when you complete an objective",
+							name = L["Broadcast Quest Changes"],
+							desc = L["When enabled, will send a group/raid message when you complete an objective"],
 							get = function()
 								return Nx.qdb.profile.Quest.BroadcastQChanges
 							end,
@@ -378,8 +378,8 @@ local function QuestOptions ()
 						qbroadnum = {
 							order = 19,
 							type = "range",
-							name = "Broadcast after number of changes",
-							desc = "Sets the number of objective changes before it sends the group/raid message",
+							name = L["Broadcast after number of changes"],						
+							desc = L["Sets the number of objective changes before it sends the group/raid message"],
 							min = 1,
 							max = 999,
 							step = 1,
@@ -395,8 +395,8 @@ local function QuestOptions ()
 							order = 20,
 							type = "toggle",
 							width = "full",
-							name = "Show Extended Info in Quest Links",
-							desc = "When enabled, adds information about level and part number in quest links",
+							name = L["Show Extended Info in Quest Links"],
+							desc = L["When enabled, adds information about level and part number in quest links"],
 							get = function()
 								return Nx.qdb.profile.Quest.ShowLinkExtra
 							end,
@@ -408,8 +408,8 @@ local function QuestOptions ()
 							order = 21,
 							type = "toggle",
 							width = "full",
-							name = "Get Completed Quest Information on Login",
-							desc = "When enabled, will get all your completed quests from the server each login",
+							name = L["Get Completed Quest Information on Login"],
+							desc = L["When enabled, will get all your completed quests from the server each login"],
 							get = function()
 								return Nx.qdb.profile.Quest.HCheckCompleted
 							end,
@@ -426,14 +426,14 @@ local function QuestOptions ()
 						questmaps = {
 							order = 23,
 							type = "description",
-							name = "Quest Map Options",
+							name = L["Quest Map Options"],
 						},
 						qmshow = {
 							order = 24,
 							type = "toggle",
 							width = "full",
-							name = "Always Show Quest Watched Areas",
-							desc = "When enabled, will always show your watched quests on the map. This only works for quests carbonite knows",
+							name = L["Always Show Quest Watched Areas"],
+							desc = L["When enabled, will always show your watched quests on the map. This only works for quests carbonite knows"],
 							get = function()
 								return Nx.qdb.profile.Quest.MapShowWatchAreas
 							end,
@@ -445,7 +445,7 @@ local function QuestOptions ()
 							order = 25,
 							type = "color",
 							width = "full",
-							name = "Color of Watched Areas When Tracked",
+							name = L["Color of Watched Areas When Tracked"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchAreaTrackColor) }
@@ -464,7 +464,7 @@ local function QuestOptions ()
 							order = 26,
 							type = "color",
 							width = "full",
-							name = "Color of Watched Areas on Mouse Over",
+							name = L["Color of Watched Areas on Mouse Over"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchAreaHoverColor) }
@@ -483,7 +483,7 @@ local function QuestOptions ()
 							order = 27,
 							type = "color",
 							width = "full",
-							name = "Alpha of Watched Areas",
+							name = L["Alpha of Watched Areas"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchAreaAlpha) }
@@ -500,8 +500,8 @@ local function QuestOptions ()
 						qmgraph = {
 							order = 28,
 							type	= "select",
-							name	= "Watched Area Graphic",
-							desc	= "Sets the graphic to be used for watched areas",
+							name = L["Watched Area Graphic"],
+							desc = L["Sets the graphic to be used for watched areas"],
 							get	= function()
 								local vals = Nx.Opts:CalcChoices("QArea")
 								for a,b in pairs(vals) do
@@ -529,9 +529,9 @@ local function QuestOptions ()
 						qmcolperq = {
 							order = 29,
 							type = "toggle",
-							name = "Use One Color Per Quest",
+							name = L["Use One Color Per Quest"],
 							width = "full",
-							desc = "When enabled, will use one specific color per quest area",
+							desc = L["When enabled, will use one specific color per quest area"],
 							get = function()
 								return Nx.qdb.profile.Quest.MapWatchColorPerQ
 							end,
@@ -542,8 +542,8 @@ local function QuestOptions ()
 						qttlcols = {
 							order = 30,
 							type = "range",
-							name = "Total Colors To Use",
-							desc = "Sets the number of possible colors to use for quest watching",
+							name = L["Total Colors To Use"],						
+							desc = L["Sets the number of possible colors to use for quest watching"],
 							min = 1,
 							max = 12,
 							step = 1,
@@ -560,7 +560,7 @@ local function QuestOptions ()
 							order = 31,
 							type = "color",
 							width = "full",
-							name = "Watch Color 1",
+							name = L["Watch Color 1"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC1) }
@@ -579,7 +579,7 @@ local function QuestOptions ()
 							order = 32,
 							type = "color",
 							width = "full",
-							name = "Watch Color 2",
+							name = L["Watch Color 2"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC2) }
@@ -598,7 +598,7 @@ local function QuestOptions ()
 							order = 33,
 							type = "color",
 							width = "full",
-							name = "Watch Color 3",
+							name = L["Watch Color 3"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC3) }
@@ -617,7 +617,7 @@ local function QuestOptions ()
 							order = 34,
 							type = "color",
 							width = "full",
-							name = "Watch Color 4",
+							name = L["Watch Color 4"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC4) }
@@ -636,7 +636,7 @@ local function QuestOptions ()
 							order = 35,
 							type = "color",
 							width = "full",
-							name = "Watch Color 5",
+							name = L["Watch Color 5"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC5) }
@@ -655,7 +655,7 @@ local function QuestOptions ()
 							order = 36,
 							type = "color",
 							width = "full",
-							name = "Watch Color 6",
+							name = L["Watch Color 6"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC6) }
@@ -674,7 +674,7 @@ local function QuestOptions ()
 							order = 37,
 							type = "color",
 							width = "full",
-							name = "Watch Color 7",
+							name = L["Watch Color 7"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC7) }
@@ -693,7 +693,7 @@ local function QuestOptions ()
 							order = 38,
 							type = "color",
 							width = "full",
-							name = "Watch Color 8",
+							name = L["Watch Color 8"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC8) }
@@ -712,7 +712,7 @@ local function QuestOptions ()
 							order = 39,
 							type = "color",
 							width = "full",
-							name = "Watch Color 9",
+							name = L["Watch Color 9"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC9) }
@@ -731,7 +731,7 @@ local function QuestOptions ()
 							order = 40,
 							type = "color",
 							width = "full",
-							name = "Watch Color 10",
+							name = L["Watch Color 10"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC10) }
@@ -750,7 +750,7 @@ local function QuestOptions ()
 							order = 41,
 							type = "color",
 							width = "full",
-							name = "Watch Color 11",
+							name = L["Watch Color 11"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC11) }
@@ -769,7 +769,7 @@ local function QuestOptions ()
 							order = 42,
 							type = "color",
 							width = "full",
-							name = "Watch Color 12",
+							name = L["Watch Color 12"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.Quest.MapWatchC12) }
@@ -793,8 +793,8 @@ local function QuestOptions ()
 						QuestFont = {
 							order = 44,
 							type	= "select",
-							name	= "Quest Font",
-							desc	= "Sets the font to be used on the quest window",
+							name = L["Quest Font"],
+							desc = L["Sets the font to be used on the quest window"],
 							get	= function()
 								local vals = Nx.Opts:CalcChoices("FontFace","Get")
 								for a,b in pairs(vals) do
@@ -816,8 +816,8 @@ local function QuestOptions ()
 						QuestFontSize = {
 							order = 45,
 							type = "range",
-							name = "Quest Font Size",
-							desc = "Sets the size of the quest window font",
+							name = L["Quest Font Size"],						
+							desc = L["Sets the size of the quest window font"],
 							min = 6,
 							max = 20,
 							step = 1,
@@ -833,8 +833,8 @@ local function QuestOptions ()
 						QuestFontSpacing = {
 							order = 46,
 							type = "range",
-							name = "Quest Font Spacing",
-							desc = "Sets the spacing of the quest window font",
+							name = L["Quest Font Spacing"],						
+							desc = L["Sets the spacing of the quest window font"],
 							min = -10,
 							max = 20,
 							step = 1,
@@ -851,15 +851,15 @@ local function QuestOptions ()
 			    },
 				watch = {
 					type = "group",
-					name = "Watch Options",
+					name = L["Watch Options"],
 					order = 2,
 					args = {
 						qwhide = {
 							order = 1,
 							type = "toggle",
 							width = "full",
-							name = "Hide Quest Watch Window",
-							desc = "When enabled, stops carbonite from displaying the quest watch window",
+							name = L["Hide Quest Watch Window"],
+							desc = L["When enabled, stops carbonite from displaying the quest watch window"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.Hide
 							end,
@@ -872,8 +872,8 @@ local function QuestOptions ()
 							order = 2,
 							type = "toggle",
 							width = "full",
-							name = "Hide Quest Watch Window in Raids",
-							desc = "When enabled, stops carbonite from displaying the quest watch window while your in a raid",
+							name = L["Hide Quest Watch Window in Raids"],
+							desc = L["When enabled, stops carbonite from displaying the quest watch window while your in a raid"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.HideRaid
 							end,
@@ -885,8 +885,8 @@ local function QuestOptions ()
 							order = 3,
 							type = "toggle",
 							width = "full",
-							name = "Lock Quest Watch Window",
-							desc = "When enabled, stops carbonite from being able to move",
+							name = L["Lock Quest Watch Window"],
+							desc = L["When enabled, stops carbonite from being able to move"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.Lock
 							end,
@@ -899,8 +899,8 @@ local function QuestOptions ()
 							order = 4,
 							type = "toggle",
 							width = "full",
-							name = "Grow quest watch window Upwards",
-							desc = "When enabled, objectives and quests get added in an upward direction instead of down",
+							name = L["Grow quest watch window Upwards"],
+							desc = L["When enabled, objectives and quests get added in an upward direction instead of down"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.GrowUp
 							end,
@@ -913,8 +913,8 @@ local function QuestOptions ()
 							order = 5,
 							type = "toggle",
 							width = "full",
-							name = "Use A Fixed Size for Quest Watch",
-							desc = "When enabled, the carbonite quest watch window does not allow resizing, just movement (RELOAD REQUIRED)",
+							name = L["Use A Fixed Size for Quest Watch"],
+							desc = L["When enabled, the carbonite quest watch window does not allow resizing, just movement (RELOAD REQUIRED)"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.FixedSize
 							end,
@@ -927,8 +927,8 @@ local function QuestOptions ()
 							order = 6,
 							type = "toggle",
 							width = "full",
-							name = "Hide Blizzards Quest Track Window",
-							desc = "When enabled, hides blizzards version of the track window",
+							name = L["Hide Blizzards Quest Track Window"],
+							desc = L["When enabled, hides blizzards version of the track window"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.HideBlizz
 							end,
@@ -940,8 +940,8 @@ local function QuestOptions ()
 							order = 7,
 							type = "toggle",
 							width = "full",
-							name = "Disable Blizzards Auto Quest Tracking",
-							desc = "When enabled, turns off blizzards quest watch window auto adding new quests (RELOAD REQUIRED)",
+							name = L["Disable Blizzards Auto Quest Tracking"],
+							desc = L["When enabled, turns off blizzards quest watch window auto adding new quests (RELOAD REQUIRED)"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.BlizzModify
 							end,
@@ -953,8 +953,8 @@ local function QuestOptions ()
 						qwtextsize = {
 							order = 8,
 							type = "range",
-							name = "Object Text Length Before Linewrap",
-							desc = "Sets the number of characters before an objective wraps",
+							name = L["Object Text Length Before Linewrap"],						
+							desc = L["Sets the number of characters before an objective wraps"],
 							min = 20,
 							max = 999,
 							step = 1,
@@ -971,8 +971,8 @@ local function QuestOptions ()
 							order = 9,
 							type = "toggle",
 							width = "full",
-							name = "Sync Carbonite Quest Watch with Blizzard Quest Watch",
-							desc = "When enabled, syncs the two watch lists which enables blizzard quest blobs to appear on the minimap",
+							name = L["Sync Carbonite Quest Watch with Blizzard Quest Watch"],
+							desc = L["When enabled, syncs the two watch lists which enables blizzard quest blobs to appear on the minimap"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.Sync
 							end,
@@ -983,8 +983,8 @@ local function QuestOptions ()
 						qrefresh = {
 							order = 10,
 							type = "range",
-							name = "Watch Delay Time",
-							desc = "Sets the forced delay time of watch update in ms, performance toggle for systems that need it",
+							name = L["Watch Delay Time"],
+							desc = L["Sets the forced delay time of watch update in ms, performance toggle for systems that need it"],
 							min = 1,
 							max = 1000,
 							step = 1,
@@ -1013,8 +1013,8 @@ local function QuestOptions ()
 							order = 13,
 							type = "toggle",
 							width = "full",
-							name = "Auto Watch New Quests",
-							desc = "When enabled, any new quest you pickup is automatically watched",
+							name = L["Auto Watch New Quests"],
+							desc = L["When enabled, any new quest you pickup is automatically watched"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.AddNew
 							end,
@@ -1026,8 +1026,8 @@ local function QuestOptions ()
 							order = 14,
 							type = "toggle",
 							width = "full",
-							name = "Auto Watch Changed Quests",
-							desc = "When enabled, any quest whose objective changes from you looting an item, or talking to someone is automatically watched",
+							name = L["Auto Watch Changed Quests"],
+							desc = L["When enabled, any quest whose objective changes from you looting an item, or talking to someone is automatically watched"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.AddChanged
 							end,
@@ -1039,8 +1039,8 @@ local function QuestOptions ()
 							order = 15,
 							type = "toggle",
 							width = "full",
-							name = "Auto Remove Completed Quests",
-							desc = "When enabled, when you complete a quest it will be removed from your watch list",
+							name = L["Auto Remove Completed Quests"],
+							desc = L["When enabled, when you complete a quest it will be removed from your watch list"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.RemoveComplete
 							end,
@@ -1052,8 +1052,8 @@ local function QuestOptions ()
 							order = 16,
 							type = "toggle",
 							width = "full",
-							name = "Show distance to quest objectives",
-							desc = "When enabled, attempts to display how far approximately you are from a quest or objective",
+							name = L["Show distance to quest objectives"],
+							desc = L["When enabled, attempts to display how far approximately you are from a quest or objective"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.ShowDist
 							end,
@@ -1066,8 +1066,8 @@ local function QuestOptions ()
 							order = 17,
 							type = "toggle",
 							width = "full",
-							name = "Auto Hide Finished Objectives",
-							desc = "When enabled, objectives that are 100% complete will be removed from the list",
+							name = L["Auto Hide Finished Objectives"],
+							desc = L["When enabled, objectives that are 100% complete will be removed from the list"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.HideDoneObj
 							end,
@@ -1080,8 +1080,8 @@ local function QuestOptions ()
 							order = 18,
 							type = "toggle",
 							width = "full",
-							name = "Show Objective Amount First",
-							desc = "When enabled, puts your objective progress before the objective instead of after",
+							name = L["Show Objective Amount First"],
+							desc = L["When enabled, puts your objective progress before the objective instead of after"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.OCntFirst
 							end,
@@ -1100,8 +1100,8 @@ local function QuestOptions ()
 							order = 20,
 							type = "toggle",
 							width = "full",
-							name = "Watch Scenarios",
-							desc = "When enabled, will place scenario status at the top of your watch window",
+							name = L["Watch Scenarios"],
+							desc = L["When enabled, will place scenario status at the top of your watch window"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.ScenTrack
 							end,
@@ -1114,8 +1114,8 @@ local function QuestOptions ()
 							order = 21,
 							type = "toggle",
 							width = "full",
-							name = "Watch Achievements",
-							desc = "When enabled, will place any tracked achievements at the top of your watch window",
+							name = L["Watch Achievements"],
+							desc = L["When enabled, will place any tracked achievements at the top of your watch window"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.AchTrack
 							end,
@@ -1128,8 +1128,8 @@ local function QuestOptions ()
 							order = 22,
 							type = "toggle",
 							width = "full",
-							name = "Watch Challenge Modes",
-							desc = "When enabled, will place the timer for your challenge mode at the top of your watch window",
+							name = L["Watch Challenge Modes"],
+							desc = L["When enabled, will place the timer for your challenge mode at the top of your watch window"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.ChalTrack
 							end,
@@ -1142,8 +1142,8 @@ local function QuestOptions ()
 							order = 23,
 							type = "toggle",
 							width = "full",
-							name = "Show Zone Achievement if Known",
-							desc = "When enabled, if carbonite knows there is a zone achievement for number of quests it will display it",
+							name = L["Show Zone Achievement if Known"],
+							desc = L["When enabled, if carbonite knows there is a zone achievement for number of quests it will display it"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.AchZoneShow
 							end,
@@ -1162,8 +1162,8 @@ local function QuestOptions ()
 							order = 25,
 							type = "toggle",
 							width = "full",
-							name = "Show Close Button",
-							desc = "When enabled, will place a button on the watch window to close it (RELOADS UI)",
+							name = L["Show Close Button"],
+							desc = L["When enabled, will place a button on the watch window to close it (RELOADS UI)"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.ShowClose
 							end,
@@ -1176,8 +1176,8 @@ local function QuestOptions ()
 							order = 26,
 							type = "toggle",
 							width = "full",
-							name = "Fade Entire Window",
-							desc = "When enabled, if the quest watch window fades, will ensure all of it fades text and all instead of just the window itself",
+							name = L["Fade Entire Window"],
+							desc = L["When enabled, if the quest watch window fades, will ensure all of it fades text and all instead of just the window itself"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.FadeAll
 							end,
@@ -1190,7 +1190,7 @@ local function QuestOptions ()
 							order = 27,
 							type = "color",
 							width = "full",
-							name = "Quest Watch Background Color",
+							name = L["Quest Watch Background Color"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.QuestWatch.BGColor) }
@@ -1210,7 +1210,7 @@ local function QuestOptions ()
 							order = 28,
 							type = "color",
 							width = "full",
-							name = "Quest Complete Color",
+							name = L["Quest Complete Color"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.QuestWatch.CompleteColor) }
@@ -1230,7 +1230,7 @@ local function QuestOptions ()
 							order = 29,
 							type = "color",
 							width = "full",
-							name = "Quest Incomplete Color",
+							name = L["Quest Incomplete Color"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.QuestWatch.IncompleteColor) }
@@ -1250,7 +1250,7 @@ local function QuestOptions ()
 							order = 30,
 							type = "color",
 							width = "full",
-							name = "Objective Complete Color",
+							name = L["Objective Complete Color"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.QuestWatch.OCompleteColor) }
@@ -1270,7 +1270,7 @@ local function QuestOptions ()
 							order = 31,
 							type = "color",
 							width = "full",
-							name = "Objective Incomplete Color",
+							name = L["Objective Incomplete Color"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.QuestWatch.OIncompleteColor) }
@@ -1290,8 +1290,8 @@ local function QuestOptions ()
 							order = 32,
 							type = "toggle",
 							width = "full",
-							name = "Color Objective Based on Progress",
-							desc = "When enabled, will color your objectives based on how complete they are",
+							name = L["Color Objective Based on Progress"],
+							desc = L["When enabled, will color your objectives based on how complete they are"],
 							get = function()
 								return Nx.qdb.profile.QuestWatch.ShowPerColor
 							end,
@@ -1309,8 +1309,8 @@ local function QuestOptions ()
 						qwiconsize = {
 							order = 34,
 							type = "range",
-							name = "Clickable Icon Size (0 disables)",
-							desc = "If a quest has an item to be used, will draw it beside the quest at the size defined here",
+							name = L["Clickable Icon Size (0 disables)"],						
+							desc = L["If a quest has an item to be used, will draw it beside the quest at the size defined here"],
 							min = 0,
 							max = 50,
 							step = 1,
@@ -1333,8 +1333,8 @@ local function QuestOptions ()
 							order = 36,
 							type = "color",
 							width = "full",
-							name = "Item Transparency",
-							desc = "Only uses the Alpha value, and is used to make clickable items in the watch list transparent",
+							name = L["Item Transparency"],
+							desc = L["Only uses the Alpha value, and is used to make clickable items in the watch list transparent"],
 							hasAlpha = true,
 							get = function()
 								local arr = { Nx.Split("|",Nx.qdb.profile.QuestWatch.ItemAlpha) }
@@ -1358,8 +1358,8 @@ local function QuestOptions ()
 						QuestWatchFont = {
 							order = 38,
 							type	= "select",
-							name	= "Quest Watch Font",
-							desc	= "Sets the font to be used on the quest watch window",
+							name = L["Quest Watch Font"],
+							desc = L["Sets the font to be used on the quest watch window"],
 							get	= function()
 								local vals = Nx.Opts:CalcChoices("FontFace","Get")
 								for a,b in pairs(vals) do
@@ -1381,8 +1381,8 @@ local function QuestOptions ()
 						QuestWatchFontSize = {
 							order = 39,
 							type = "range",
-							name = "Watch Font Size",
-							desc = "Sets the size of the quest watch font",
+							name = L["Watch Font Size"],						
+							desc = L["Sets the size of the quest watch font"],
 							min = 6,
 							max = 20,
 							step = 1,
@@ -1398,8 +1398,8 @@ local function QuestOptions ()
 						QuestWatchFontSpacing = {
 							order = 40,
 							type = "range",
-							name = "Watch Font Spacing",
-							desc = "Sets the spacing of the quest watch font",
+							name = L["Watch Font Spacing"],						
+							desc = L["Sets the spacing of the quest watch font"],
 							min = -10,
 							max = 20,
 							step = 1,
@@ -1416,15 +1416,15 @@ local function QuestOptions ()
 				},
 				sounds = {
 					type = "group",
-					name = "Sound Options",
+					name = L["Sound Options"],
 					order = 3,
 					args = {
 						sndEnable = {
 							order = 1,
 							type = "toggle",
 							width = "full",
-							name = "Play Quest Complete Sound",
-							desc = "When enabled, one of the selected sounds below will play on quest completion",
+							name = L["Play Quest Complete Sound"],
+							desc = L["When enabled, one of the selected sounds below will play on quest completion"],
 							get = function()
 								return Nx.qdb.profile.Quest.SndPlayCompleted
 							end,
@@ -1436,13 +1436,13 @@ local function QuestOptions ()
 							order = 2,
 							type = "description",
 							width = "full",
-							name = "Place a check in sounds you want carbonite to play when a quest is complete.\nChecking a box will play the sound for you to hear."
+							name = L["Place a check in sounds you want carbonite to play when a quest is complete.\nChecking a box will play the sound for you to hear."]
 						},
 						snd1 = {
 							order = 3,
 							type = "toggle",
 							width = "full",
-							name = "Carbonite Quest Complete",
+							name = L["Carbonite Quest Complete"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd1
 							end,
@@ -1457,7 +1457,7 @@ local function QuestOptions ()
 							order = 4,
 							type = "toggle",
 							width = "full",
-							name = "Peon Work Complete",
+							name = L["Peon Work Complete"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd2
 							end,
@@ -1472,7 +1472,7 @@ local function QuestOptions ()
 							order = 5,
 							type = "toggle",
 							width = "full",
-							name = "Undead Well Done",
+							name = L["Undead Well Done"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd3
 							end,
@@ -1487,7 +1487,7 @@ local function QuestOptions ()
 							order = 6,
 							type = "toggle",
 							width = "full",
-							name = "Female Congradulations",
+							name = L["Female Congratulations"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd4
 							end,
@@ -1502,7 +1502,7 @@ local function QuestOptions ()
 							order = 7,
 							type = "toggle",
 							width = "full",
-							name = "Dwarven Well Done",
+							name = L["Dwarven Well Done"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd5
 							end,
@@ -1517,7 +1517,7 @@ local function QuestOptions ()
 							order = 8,
 							type = "toggle",
 							width = "full",
-							name = "Gnome Good Job",
+							name = L["Gnome Good Job"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd6
 							end,
@@ -1532,7 +1532,7 @@ local function QuestOptions ()
 							order = 9,
 							type = "toggle",
 							width = "full",
-							name = "Tauren Well Done",
+							name = L["Tauren Well Done"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd7
 							end,
@@ -1547,7 +1547,7 @@ local function QuestOptions ()
 							order = 10,
 							type = "toggle",
 							width = "full",
-							name = "Undead What Now",
+							name = L["Undead What Now"],							
 							get = function()
 								return Nx.qdb.profile.Quest.Snd8
 							end,
@@ -1562,13 +1562,13 @@ local function QuestOptions ()
 				},
 				database = {
 					type = "group",
-					name = "Databases",
+					name = L["Databases"],
 					order = 4,
 					args = {
 						title = {
 							order = 1,
 							type = "description",
-							name = "Reload the UI with the button at the bottom to change which quests are loaded.",
+							name = L["Reload the UI with the button at the bottom to change which quests are loaded."],							
 						},
 						spacer1 = {
 							order = 2,
@@ -1579,8 +1579,8 @@ local function QuestOptions ()
 							order = 3,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Level 0 (holidays, professions, etc)",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Level 0 (holidays, professions, etc)"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load0
 							end,
@@ -1592,8 +1592,8 @@ local function QuestOptions ()
 							order = 4,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 1-10",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 1-10"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load1
 							end,
@@ -1605,8 +1605,8 @@ local function QuestOptions ()
 							order = 5,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 11-20",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 11-20"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load2
 							end,
@@ -1618,8 +1618,8 @@ local function QuestOptions ()
 							order = 6,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 21-30",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 21-30"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load3
 							end,
@@ -1631,8 +1631,8 @@ local function QuestOptions ()
 							order = 7,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 31-40",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 31-40"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load4
 							end,
@@ -1644,8 +1644,8 @@ local function QuestOptions ()
 							order = 8,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 41-50",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 41-50"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load5
 							end,
@@ -1657,8 +1657,8 @@ local function QuestOptions ()
 							order = 9,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 51-60",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 51-60"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load6
 							end,
@@ -1670,8 +1670,8 @@ local function QuestOptions ()
 							order = 10,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 61-70",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 61-70"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load7
 							end,
@@ -1683,8 +1683,8 @@ local function QuestOptions ()
 							order = 11,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 71-80",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 71-80"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load8
 							end,
@@ -1696,8 +1696,8 @@ local function QuestOptions ()
 							order = 12,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 81-85",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 81-85"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load9
 							end,
@@ -1709,8 +1709,8 @@ local function QuestOptions ()
 							order = 13,
 							type = "toggle",
 							width = "full",
-							name = "Load Quests for Levels 86-90",
-							desc = "Loads all the carbonite quest data in this range on reload",
+							name = L["Load Quests for Levels 86-90"],
+							desc = L["Loads all the carbonite quest data in this range on reload"],
 							get = function()
 								return Nx.qdb.profile.Quest.Load10
 							end,
@@ -1730,7 +1730,7 @@ local function QuestOptions ()
 							func = function()
 								Nx.Opts.NXCmdReload()
 							end,
-							name = "Reload UI"
+							name = L["Reload UI"]						
 						},
 					},
 				},
@@ -1949,7 +1949,7 @@ function CarboniteQuest:OnInitialize()
 	Nx.Quest.RecordQuests(true)
 	Nx.Quest.List:LogUpdate()
 	Nx.Quest.Watch:Update()
-	tinsert(Nx.BrokerMenuTemplate,{ text = "Toggle Quest Watch", func = function() Nx.Quest.Watch.Win:Show(not Nx.Quest.Watch.Win:IsShown()) end })
+	tinsert(Nx.BrokerMenuTemplate,{ text = L["Toggle Quest Watch"], func = function() Nx.Quest.Watch.Win:Show(not Nx.Quest.Watch.Win:IsShown()) end })
 end
 
 function Nx.Quest:OnChat_msg_addon(msg,dist,target)
@@ -2147,59 +2147,59 @@ function Nx.Quest:Init()
 	}
 
 	self.DailyTypes = {
-		["1"] = "Daily",
-		["2"] = "Daily Dungeon",
-		["3"] = "Daily Heroic",
+		["1"] = L["Daily"],
+		["2"] = L["Daily Dungeon"],
+		["3"] = L["Daily Heroic"],
 	}
 	self.Reputations = {
-		["A"] = "Aldor",
-		["S"] = "Scryer",
-		["c"] = "Consortium",
-		["e"] = "Cenarion Expedition",
-		["g"] = "Sha'tari Skyguard",
-		["k"] = "Keepers of Time",
-		["l"] = "Lower City",
-		["n"] = "Netherwing",
-		["o"] = "Ogri'la",
-		["s"] = "Shattered Sun Offensive",
-		["t"] = "Sha'tar",
-		["z"] = "Honor Hold/Thrallmar",
+		["A"] = L["Aldor"],
+		["S"] = L["Scryer"],
+		["c"] = L["Consortium"],
+		["e"] = L["Cenarion Expedition"],
+		["g"] = L["Sha'tari Skyguard"],
+		["k"] = L["Keepers of Time"],
+		["l"] = L["Lower City"],
+		["n"] = L["Netherwing"],
+		["o"] = L["Ogri'la"],
+		["s"] = L["Shattered Sun Offensive"],
+		["t"] = L["Sha'tar"],
+		["z"] = L["Honor Hold/Thrallmar"],
 		-- WotLK
-		["C"] = "Argent Crusade",
-		["E"] = "Explorers' League",
-		["F"] = "Frenzyheart Tribe",
-		["f"] = "The Frostborn",
-		["H"] = "Horde Expedition",
-		["K"] = "The Kalu'ak",
-		["i"] = "Kirin Tor",
-		["N"] = "Knights of the Ebon Blade",
-		["O"] = "The Oracles",
-		["h"] = "The Sons of Hodir",
-		["a"] = "Alliance Vanguard",
-		["V"] = "Valiance Expedition",
-		["W"] = "Warsong Offensive",
-		["w"] = "The Wyrmrest Accord",
-		["I"] = "The Silver Covenant",		-- Patch 3.1
-		["R"] = "The Sunreavers",				-- Patch 3.1
+		["C"] = L["Argent Crusade"],
+		["E"] = L["Explorers' League"],
+		["F"] = L["Frenzyheart Tribe"],
+		["f"] = L["The Frostborn"],
+		["H"] = L["Horde Expedition"],
+		["K"] = L["The Kalu'ak"],
+		["i"] = L["Kirin Tor"],
+		["N"] = L["Knights of the Ebon Blade"],
+		["O"] = L["The Oracles"],
+		["h"] = L["The Sons of Hodir"],
+		["a"] = L["Alliance Vanguard"],
+		["V"] = L["Valiance Expedition"],
+		["W"] = L["Warsong Offensive"],
+		["w"] = L["The Wyrmrest Accord"],
+		["I"] = L["The Silver Covenant"],		-- Patch 3.1
+		["R"] = L["The Sunreavers"],				-- Patch 3.1
 	}
 	self.Requirements = {
---		["1"] = "Alliance",		-- Already stripped out by quest side removal code
---		["2"] = "Horde",
-		["oH"] = "Ogri'la Honored",
-		["H350"] = "Herbalism 350",
-		["M350"] = "Mining 350",
-		["S350"] = "Skining 350",
-		["G"] = "Gathering Skill",
-		["nF"] = "Netherwing Friendly",
-		["nH"] = "Netherwing Honored",
-		["nRA"] = "Netherwing Revered (Aldor)",
-		["nRS"] = "Netherwing Revered (Scryer)",
+--		["1"] = L["Alliance"],		-- Already stripped out by quest side removal code
+--		["2"] = L["Horde"],
+		["oH"] = L["Ogri'la Honored"],
+		["H350"] = L["Herbalism 350"],
+		["M350"] = L["Mining 350"],
+		["S350"] = L["Skining 350"],
+		["G"] = L["Gathering Skill"],
+		["nF"] = L["Netherwing Friendly"],
+		["nH"] = L["Netherwing Honored"],
+		["nRA"] = L["Netherwing Revered (Aldor)"],
+		["nRS"] = L["Netherwing Revered (Scryer)"],
 		-- WotLK
-		["hH"] = "The Sons of Hodir Honored",
-		["hR"] = "The Sons of Hodir Revered",
-		["J375"] = "Jewelcrafting 375",
-		["C"] = "Cooking",
-		["F"] = "Fishing",
+		["hH"] = L["The Sons of Hodir Honored"],
+		["hR"] = L["The Sons of Hodir Revered"],
+		["J375"] = L["Jewelcrafting 375"],
+		["C"] = L["Cooking"],
+		["F"] = L["Fishing"],
 	}
 
 	self.DailyIds = {
@@ -4795,11 +4795,11 @@ end
 function Nx.Quest:MsgNotInDB (typ)
 
 	if typ == "O" then
-		UIErrorsFrame:AddMessage ("This objective is not in the database", 1, 0, 0, 1)
+		UIErrorsFrame:AddMessage (L["This objective is not in the database"], 1, 0, 0, 1)
 	elseif typ == "Z" then
-		UIErrorsFrame:AddMessage ("This objective zone is not in the database", 1, 0, 0, 1)
+		UIErrorsFrame:AddMessage (L["This objective zone is not in the database"], 1, 0, 0, 1)
 	else
-		UIErrorsFrame:AddMessage ("This quest is not in the database", 1, 0, 0, 1)
+		UIErrorsFrame:AddMessage (L["This quest is not in the database"], 1, 0, 0, 1)
 	end
 end
 
@@ -5106,11 +5106,11 @@ function Nx.Quest.List:Open()
 
 	win:Attach (f, 0, 1, 0, 18)
 
-	self.FilterDesc = "Search: [click]"
+	self.FilterDesc = L["Search: [click]"]
 	self.FilterDescEsc = "Search: %[click%]"
 
 --	if Nx.Free then
---		self.FilterDesc = "Search: " .. Nx.FreeMsg
+--		self.FilterDesc = L["Search: "] .. Nx.FreeMsg
 --	end
 
 	self.Filters = { "", "", "", ""}
@@ -5154,51 +5154,51 @@ function Nx.Quest.List:Open()
 	local menui4 = {}
 	self.MenuItems4 = menui4
 
-	local item = menu:AddItem (0, "Toggle High Watch Priority", self.Menu_OnHighPri, self)
+	local item = menu:AddItem (0, L["Toggle High Watch Priority"], self.Menu_OnHighPri, self)
 	tinsert (menui1, item)
 
-	local item = menu:AddItem (0, "Show Category Headers", self.Menu_OnShowHeaders, self)
+	local item = menu:AddItem (0, L["Show Category Headers"], self.Menu_OnShowHeaders, self)
 	item:SetChecked (qopts.NXShowHeaders)
 	tinsert (menui1, item)
 
-	local item = menu:AddItem (0, "Show Objectives", self.Menu_OnShowObjectives, self)
+	local item = menu:AddItem (0, L["Show Objectives"], self.Menu_OnShowObjectives, self)
 	item:SetChecked (qopts.NXShowObj)
 	tinsert (menui1, item)
 
-	local item = menu:AddItem (0, "Show Only Party Quests", self.Menu_OnShowParty, self)
+	local item = menu:AddItem (0, L["Show Only Party Quests"], self.Menu_OnShowParty, self)
 	item:SetChecked (false)
 	tinsert (menui1, item)
 
 	local item = menu:AddItem (0, "")
 	tinsert (menui1, item)
 
-	local item = menu:AddItem (0, "Watch All Quests", self.Menu_OnWatchAll, self)
+	local item = menu:AddItem (0, L["Watch All Quests"], self.Menu_OnWatchAll, self)
 	tinsert (menui1, item)
 
-	local item = menu:AddItem (0, "Watch All Completed Quests", self.Menu_OnWatchCompleted, self)
+	local item = menu:AddItem (0, L["Watch All Completed Quests"], self.Menu_OnWatchCompleted, self)
 	tinsert (menui1, item)
 
 	local item = menu:AddItem (0, "")
 	tinsert (menui1, item)
 
-	local item = menu:AddItem (0, "Broadcast Quest Changes To Party", nil, self)
+	local item = menu:AddItem (0, L["Broadcast Quest Changes To Party"], nil, self)
 	item:SetChecked (Nx.qdb.profile.Quest, "BroadcastQChanges")
 	tinsert (menui1, item)
-	local item = menu:AddItem (0, "Send Quest Status To Party", self.Menu_OnSendQInfo, self)
+	local item = menu:AddItem (0, L["Send Quest Status To Party"], self.Menu_OnSendQInfo, self)
 	tinsert (menui1, item)
-	local item = menu:AddItem (0, "Share", self.Menu_OnShare, self)
+	local item = menu:AddItem (0, L["Share"], self.Menu_OnShare, self)
 	self.MenuIShare = item
 	tinsert (menui1, item)
 
 	local item = menu:AddItem (0, "")
 	tinsert (menui1, item)
-	local item = menu:AddItem (0, "Abandon", self.Menu_OnAbandon, self)
+	local item = menu:AddItem (0, L["Abandon"], self.Menu_OnAbandon, self)
 	tinsert (menui1, item)
 
-	local item = menu:AddItem (0, "Remove", self.Menu_OnCompleted, self)
+	local item = menu:AddItem (0, L["Remove"], self.Menu_OnCompleted, self)
 	tinsert (menui2, item)
 
-	local item = menu:AddItem (0, "Remove All", self.Menu_OnHistoryRemoveAll, self)
+	local item = menu:AddItem (0, L["Remove All"], self.Menu_OnHistoryRemoveAll, self)
 	tinsert (menui2, item)
 
 	local function func()
@@ -5206,49 +5206,49 @@ function Nx.Quest.List:Open()
 		QHistLogin = Nx:ScheduleTimer(Nx.Quest.QuestQueryTimer,.1,Nx.Quest)
 --		QueryQuestsCompleted()
 	end
-	local item = menu:AddItem (0, "Get Completed From Server", func, self)
+	local item = menu:AddItem (0, L["Get Completed From Server"], func, self)
 	tinsert (menui2, item)
 
-	local item = menu:AddItem (0, "Mark As Previously Completed", self.Menu_OnCompleted, self)
+	local item = menu:AddItem (0, L["Mark As Previously Completed"], self.Menu_OnCompleted, self)
 	tinsert (menui3, item)
 
-	tinsert (menui3, menu:AddItem (0, "Goto Quest Giver", self.Menu_OnGoto, self))
+	tinsert (menui3, menu:AddItem (0, L["Goto Quest Giver"], self.Menu_OnGoto, self))
 
 	local item = menu:AddItem (0, "")
 	tinsert (menui2, item)
 	tinsert (menui3, item)
 
-	local item = menu:AddItem (0, "Show All Quests", self.Menu_OnShowAllQuests, self)
+	local item = menu:AddItem (0, L["Show All Quests"], self.Menu_OnShowAllQuests, self)
 	item:SetChecked (false)
 	tinsert (menui2, item)
 	tinsert (menui3, item)
 
-	local item = menu:AddItem (0, "Show Low Level Quests", self.Menu_OnShowLowLevel, self)
+	local item = menu:AddItem (0, L["Show Low Level Quests"], self.Menu_OnShowLowLevel, self)
 	item:SetChecked (false)
 --	tinsert (menui2, item)
 	tinsert (menui3, item)
 
-	local item = menu:AddItem (0, "Show High Level Quests", self.Menu_OnShowHighLevel, self)
+	local item = menu:AddItem (0, L["Show High Level Quests"], self.Menu_OnShowHighLevel, self)
 	item:SetChecked (false)
 --	tinsert (menui2, item)
 	tinsert (menui3, item)
 
-	local item = menu:AddItem (0, "Show Quests From All Zones", self.Menu_OnShowAllZones, self)
+	local item = menu:AddItem (0, L["Show Quests From All Zones"], self.Menu_OnShowAllZones, self)
 	item:SetChecked (false)
 	tinsert (menui2, item)
 	tinsert (menui3, item)
 
-	local item = menu:AddItem (0, "Show Finished Quests", self.Menu_OnShowFinished, self)
+	local item = menu:AddItem (0, L["Show Finished Quests"], self.Menu_OnShowFinished, self)
 	item:SetChecked (false)
 	tinsert (menui3, item)
 
-	local item = menu:AddItem (0, "Show Only Non Dungeon Dailies", self.Menu_OnShowOnlyDailies, self)
+	local item = menu:AddItem (0, L["Show Only Non Dungeon Dailies"], self.Menu_OnShowOnlyDailies, self)
 	item:SetChecked (false)
 	tinsert (menui3, item)
 
 	local item = menu:AddItem (0, "")
 	tinsert (menui3, item)
-	local item = menu:AddItem (0, "Track None", self.Menu_OnTrackNone, self)
+	local item = menu:AddItem (0, L["Track None"], self.Menu_OnTrackNone, self)
 	tinsert (menui3, item)
 
 	local item = menu:AddItem (0, "")
@@ -5259,7 +5259,7 @@ function Nx.Quest.List:Open()
 	local function func()
 		Nx.Opts:Open ("Quest")
 	end
-	local item = menu:AddItem (0, "Options...", func)
+	local item = menu:AddItem (0, L["Options..."], func)
 	tinsert (menui1, item)
 	tinsert (menui2, item)
 	tinsert (menui3, item)
@@ -6733,7 +6733,7 @@ function Nx.Quest.List:Update()
 			list:ItemSet (4, qEntry.Col4)
 		end
 
-		local str = (showAllZones and "All" or Map:IdToName (mapId)) .. " Completed"
+		local str = (showAllZones and "All" or Map:IdToName (mapId)) .. L[" Completed"]
 
 		list:ItemSet (2, format ("|cffc0c0c0--- %s (%d) ---", str, dbTitleNum), dbTitleIndex)
 	end
@@ -7003,7 +7003,7 @@ function Nx.Quest.List:Update()
 --			qsindex = qsindex + 1
 		end
 
-		local str = (showAllZones and "Full" or Map:IdToName (mapId)) .. " Database"
+		local str = (showAllZones and "Full" or Map:IdToName (mapId)) .. L[" Database"]
 
 		list:ItemSet (2, format ("|cffc0c0c0--- %s (%d) ---", str, dbTitleNum), dbTitleIndex)
 
@@ -7057,7 +7057,7 @@ function Nx.Quest.List:Update()
 							haveStr = "|cffe0e0e0+ "
 						end
 
-						done = done == "0" and "" or "|cff80ff80 - Complete"
+						done = done == "0" and "" or "|cff80ff80 - " .. L["Complete"]
 
 						list:ItemSet (2, format ("%s %s%s%s", lvl, haveStr, name, done))
 					end
@@ -7758,7 +7758,7 @@ function Nx.Quest:FrameItems_Update (questState)
 	NxQuestDSCRewardTitleText:SetPoint ("TOPLEFT", "NxQuestDSC", "TOPLEFT", 0, -10)
 
 	local questState = "NxQuestDSC"
-	local questItemName = "NxQuestDSCItem"
+	local questItemName = L["NxQuestDSCItem"]
 
 	local numQuestRewards
 	local numQuestChoices
@@ -8118,17 +8118,17 @@ function Nx.Quest.Watch:Open()
 	local menu = Nx.Menu:Create (list.Frm)
 	self.Menu = menu
 
-	menu:AddItem (0, "Watch All Quests", qlist.Menu_OnWatchAll, qlist)
-	menu:AddItem (0, "Remove All Watches", self.Menu_OnRemoveAllWatches, self)
+	menu:AddItem (0, L["Watch All Quests"], qlist.Menu_OnWatchAll, qlist)
+	menu:AddItem (0, L["Remove All Watches"], self.Menu_OnRemoveAllWatches, self)
 
-	menu:AddItem (0, "Track None", qlist.Menu_OnTrackNone, qlist)
+	menu:AddItem (0, L["Track None"], qlist.Menu_OnTrackNone, qlist)
 
---	local item = menu:AddItem (0, "Max Auto Track", update, self)
+--	local item = menu:AddItem (0, L["Max Auto Track"], update, self)
 --	item:SetSlider (qopts, 1, 25, 1, "NXWAutoMax")
 
 	local i = 25
 
-	local item = menu:AddItem (0, "Max Visible In List", update, self)
+	local item = menu:AddItem (0, L["Max Visible In List"], update, self)
 	item:SetSlider (qopts, 1, i, 1, "NXWVisMax")
 
 --	menu:AddItem (0, "")
@@ -8144,41 +8144,41 @@ function Nx.Quest.Watch:Open()
 	local menu = Nx.Menu:Create (list.Frm, 260)
 	self.MenuPri = menu
 
-	local item = menu:AddItem (0, "Hide Unfinished Quests", update, self)
+	local item = menu:AddItem (0, L["Hide Unfinished Quests"], update, self)
 	item:SetChecked (qopts, "NXWHideUnfinished")
 
-	local item = menu:AddItem (0, "Hide 5+ Group Quests", update, self)
+	local item = menu:AddItem (0, L["Hide 5+ Group Quests"], update, self)
 	item:SetChecked (qopts, "NXWHideGroup")
 
-	local item = menu:AddItem (0, "Hide Quests Not In Zone", update, self)
+	local item = menu:AddItem (0, L["Hide Quests Not In Zone"], update, self)
 	item:SetChecked (qopts, "NXWHideNotInZone")
 
---	local item = menu:AddItem (0, "Hide Quests Not On Continent", update, self)
+--	local item = menu:AddItem (0, L["Hide Quests Not On Continent"], update, self)
 --	item:SetChecked (qopts, "NXWHideNotInCont")
 
-	local item = menu:AddItem (0, "Hide Quests Farther Than", update, self)
+	local item = menu:AddItem (0, L["Hide Quests Farther Than"], update, self)
 	item:SetSlider (qopts, 200, 20000, 1, "NXWHideDist")
 
-	local item = menu:AddItem (0, "Sort, Distance", update, self)
+	local item = menu:AddItem (0, L["Sort, Distance"], update, self)
 	item:SetSlider (qopts, 0, 1, nil, "NXWPriDist")
 
-	local item = menu:AddItem (0, "Sort, Complete", update, self)
+	local item = menu:AddItem (0, L["Sort, Complete"], update, self)
 	item:SetSlider (qopts, -200, 200, 1, "NXWPriComplete")
 
-	local item = menu:AddItem (0, "Sort, Low Level", update, self)
+	local item = menu:AddItem (0, L["Sort, Low Level"], update, self)
 	item:SetSlider (qopts, -200, 200, 1, "NXWPriLevel")
 
 	local function func()
 		Nx.Map:GetMap (1).Guide:UpdateGatherFolders()
 	end
 
-	local item = menu:AddItem (0, "Quest Giver Lower Levels To Show", func, self)
+	local item = menu:AddItem (0, L["Quest Giver Lower Levels To Show"], func, self)
 	item:SetSlider (Nx.qdb.profile.Quest, 0, 90, 1, "MapQuestGiversLowLevel")
 
-	local item = menu:AddItem (0, "Quest Giver Higher Levels To Show", func, self)
+	local item = menu:AddItem (0, L["Quest Giver Higher Levels To Show"], func, self)
 	item:SetSlider (Nx.qdb.profile.Quest, 0, 90, 1, "MapQuestGiversHighLevel")
 
---	local item = menu:AddItem (0, "Group", update, self)
+--	local item = menu:AddItem (0, L["Group"], update, self)
 --	item:SetSlider (qopts, -200, 200, 1, "NXWPriGroup")
 
 	-- Create watch button menu
@@ -8186,14 +8186,14 @@ function Nx.Quest.Watch:Open()
 	local menu = Nx.Menu:Create (list.Frm)
 	self.WatchMenu = menu
 
-	menu:AddItem (0, "Remove Watch", self.Menu_OnRemoveWatch, self)
-	menu:AddItem (0, "Link Quest (shift right click)", self.Menu_OnLinkQuest, self)
-	menu:AddItem (0, "Show Quest Log (alt right click)", self.Menu_OnShowQuest, self)
-	menu:AddItem (0, "Show On Map (shift left click)", self.Menu_OnShowMap, self)
-	menu:AddItem (0, "Share", self.Menu_OnShare, self)
+	menu:AddItem (0, L["Remove Watch"], self.Menu_OnRemoveWatch, self)
+	menu:AddItem (0, L["Link Quest (shift right click)"], self.Menu_OnLinkQuest, self)
+	menu:AddItem (0, L["Show Quest Log (alt right click)"], self.Menu_OnShowQuest, self)
+	menu:AddItem (0, L["Show On Map (shift left click)"], self.Menu_OnShowMap, self)
+	menu:AddItem (0, L["Share"], self.Menu_OnShare, self)
 
 	menu:AddItem (0, "")
-	menu:AddItem (0, "Abandon", self.Menu_OnAbandon, self)
+	menu:AddItem (0, L["Abandon"], self.Menu_OnAbandon, self)
 
 	--
 
@@ -8728,7 +8728,7 @@ function Nx.Quest.Watch:UpdateList()
 						end
 
 						if not isComplete and cur.ItemLink and Nx.qdb.profile.QuestWatch.ItemScale >= 1 then
-							list:ItemSetFrame ("WatchItem~" .. cur.QI .. "~" .. cur.ItemImg .. "~" .. cur.ItemCharges .. "~" .. cur.ItemID .. "~" .. cur.ItemLink)
+							list:ItemSetFrame ("WatchItem~" .. cur.QI .. "~" .. cur.ItemImg .. "~" .. cur.ItemCharges)
 						end
 
 						list:ItemSetButtonTip (cur.ObjText .. (cur.PartyDesc or ""))
@@ -8738,7 +8738,7 @@ function Nx.Quest.Watch:UpdateList()
 						local lvlStr = ""
 						if level > 0 then
 							local col = Quest:GetDifficultyColor (level)
-							lvlStr = format ("|cff%02x%02x%02x%2d ", col.r * 255, col.g * 255, col.b * 255, level)
+							lvlStr = format ("|cff%02x%02x%02x%2d%s ", col.r * 255, col.g * 255, col.b * 255, level, cur.TagShort)
 						end
 
 						local nameStr = format ("%s%s%s", lvlStr, color, cur.Title)
@@ -9290,7 +9290,7 @@ end
 function Nx.Quest:CreateGiverIconMenu (mainMenu, frm)
 	local completedMenu = Nx.Menu:Create (frm)
 	self.GiverIconMenuCompleted = completedMenu
-	self.GiverIconMenuICompleted = mainMenu:AddSubMenu (completedMenu, "Quest Completion...")
+	self.GiverIconMenuICompleted = mainMenu:AddSubMenu (completedMenu, L["Quest Completion..."])
 
 	self.GiverIconMenuICompletedT = {}
 

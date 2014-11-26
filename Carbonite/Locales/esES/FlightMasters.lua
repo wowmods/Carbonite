@@ -1,4 +1,4 @@
-if ( GetLocale() ~= "esES" ) then
+﻿if ( GetLocale() ~= "esES" ) then
 	return;
 end
 
@@ -19,7 +19,7 @@ L["Argent Tournament Grounds, Icecrown"] = "Campos del Torneo Argenta, Corona de
 L["Astranaar, Ashenvale"] = "Astranaar, Vallefresno"
 L["Azure Watch, Azuremyst Isle"] = "Avanzada Azur, Isla Bruma Azur"
 L["Bambala, Stranglethorn"] = "Bambala, Tuercespina"
-L["Beeble's Wreck, Isle Of Giants"] = true
+L["Beeble's Wreck, Isle of Giants"] = true
 L["Bilgewater Harbor, Azshara"] = "Muelle Pantoque, Azshara"
 L["Binan Village, Kun-Lai Summit"] = true
 L["Blackfathom Camp, Ashenvale"] = "Campamento Brazanegra, Vallefresno"

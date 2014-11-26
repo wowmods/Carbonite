@@ -1,4 +1,4 @@
-if ( GetLocale() ~= "frFR" ) then
+﻿if ( GetLocale() ~= "frFR" ) then
 	return;
 end
 
@@ -14,13 +14,13 @@ L["The Maelstrom"] = "Le Maelstrom"
 L["Pandaria"] = "Pandarie"
 L["All"] = "tout"
 L["Quest Givers"] = "Donneurs de Qu\195\170tes"
-L["Stable Master"] = "Maitre des \195\169curies"
+L["Stable Master"] = "Maitre des Ecuries" 
 L["Flight Master"] = "Maitre de Vol"
 L["Common Place"] = "Lieu Commun"
 L["Auctioneer"] = "Commissaire Priseur"
 L["Banker"] = "Banquier"
 L["Innkeeper"] = "Aubergiste"
-L["Arcane Reforger"] = "reforgeur Arcanique"
+L["Arcane Reforger"] = "Reforgeur Arcanique"
 L["Void Storage"] = "Chambre du vide"
 L["Transmogrifier"] = "Transmogriffage"
 L["Battle Pet Trainer"] = "Entraineur Familiers"
