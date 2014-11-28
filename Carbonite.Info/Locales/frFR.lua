@@ -5,19 +5,19 @@ end
 local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite.Info", "frFR", true)
 if not L then return end
 
-L["Info Options"] = true
+L["Info Options"] = "Options Info"
 L["Lock Info Windows"] = "Verrouiller Fen\195\170tre Info"
 L["Locks the location of your info windows"] = "Verrouiller l'emplacement de la fen\195\170tre Info"
 L["Info Window Background Color"] = "Couleur de fond de la fen\195\170tre Info"
 L["Info Font"] = "Police de la fen\195\170tre Info"
-L["Sets the font to be used for info windows"] = "D\195\169finir la police de la fen\195\170tre Info"
+L["Sets the font to be used for info windows"] = "D\195\169fini la police de la fen\195\170tre Info"
 L["Info Font Size"] = "Taille de la police Info"
-L["Sets the size of the info font"] = "D\195\169finir la taille de police de la fen\195\170tre Info"
+L["Sets the size of the info font"] = "D\195\169fini la taille de police de la fen\195\170tre Info"
 L["Info Font Spacing"] = "Espacement de la police fen\195\170tre Info"
-L["Sets the spacing of the info font"] = "D\195\169finir l'espacement de la police fen\195\170tre Info"
+L["Sets the spacing of the info font"] = "D\195\169fini l'espacement de la police fen\195\170tre Info"
 L["Show Info Windows"] = "Afficher fen\195\170tre Info"
-L["Toggle Info Windows"] = true
-L["Info Module"] = true
+L["Toggle Info Windows"] = "Basculer vers fen\195\170tre Info"
+L["Info Module"] = "Module Info"
 L["Close"] = "Fermer"
 L["Edit Item"] = "Editer Objet"
 L["Show"] = "Afficher"
