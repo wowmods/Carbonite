@@ -8021,8 +8021,7 @@ function Nx.Quest.Watch:Open()
 	win:SetUser (self, self.OnWin)
 	win:SetBGAlpha (0, 1)
 	win.Frm:SetClampedToScreen (true)
-	RegisterStateDriver(win.Frm, "visibility", "[combat] hide; show");
-
+	
 	local xo = 0
 	local yo = 0
 
