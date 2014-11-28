@@ -6486,8 +6486,7 @@ function Nx.Quest.List:Update()
 					tag = tag .. " " .. cur.GCnt
 				end
 
-				if cur.Daily then
-
+				if cur.Daily == LE_QUEST_FREQUENCY_DAILY then
 					if tag then
 						tag = format (DAILY_QUEST_TAG_TEMPLATE, tag)
 					else
