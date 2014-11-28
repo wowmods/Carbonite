@@ -4050,7 +4050,7 @@ function Nx.Map:UpdateWorld()
 	if winfo.MapBaseName then texName = winfo.MapBaseName end
 	if winfo.Garrison then
 		local level, mapname, x, y = C_Garrison.GetGarrisonInfo()
-		texName = mapname
+		texName = winfo.Overlay .. "_tier" .. level
 	end
 	for i = 1, 12 do
 		self.TileFrms[i].texture:SetTexture (texPath..texName..i)
