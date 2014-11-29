@@ -3679,11 +3679,13 @@ function Nx.Quest:ScanBlizzQuestDataZone()
 					end
 					Nx.Quests[-id] = patch
 					Nx.Quests[id] = quest
-					Nx.Quest.Watch:Update()
-					Nx.Quest:RecordQuestsLog()
 				end
 			end
 		end
+	end
+	if not Nx.Quest.List.LoggingIn then		
+		Nx.Quest.Watch:Update()
+		Nx.Quest:RecordQuestsLog()					
 	end
 	--Nx.prt ("%f secs", GetTime() - tm)
 end
@@ -6319,8 +6321,9 @@ function Nx.Quest.List:OnQuestUpdate (event)
 			Quest:AccessAllQuests()
 			QLogUpdate = Nx:ScheduleTimer(self.LogUpdate,.5,self)	-- Small delay, so access works (0 does work)
 
-		else			
-			Nx.Quest:ScanBlizzQuestDataZone()			
+		else								
+			self:LogUpdate()
+			Nx.Quest:ScanBlizzQuestDataZone()
 			self:LogUpdate()
 		end
 	else
@@ -6368,8 +6371,7 @@ function Nx.Quest.List:LogUpdate()
 
 		if Nx.qdb.profile.QuestWatch.AddNew and not Quest.DailyPVPIds[cur.QId] then
 			Quest.Watch:Add (curi)
-		end
-
+		end		
 		Quest:Capture (curi)
 
 --		Nx.prt ("OnQuestUpdate Watch %d %d", qn, i)
