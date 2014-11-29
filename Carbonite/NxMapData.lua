@@ -1304,14 +1304,22 @@ Map.MapWorldInfo = {
 		X = -109.166796875,
 		Y = -418.3333984375,
 		Garrison = true,
-		Overlay = "garrisonsmvalliance",
+		City = true,
+		MMOutside = true,
+		Explored = true,
+		MapBaseName = "garrisonsmvalliance_tier",
+		Overlay = "garrisonsmvalliance_tier1",
 	},
 	[976] = {
 		Scale = 1.404166015625,
 		X = -977.083203125,
 		Y = -1162.9166015625,
 		Garrison = true,
-		Overlay = "garrisonffhorde",
+		MMOutside = true,
+		Explored = true,
+		City = true,
+		MapBaseName = "garrisonffhorde_tier",
+		Overlay = "garrisonffhorde_tier1",
 	},
 	[978] = {
 		Scale = 6.2458203125,
@@ -2877,11 +2885,11 @@ Map.ZoneOverlays = {
 		["THECRACKLINGPLAINS"] = "439,137,266,293",
 		["WORGOL"] = "72,292,317,233",
 	},
-	["garrisonffhorde"] = { -- 976
-		["garrisonffhorde"] = "0,0,1024,768",
+	["garrisonffhorde_tier1"] = { -- 976
+		["garrisonffhorde_tier1"] = "0,0,1024,768",
 	},
-	["garrisonsmvalliance"] = { -- 971
-		["garrisonsmvalliance"] = "0,0,1024,768",
+	["garrisonsmvalliance_tier1"] = { -- 971
+		["garrisonsmvalliance_tier1"] = "0,0,1024,768",
 	},
 	["gorgrond"] = { -- 949
 		["BASTIONRISE"] = "283,507,324,161",
