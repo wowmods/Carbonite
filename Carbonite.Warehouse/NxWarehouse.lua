@@ -42,7 +42,7 @@ local defaults = {
 			WarehouseFontSpacing = 6,
 			Enable = true,
 			AddTooltip = true,
-		},
+					},
 	},
 }
 
@@ -208,7 +208,7 @@ function CarboniteWarehouse:OnInitialize()
 			hooksecurefunc (ItemRefTooltip, name, Nx.Warehouse.ReftipProcess)
 	end
 
-	Nx:AddToConfig("Warehouse Module",WarehouseOptions(),"Warehouse Module")
+	Nx:AddToConfig("Warehouse Module",WarehouseOptions(),L["Warehouse Module"])
 	tinsert(Nx.BrokerMenuTemplate,{ text = L["Toggle Warehouse"], func = function() Nx.Warehouse:ToggleShow() end })
 	if Nx.RequestTime then
 		RequestTimePlayed()
