@@ -112,6 +112,16 @@ L["Scale"] = "缩放"
 L["Transparency"] = "透明度"
 L["Reset Layout"] = "重设布局"
 
+-- UI Tooltips
+L["Close/Menu"] = true
+L["Close/Unlock"] = true
+L["Pick Color"] = true
+L["Unlock"] = true
+L["Maximize"] = true
+L["Restore"] = true
+L["Minimize"] = true
+L["Auto Scale"] = true
+
 -- Stuff from old localization
 L["Searching for Artifacts"] = "寻找考古点"		-- NXlARTIFACTS
 L["Extract Gas"] = "精炼气体"					-- NXlEXTRACTGAS
