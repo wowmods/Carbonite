@@ -287,7 +287,7 @@ function CarboniteWeekly:OnInitialize()
 		Nx.wkdb.profile.Weekly.SecondsToReset = resettime + Nx.Weekly:CalcReset()
 		Nx.Weekly:Reset()
 	end
-	Nx:AddToConfig("Weekly Status Module",WeeklyOptions(),"Weekly Status Module")
+	Nx:AddToConfig("Weekly Status Module",WeeklyOptions(),L["Weekly Status Module"])
 	tinsert(Nx.BrokerMenuTemplate,{ text = L["Toggle Weekly List"], func = function() Nx.Weekly:ToggleShow() end })
 end
 
