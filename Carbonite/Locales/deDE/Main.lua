@@ -121,14 +121,14 @@ L["Transparency"] = "Transparenz"
 L["Reset Layout"] = "Layout zur\195\188cksetzen"
 
 -- UI Tooltips
-L["Close/Menu"] = true
-L["Close/Unlock"] = true
-L["Pick Color"] = true
-L["Unlock"] = true
-L["Maximize"] = true
-L["Restore"] = true
-L["Minimize"] = true
-L["Auto Scale"] = true
+L["Close/Menu"] = "Schlie\195\159en/Men\195\188" 
+L["Close/Unlock"] = "Schlie\195\159en/Entsperren"
+L["Pick Color"] = "Farbe ausw\195\164hlen"
+L["Unlock"] = "Entsperren"
+L["Maximize"] = "Maximieren"
+L["Restore"] = "Wiederherstellen"
+L["Minimize"] = "Minimieren"
+L["Auto Scale"] = "Auto-Skalierung"
 
 -- Stuff from old localization
 L["Searching for Artifacts"] = "Suche nach Artefakten" 		-- NXlARTIFACTS
