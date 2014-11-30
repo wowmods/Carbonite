@@ -5,8 +5,8 @@ end
 local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite.Weekly", "deDE")
 if not L then return end
 
-L["Weekly Status Module"] = "w\195\192chentlicher Status Modul"
-L["Weekly Status Options"] = "Einstellungen w\195\192chentlicher Status"
+L["Weekly Status Module"] = "W\195\182chentliches"
+L["Weekly Status Options"] = "W\195\182chentlicher Status"
 L["General"] = "Allgemein"
 L["Day Reset Occurs"] = "Der Tag, an dem Blizzard die ID zur\195\188cksetzt"
 L["Monday"] = "Montag"
