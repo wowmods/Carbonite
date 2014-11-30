@@ -7761,7 +7761,7 @@ function Nx.Quest:FrameItems_Update (questState)
 	NxQuestDSCRewardTitleText:SetPoint ("TOPLEFT", "NxQuestDSC", "TOPLEFT", 0, -10)
 
 	local questState = "NxQuestDSC"
-	local questItemName = L["NxQuestDSCItem"]
+	local questItemName = "NxQuestDSCItem"
 
 	local numQuestRewards
 	local numQuestChoices
