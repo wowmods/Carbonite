@@ -134,6 +134,16 @@ L["Reload"] = "재시작"
 L["Profiling is on. This decreases game performance. Disable?"] = "프로필이 있습니다. 게임 성능이 떨어지게 됩니다. 사용 안하시겠습니까?"
 L["Disable and Reload"] ="사용안함 그리고 재시작"
 
+-- UI Tooltips
+L["Close/Menu"] = true
+L["Close/Unlock"] = true
+L["Pick Color"] = true
+L["Unlock"] = true
+L["Maximize"] = true
+L["Restore"] = true
+L["Minimize"] = true
+L["Auto Scale"] = true
+
 -- Stuff from old localization
 L["Searching for Artifacts"] = "유물 수색" 		-- NXlARTIFACTS
 L["Extract Gas"] = "가스 추출"						-- NXlEXTRACTGAS
