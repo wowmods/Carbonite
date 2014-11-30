@@ -261,6 +261,7 @@ L["Show Quest Log (alt right click)"] = "Quest Logbuch anzeigen (Alt-Rechtsklick
 L["Show On Map (shift left click)"] = "Zeige auf der Karte (Umschalten-Linksklick)"
 L["Quest Completion..."] = "Questfortschritt..."
 
+L["Menu"] = "Men\195\188"
 L["Priorities"] = "Priorit\195\164ten"
 L["Swap Views"] = "Anzeigen austauschen"
 L["Show Quests On Map"] = "Zeige Quests auf Karte"

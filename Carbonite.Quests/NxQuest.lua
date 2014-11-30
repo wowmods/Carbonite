@@ -1787,7 +1787,7 @@ function CarboniteQuest:OnInitialize()
 		VRGBADn = ".87|.87|.185|.94",
 	}
 	Nx.Button.TypeData["QuestWatchMenu"] = {
-		Tip = "Menu",
+		Tip = L["Menu"],
 		Skin = true,
 		Up = "ButWatchMenu",
 		Dn = "ButWatchMenu",
@@ -8139,7 +8139,7 @@ function Nx.Quest.Watch:Open()
 		Nx.Opts:Open ("Quest Watch")
 	end
 
-	menu:AddItem (0, "Options...", func)
+	menu:AddItem (0, L["Options..."], func)
 
 	-- Create priority button menu
 

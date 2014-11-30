@@ -257,6 +257,7 @@ L["Show Quest Log (alt right click)"] = true
 L["Show On Map (shift left click)"] = true
 L["Quest Completion..."] = true
 
+L["Menu"] = true
 L["Priorities"] = true
 L["Swap Views"] = true
 L["Show Quests On Map"] = true
