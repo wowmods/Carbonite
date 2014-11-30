@@ -118,6 +118,16 @@ L["Scale"] = "Маштаб"
 L["Transparency"] = "Прозрачность"
 L["Reset Layout"] = "Сбросить "
 
+-- UI Tooltips
+L["Close/Menu"] = true
+L["Close/Unlock"] = true
+L["Pick Color"] = true
+L["Unlock"] = true
+L["Maximize"] = true
+L["Restore"] = true
+L["Minimize"] = true
+L["Auto Scale"] = true
+
 -- Stuff from old localization
 L["Searching for Artifacts"] = "Поиск артефактов"		-- NXlARTIFACTS
 L["Extract Gas"] = "Извлечение газа"					-- NXlEXTRACTGAS
