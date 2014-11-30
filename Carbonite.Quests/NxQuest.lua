@@ -8445,9 +8445,7 @@ function Nx.Quest.Watch:OnTimer (item)
 		return
 	end
 
-	if not InCombatLockdown() then
-		local watched = self:UpdateList()
-	end
+	local watched = self:UpdateList()
 
 --	Nx.Quest:Route (watched)
 end

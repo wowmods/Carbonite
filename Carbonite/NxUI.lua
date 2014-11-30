@@ -2191,7 +2191,9 @@ end
 -- Set win width and height (client size)
 
 function Nx.Window:SetSize (width, height, skipChildren)
-
+	if InCombatLockdown() then
+		return
+	end
 	self.Frm:SetWidth (width + self.BorderW * 2)
 	self.Frm:SetHeight (height + self.TitleH + self.BorderH * 2)
 
@@ -4893,17 +4895,15 @@ end
 --------
 -- Free list frames by adding back to global list
 
-function Nx.List:FreeFrames (list)
-
+function Nx.List:FreeFrames (list)	
 	local frms = self.Frms
-
 	for n, f in ipairs (list.UsedFrms) do
-
-		f:Hide()
+		if not InCombatLockdown() then
+			f:Hide()
+		end
 		tinsert (frms[f.NXListFType], n, f)		-- Insert at top in same order, so we don't have flipping
 	end
-
-	list.UsedFrms = wipe (list.UsedFrms or {})
+	list.UsedFrms = wipe (list.UsedFrms or {})	
 end
 
 --------
@@ -4925,7 +4925,6 @@ end
 -- Get a list frame from the global list
 
 function Nx.List:GetFrame (list, typ)
-
 	local frms = self.Frms[typ]
 	local f = tremove (frms, 1)
 	if not f then
@@ -4941,7 +4940,7 @@ function Nx.List:GetFrame (list, typ)
 		f.NXListFType = typ
 	end
 	f:Show()
-	f:SetParent (list.Frm)
+	f:SetParent (list.Frm)	
 	tinsert (list.UsedFrms, f)
 	return f
 end
@@ -5249,7 +5248,9 @@ end
 -- self = instance
 
 function Nx.List:Resize (width, height)
-
+	if InCombatLockdown() then
+		return
+	end
 --	Nx.prt ("List resize %s %s", width, height)
 
 	local f = self.Frm
@@ -5478,7 +5479,7 @@ function Nx.List:Update (showLast)
 		self:ShowLast()
 	end
 
-	if self.ShowAll then
+	if self.ShowAll then		
 		self:Resize (0, 0)
 	end
 
@@ -5658,7 +5659,9 @@ function Nx.List:Update (showLast)
 					end
 
 				elseif typ == "WatchItem" then
-
+					if InCombatLockdown() then
+						return
+					end
 					local f = Nx.List:GetFrame (self, typ)
 					f:ClearAllPoints()
 
