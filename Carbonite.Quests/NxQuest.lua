@@ -1797,7 +1797,7 @@ function CarboniteQuest:OnInitialize()
 		VRGBADn = "1|1|1|.75",
 	}
 	Nx.Button.TypeData["QuestWatchPri"] = {
-		Tip = "Priorities",
+		Tip = L["Priorities"],
 		Skin = true,
 		Up = "ButWatchMenu",
 		Dn = "ButWatchMenu",
@@ -1807,7 +1807,7 @@ function CarboniteQuest:OnInitialize()
 		VRGBADn = "1|1|.5|.75",
 	}
 	Nx.Button.TypeData["QuestWatchSwap"] = {
-		Tip = "Swap Views",
+		Tip = L["Swap Views"],
 		Skin = true,
 		Up = "ButWatchMenu",
 		Dn = "ButWatchMenu",
@@ -1817,7 +1817,7 @@ function CarboniteQuest:OnInitialize()
 		VRGBADn = "1|1|1|.75",
 	}
 	Nx.Button.TypeData["QuestWatchShowOnMap"] = {
-		Tip = "Show Quests On Map",
+		Tip = L["Show Quests On Map"],
 		Bool = true,
 		Up = "Interface\\Addons\\Carbonite\\Gfx\\Buttons\\DotOn",
 		Dn = "Interface\\Addons\\Carbonite\\Gfx\\Buttons\\DotOn",
@@ -1827,7 +1827,7 @@ function CarboniteQuest:OnInitialize()
 		VRGBADn = ".25|1|.25|.87",
 	}
 	Nx.Button.TypeData["QuestWatchATrack"] = {
-		Tip = "Auto Track",
+		Tip = L["Auto Track"],
 		Bool = true,
 		Up = "Interface\\Addons\\Carbonite\\Gfx\\Buttons\\DotOn",
 		Dn = "Interface\\Addons\\Carbonite\\Gfx\\Buttons\\DotOn",
@@ -1837,7 +1837,7 @@ function CarboniteQuest:OnInitialize()
 		VRGBADn = "1|.25|1|.87",
 	}
 	Nx.Button.TypeData["QuestWatchGivers"] = {
-		Tip = "Quest Givers",
+		Tip = L["Quest Givers"],
 		States = 3,
 		Tx = "Interface\\Addons\\Carbonite\\Gfx\\Buttons\\DotOn",
 		{
@@ -1854,7 +1854,7 @@ function CarboniteQuest:OnInitialize()
 		}
 	}
 	Nx.Button.TypeData["QuestWatchParty"] = {
-		Tip = "Show Party Quests",
+		Tip = L["Show Party Quests"],
 		Bool = true,
 		Up = "Interface\\Addons\\Carbonite\\Gfx\\Buttons\\DotOn",
 		Dn = "Interface\\Addons\\Carbonite\\Gfx\\Buttons\\DotOn",
@@ -3793,7 +3793,7 @@ function Nx.Quest:GetHistoryTimer()
 			QHistQuery = Nx:ScheduleTimer(Nx.Quest.QuestQueryTimer, .1, Nx.Quest)
 		end
 
-		Nx:ShowMessage ("Get character's quest completion data from the server?", "Get", func, "Cancel")
+		Nx:ShowMessage (L["Get character's quest completion data from the server?"], "Get", func, "Cancel")
 	end
 end
 
@@ -4329,7 +4329,7 @@ function Nx.Quest:GetLongTitle (cur)
 
 	local quest = cur.Q
 	if quest and quest.CNum then
-		title = title .. format (" (Part %d of %d)", quest.CNum, cur.CNumMax)
+		title = title .. format (L[" (Part %d of %d)"], quest.CNum, cur.CNumMax)
 	end
 
 	return title
@@ -4341,9 +4341,9 @@ function Nx.Quest:GetPartTitle (quest, cur)
 
 	if quest and quest.CNum then
 		if cur then
-			s = s .. format ("(Part %d of %d)", quest.CNum, cur.CNumMax)
+			s = s .. format (L["(Part %d of %d)"], quest.CNum, cur.CNumMax)
 		else
-			s = s .. format ("(Part %d)", quest.CNum)
+			s = s .. format (L["(Part %d)"], quest.CNum)
 		end
 	end
 
@@ -4517,8 +4517,8 @@ function Nx.Quest:Goto (qId)
 	cur.Q = quest
 	cur.QI = 0
 	cur.QId = qId
-	cur.Header = "Goto"
-	cur.Title = "Goto: " .. name
+	cur.Header = L["Goto"]
+	cur.Title = L["Goto: "] .. name
 	cur.ObjText = ""
 	cur.Level = lvl
 	cur.PartySize = 1
@@ -5108,7 +5108,7 @@ function Nx.Quest.List:Open()
 	win:Attach (f, 0, 1, 0, 18)
 
 	self.FilterDesc = L["Search: [click]"]
-	self.FilterDescEsc = "Search: %[click%]"
+	self.FilterDescEsc = L["Search: %[click%]"]
 
 --	if Nx.Free then
 --		self.FilterDesc = L["Search: "] .. Nx.FreeMsg
@@ -5297,10 +5297,10 @@ function Nx.Quest.List:Open()
 
 	self.TabSelected = 1
 
-	bar:AddTab ("Current", 1, nil, true)
-	bar:AddTab ("History", 2)
-	bar:AddTab ("Database", 3)
-	bar:AddTab ("Player", 4)
+	bar:AddTab (L["Current"], 1, nil, true)
+	bar:AddTab (L["History"], 2)
+	bar:AddTab (L["Database"], 3)
+	bar:AddTab (L["Player"], 4)
 
 	-- Old attach
 
@@ -6410,14 +6410,14 @@ function Nx.Quest.List:Update()
 	local dailysDone = GetDailyQuestsCompleted()
     if Nx.qdb.profile.Quest.ShowDailyCount then
 	  if dailysDone > 0 then
-		dailyStr = "Daily Quests Completed: |cffffffff" .. dailysDone
+		dailyStr = L["Daily Quests Completed: |cffffffff"] .. dailysDone
 	  end
     end
 	if Nx.qdb.profile.Quest.ShowDailyReset then
-		dailyStr = dailyStr .. "|r  Daily reset: |cffffffff" .. Nx.Util_GetTimeElapsedStr (GetQuestResetTime())
+		dailyStr = dailyStr .. L["|r  Daily reset: |cffffffff"] .. Nx.Util_GetTimeElapsedStr (GetQuestResetTime())
 	end
 
-	self.Win:SetTitle (format ("Quests: |cffffffff%d/%d|r  %s", i, MAX_QUESTS, dailyStr))
+	self.Win:SetTitle (format (L["Quests: |cffffffff%d/%d|r  %s"], i, MAX_QUESTS, dailyStr))
 
 	-- List
 
@@ -6473,7 +6473,7 @@ function Nx.Quest.List:Update()
 				local nameStr = format ("%s %s%s", lvlStr, color, title)
 
 				if quest and quest.CNum then
-					nameStr = nameStr .. format (" (Part %d of %d)", quest.CNum, cur.CNumMax)
+					nameStr = nameStr .. format (L[" (Part %d of %d)"], quest.CNum, cur.CNumMax)
 				end
 
 				if onQ > 0 then
@@ -6481,7 +6481,7 @@ function Nx.Quest.List:Update()
 				end
 
 				if isComplete then
-					nameStr = nameStr .. (isComplete == 1 and "|cff80ff80 - Complete" or "|cfff04040 - "..FAILED)
+					nameStr = nameStr .. (isComplete == 1 and "|cff80ff80 - "..L["Complete"] or "|cfff04040 - "..FAILED)
 				end
 
 				if tag and cur.GCnt > 0 then
@@ -6667,7 +6667,7 @@ function Nx.Quest.List:Update()
 				local title = qname
 
 				if quest and quest.CNum then
-					title = title .. format (" (Part %d)", quest.CNum)
+					title = title .. format (L[" (Part %d)"], quest.CNum)
 				end
 
 				if showQId then
