@@ -5,6 +5,7 @@ end
 local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite.Quest", "frFR")
 if not L then return end
 
+L["Quest Module"] = true
 L["Quest Options"] = true
 L["Quest Window Options"] = true
 L["Use Alt-L instead of L for Carbonite Quests"] = true

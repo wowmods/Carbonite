@@ -1943,7 +1943,7 @@ function CarboniteQuest:OnInitialize()
 		Nx.Quest:HideUIPanel (_G["QuestMapFrame"])
 	end
 	CarboniteQuest:RegisterComm("carbmodule",Nx.Quest.OnChat_msg_addon)
-	Nx:AddToConfig("Quest Module",QuestOptions(),"Quest Module")
+	Nx:AddToConfig("Quest Module",QuestOptions(),L["Quest Module"])
 	Nx.Quest:SetCols()
 	Nx.Quest.Initialized = true
 	Nx.Quest.RecordQuests(true)
