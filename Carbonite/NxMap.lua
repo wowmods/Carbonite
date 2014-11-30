@@ -4050,6 +4050,9 @@ function Nx.Map:UpdateWorld()
 	if winfo.MapBaseName then texName = winfo.MapBaseName end
 	if winfo.Garrison then
 		local level, mapname, x, y = C_Garrison.GetGarrisonInfo()
+		if not level then
+			level = "1"
+		end
 		texName = winfo.MapBaseName .. level
 	end
 	for i = 1, 12 do
