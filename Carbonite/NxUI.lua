@@ -3156,16 +3156,16 @@ Nx.Button.TypeData = {
 		Skin = true,
 		Up = "ButClose",
 		Dn = "ButClose",
-		Tip = "Close/Menu"
+		Tip = L["Close/Menu"]
 	},
 	["CloseLock"] = {
 		Skin = true,
 		Up = "ButLock",
 		Dn = "ButLock",
-		Tip = "Close/Unlock"
+		Tip = L["Close/Unlock"]
 	},
 	["Color"] = {
-		Tip = "Pick Color",
+		Tip = L["Pick Color"],
 		SizeUp = 22,			-- Temp. Make opts version?
 		SizeDn = 22,
 	},
@@ -3173,7 +3173,7 @@ Nx.Button.TypeData = {
 		Skin = true,
 		Up = "ButLock",
 		Dn = "ButLock",
-		Tip = "Unlock"
+		Tip = L["Unlock"]
 	},
 	["Guide"] = {
 		Bool = true,
@@ -3185,21 +3185,21 @@ Nx.Button.TypeData = {
 		AlphaDn = 1,
 	},
 	["Max"] = {
-		Tip = "Maximize",
+		Tip = L["Maximize"],
 		Skin = true,
 		Up = "ButMax",
 		Dn = "ButMax",
 		VRGBAUp = "1|1|1|1",
 	},
 	["MaxOn"] = {
-		Tip = "Restore",
+		Tip = L["Restore"],
 		Skin = true,
 		Up = "ButMax",
 		Dn = "ButMax",
 		VRGBAUp = ".5|.5|1|1",
 	},
 	["Min"] = {
-		Tip = "Minimize",
+		Tip = L["Minimize"],
 		Bool = true,
 		Skin = true,
 		Up = "ButWatchShow",
@@ -3208,7 +3208,7 @@ Nx.Button.TypeData = {
 		VRGBADn = ".62|.62|1|1",
 	},
 	["MapAutoScale"] = {
-		Tip = "Auto Scale",
+		Tip = L["Auto Scale"],
 		Bool = true,
 		Skin = true,
 		Up = "But",
