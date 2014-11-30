@@ -118,6 +118,16 @@ L["Scale"] = "Echelle"
 L["Transparency"] = "Transparence"
 L["Reset Layout"] = "R\195\169initialiser Layout"
 
+-- UI Tooltips
+L["Close/Menu"] = true
+L["Close/Unlock"] = true
+L["Pick Color"] = true
+L["Unlock"] = true
+L["Maximize"] = true
+L["Restore"] = true
+L["Minimize"] = true
+L["Auto Scale"] = true
+
 -- Stuff from old localization
 L["Searching for Artifacts"] = "Recherche d'art\195\169facts"		-- NXlARTIFACTS
 L["Extract Gas"] = "Extraction de gaz"								-- NXlEXTRACTGAS
