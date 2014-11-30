@@ -137,15 +137,15 @@ L["Sound Options"] = "Klangeinstellungen"
 L["Play Quest Complete Sound"] = "Spiele Quest-Abschluss-Meldung"
 L["When enabled, one of the selected sounds below will play on quest completion"] = "Wenn eingestellt, wird die ausgew\195\164hlte Meldung bei Abschlu\195\159 einer Quest abgespielt"
 L["Place a check in sounds you want carbonite to play when a quest is complete.\nChecking a box will play the sound for you to hear."] = "Platzieren Sie ein Kreuz bei dem Klang, der abgespielt werden soll, wenn eine Quest abgeschlossen wird.\nWenn ein Klang angew\195\164hlt wird, spielt Carbonite ihn ab."
--- no sense in translating these - the sounds remain in english anyway
-L["Carbonite Quest Complete"] = true
-L["Peon Work Complete"] = true
-L["Undead Well Done"] = true
-L["Female Congratulations"] = true
-L["Dwarven Well Done"] = true
-L["Gnome Good Job"] = true
-L["Tauren Well Done"] = true
-L["Undead What Now"] = true
+-- no sense in translating these - the sounds remain in english anyway - Only Carbonite Sound remains english 
+L["Carbonite Quest Complete"] = "Carbonite Sound: Quest Complete (Quest abgeschlossen engl.)"
+L["Peon Work Complete"] = "Peon: Arbeit abgeschlossen"
+L["Undead Well Done"] = "Untoter: Gut Gemacht"
+L["Female Congratulations"] = "Weiblich: Herzlichen Gl\195\188ckwunsch"
+L["Dwarven Well Done"] = "Zwerg: Gut Gemacht"
+L["Gnome Good Job"] = "Gnom: Sehr Gut"
+L["Tauren Well Done"] = "Taure: Gut Gemacht"
+L["Undead What Now"] = "Untoter: Was Jetzt"
 L["Databases"] = "Datenbanken"
 L["Reload the UI with the button at the bottom to change which quests are loaded."] = "Oberfl\195\164che neu laden mit dem Knopf unten, mit dem festgelegt wird, welche Quests geladen werden."
 L["Load Quests for Level 0 (holidays, professions, etc)"] = "Lade Quests f\195\188r Stufe 0 (Feiertage, Berufe, usw.)"
