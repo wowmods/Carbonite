@@ -3996,8 +3996,8 @@ end
 function Nx.Map:UpdateWorld()
 
 	if self.Debug then
-		Nx.prt ("%d Map UpdateWorld1 %d L%d",
-				self.Tick, self:GetCurrentMapId(), GetCurrentMapDungeonLevel())
+--		Nx.prt ("%d Map UpdateWorld1 %d L%d",
+--				self.Tick, self:GetCurrentMapId(), GetCurrentMapDungeonLevel())
 	end
 
 	self.NeedWorldUpdate = false
