@@ -113,14 +113,14 @@ L["Transparency"] = "透明度"
 L["Reset Layout"] = "重设布局"
 
 -- UI Tooltips
-L["Close/Menu"] = true
-L["Close/Unlock"] = true
-L["Pick Color"] = true
-L["Unlock"] = true
-L["Maximize"] = true
-L["Restore"] = true
-L["Minimize"] = true
-L["Auto Scale"] = true
+L["Close/Menu"] = "关闭/菜单"
+L["Close/Unlock"] = "关闭/解锁"
+L["Pick Color"] = "选取颜色"
+L["Unlock"] = "解锁"
+L["Maximize"] = "最大化"
+L["Restore"] = "恢复"
+L["Minimize"] = "最小化"
+L["Auto Scale"] = "自动缩放"
 
 -- Stuff from old localization
 L["Searching for Artifacts"] = "寻找考古点"		-- NXlARTIFACTS
