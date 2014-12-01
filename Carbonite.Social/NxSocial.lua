@@ -502,7 +502,7 @@ function CarboniteSocial:OnInitialize()
 	CarboniteSocial:RegisterEvent("WORLD_MAP_UPDATE", "On_Event")
 	CarboniteSocial:RegisterComm("carbmodule",Nx.Social.OnChat_msg_addon)
 --	CarboniteSocial.EventTimer = CarboniteSocial:ScheduleRepeatingTimer("On_Update",2)
-	Nx:AddToConfig("Social & Punks Module",socialConfig(),"Social & Punks Module")
+	Nx:AddToConfig("Social & Punks Module",socialConfig(),L["Social & Punks Module"])
 	Nx.Social:SetCols()
 end
 

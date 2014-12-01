@@ -19,7 +19,6 @@ NXClassLocToCap = {		-- Convert localized class name to generic caps
 	["전사"] = "WARRIOR",
 }
 
-	-- Is this needed?
 	NXlItemTypes = {
 		ARMOR,
 		"소비 용품",

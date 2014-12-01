@@ -5,6 +5,7 @@ end
 local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite.Social", "deDE")
 if not L then return end
 
+L["Social & Punks Module"] = "Gesellschaftsoptionen & Gegner/Kumpel Modul"
 L["Social Options"] = "Gesellschaftsoptionen"
 L["Enable the enhanced social window"] = "Erweitertes Gesellschaftsfenster einschalten"
 L["When enabled, Carbonite will use the enhanced social window instead of blizzards (REQUIRES RELOAD)"] = "Wenn eingestellt, wird das erweiterte Carbonite Gesellschaftsfenster anstatt Blizzards genutzt. (Neustart erforderlich)"

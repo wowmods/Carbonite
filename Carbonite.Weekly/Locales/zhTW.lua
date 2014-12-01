@@ -5,6 +5,7 @@ end
 local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite.Weekly", "zhTW")
 if not L then return end
 
+L["Weekly Status Module"] = true
 L["Weekly Status Options"] = true
 L["General"] = true
 L["Day Reset Occurs"] = true
