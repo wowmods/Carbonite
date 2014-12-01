@@ -5491,8 +5491,7 @@ function Nx.Quest:HideUIPanel (frame)
 		self.List.Win:Show (false)
 
 		if self.List.List:ItemGetNum() > 0 then
-			self.List.List:Empty()
-			collectgarbage ("collect")
+			self.List.List:Empty()			
 		end
 
 		self:RestoreExpandQuests()		-- Hide window first, then restore
