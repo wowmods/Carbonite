@@ -242,7 +242,7 @@ L["Sets the spacing of the menu font"] = "Legt den Zeilenabstand f\195\188r Men\
 
 -- Guide Options
 L["Guide Options"] = "Wegweisereinstellungen"
-L["Max Vendors To Record"] = "H\195\164ndler-Historie Max L\195\164nge"
+L["Max Vendors To Record"] = "Max. L\195\164nge H\195\164ndlerverlauf"
 L["Sets the number of vendors you visit that will be held in memory for recall in the guide."] = "Legt die maximale Anzahl von H\195\164ndlern fest, die gespeichert werden, um sp\195\164ter ihre Position als Wegweiser zu setzen."
 L["Gather Options"] = "Einstellungen f\195\188r Sammelberufe"
 L["Enable Saving Gathered Nodes"] = "Sammelpunkte speichern"
