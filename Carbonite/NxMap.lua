@@ -9680,8 +9680,7 @@ function Nx.MapAddIcon (name, mapId, x, y, tip, texture, tx1, ty1, tx2, ty2)
 	if not Nx.CustomIcons[mapId] then
 		Nx.CustomIcons[mapId] = {}
 	end
-	local wx, wy = map:GetWorldPos (mapId, x, y)
-	Nx.prt(mapId .. " " .. x .. " " .. y .. " " .. tip)
+	local wx, wy = map:GetWorldPos (mapId, x, y)	
 	Nx.CustomIcons[mapId][name] = {}
 	Nx.CustomIcons[mapId][name].x = wx
 	Nx.CustomIcons[mapId][name].y = wy
