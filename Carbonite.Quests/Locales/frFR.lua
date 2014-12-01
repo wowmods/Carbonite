@@ -87,7 +87,7 @@ L["When enabled, turns off blizzards quest watch window auto adding new quests (
 L["Object Text Length Before Linewrap"] = "Longueur du texte avant retour \195\160 la ligne"
 L["Sets the number of characters before an objective wraps"] = "D\195\169fini le nombre de caract\195\168res avant qu'un objectif chaine"
 L["Sync Carbonite Quest Watch with Blizzard Quest Watch"] = "Synchronise la fen\195\170tre de surveillance de Qu\195\170tes Carbonite avec celle de blizzard"
-L["When enabled, syncs the two watch lists which enables blizzard quest blobs to appear on the minimap"] = "Quand acti\195\169, synchronise les deux fen\195\170tres de surveillances de Qu\4195\170tes ce qui permet d'afficher les points de Qu\195\170tes sur la MiniMap"
+L["When enabled, syncs the two watch lists which enables blizzard quest blobs to appear on the minimap"] = "Quand activ\195\169, synchronise les deux fen\195\170tres de surveillances de Qu\4195\170tes ce qui permet d'afficher les points de Qu\195\170tes sur la MiniMap"
 L["Watch Delay Time"] = "Temporisation de surveillance"
 L["Sets the forced delay time of watch update in ms, performance toggle for systems that need it"] = "D\195\69fini la temporisation forc\195\169e de la surveillance en ms, basculement performances pour les syst\195\168mes en ayant besoin"
 L["Auto Watch New Quests"] = "Surveillance automatique des nouvelles Qu\195\170tes"
