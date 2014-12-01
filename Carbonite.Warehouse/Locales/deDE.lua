@@ -7,18 +7,18 @@ if not L then return end
 
 L["ItemTypes"] = {
 	ARMOR,
-	"Consommable",
-	"Conteneur",
-	"Gemme",
-	"Glyphe",
-	"Cl\195\169",
-	"Divers",
-	"Qu\195\170te",
-	"Carquois",
-	"Composant",
-	"Recette",
-	"Artisanat",
-	"Arme",
+	"Essbar",
+	"Beh\195\164lter",
+	"Juwelen",
+	"Glyphen",
+	"Schl\195\188ssel",
+	"Diverse",
+	"Munition",
+	"Quest",
+	"K\195\182cher",
+	"Rezept",
+	"Handelsware",
+	"Waffe",
 }
 
 L["Warehouse Module"] = "Lager Modul"
