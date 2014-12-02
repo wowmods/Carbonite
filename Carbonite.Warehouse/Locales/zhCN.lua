@@ -2,7 +2,20 @@ local L = LibStub("AceLocale-3.0"):NewLocale("Carbonite.Warehouse", "zhCN")
 if not L then return end
 
 L["ItemTypes"] = {
-	护甲,
+	ARMOR,
+	"消耗品",
+	"容器",
+	"宝石",
+	"雕文",
+	"钥匙",
+	"其他",
+	"弹药",
+	"任务",
+	"箭袋",
+	"施法材料",
+	"配方",
+	"商品",
+	"武器",
 }
 
 L["Warehouse Module"] = "仓库模块"
