@@ -256,9 +256,10 @@ L["Quest Giver Lower Levels To Show"] = "Niedrigstufige Questgeber anzeigen"
 L["Quest Giver Higher Levels To Show"] = "Hochstufigere Questgeber anzeigen"
 L["Group"] = "Gruppe"
 L["Remove Watch"] = "Verfolgung beenden"
-L["Link Quest (shift right click)"] = "Quest im Chat verlinken (Umschalten-Rechtsklick)"
-L["Show Quest Log (alt right click)"] = "Quest Logbuch anzeigen (Alt-Rechtsklick)"
-L["Show On Map (shift left click)"] = "Zeige auf der Karte (Umschalten-Linksklick)"
+-- still too long?
+L["Link Quest (shift right click)"] = "Quest verlinken (Shift-Rechtsklick)"
+L["Show Quest Log (alt right click)"] = "Quest-Log zeigen (Alt-Rechtsklick)"
+L["Show On Map (shift left click)"] = "Kartenansicht (Shift-Linksklick)"
 L["Quest Completion..."] = "Questfortschritt..."
 
 L["Menu"] = "Men\195\188"
