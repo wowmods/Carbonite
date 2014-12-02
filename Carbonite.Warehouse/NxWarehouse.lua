@@ -1173,7 +1173,7 @@ function Nx.Warehouse:UpdateItems()
 				self:AddItem (items, 3, name, data)
 			end
 		end
-		
+
 		local mail = ch["WareMail"]
 
 		if mail then
@@ -1469,7 +1469,7 @@ function Nx.Warehouse:FindCharsWithItem (link, specific)
 				end
 			end
 		end		
-		
+
 		local inv = ch["WareInv"]
 
 		if inv then
