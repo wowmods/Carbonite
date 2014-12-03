@@ -35,6 +35,7 @@ L["Bouldercrag's Refuge, The Storm Peaks"] = true
 L["Bozzle's Wreck, Isle of Giants"] = true
 L["Brackenwall Village, Dustwallow Marsh"] = true
 L["Brill, Tirisfal Glades"] = true
+L["Buzzle's Wreck, Isle of Giants"] = true
 L["Camp Ataya, Feralas"] = true
 L["Camp Everstill, Redridge"] = true
 L["Camp Mojache, Feralas"] = true

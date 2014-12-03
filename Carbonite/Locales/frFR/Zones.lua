@@ -267,6 +267,7 @@ L["Twin Peaks"] = "Pics-Jumeaux"
 L["Uldaman"] = true
 L["Ulduar"] = true
 L["Uldum"] = true
+L["Un'Goro Crater"] = "Crat\195\168re d’Un’Goro"
 L["Undercity"] = "Fossoyeuse"
 L["Unga Ingoo"] = "Unga Ingou"
 L["Un'Goro Crater"] = "Crat\195\168re d’Un’Goro"
