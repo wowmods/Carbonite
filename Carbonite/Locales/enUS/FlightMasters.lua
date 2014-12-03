@@ -31,6 +31,7 @@ L["Bouldercrag's Refuge, The Storm Peaks"] = true
 L["Bozzle's Wreck, Isle of Giants"] = true
 L["Brackenwall Village, Dustwallow Marsh"] = true
 L["Brill, Tirisfal Glades"] = true
+L["Buzzle's Wreck, Isle of Giants"] = true
 L["Camp Ataya, Feralas"] = true
 L["Camp Everstill, Redridge"] = true
 L["Camp Mojache, Feralas"] = true
@@ -380,3 +381,4 @@ L["Bastion Rise, Gorgrond"] = true --47.4, 90.8 pr\195\169 alpha carbonite wod N
 L["Unknown location, Talador"] = true --80.0, 56.6 (A) pr\195\169 alpha carbonite wod NPC Zaari
 L["Unknown location, Talador"] = true --51.2, 42.6 (A+H) pr\195\169 alpha carbonite wod NPC Zamara
 ]]--
+
