@@ -35,7 +35,6 @@ L["Bouldercrag's Refuge, The Storm Peaks"] = "Refugio de Pedruscón, Las Cumbres
 L["Bozzle's Wreck, Isle of Giants"] = true
 L["Brackenwall Village, Dustwallow Marsh"] = "Poblado Murohelecho, Marjal Revolcafango"
 L["Brill, Tirisfal Glades"] = "Rémol, Claros de Tirisfal"
-L["Buzzle's Wreck, Isle of Giants"] = true
 L["Camp Ataya, Feralas"] = "Campamento Ataya, Feralas"
 L["Camp Everstill, Redridge"] = "Campamento Sempiterno, Crestagrana"
 L["Camp Mojache, Feralas"] = "Campamento Mojache, Feralas"

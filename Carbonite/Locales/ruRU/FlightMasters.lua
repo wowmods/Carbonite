@@ -35,7 +35,6 @@ L["Bouldercrag's Refuge, The Storm Peaks"] = "Приют Глыбоскала, �
 L["Bozzle's Wreck, Isle of Giants"] = true
 L["Brackenwall Village, Dustwallow Marsh"] = "Деревня Гиблотопь, Пылевые топи"
 L["Brill, Tirisfal Glades"] = "Брилл, Тирисфальские леса"
-L["Buzzle's Wreck, Isle of Giants"] = true
 L["Camp Ataya, Feralas"] = "Лагерь Атайа, Фералас"
 L["Camp Everstill, Redridge"] = "Лагерь Безмолвия, Красногорье"
 L["Camp Mojache, Feralas"] = "Лагерь Мохаче, Фералас"
@@ -282,11 +281,7 @@ L["Thondroril River, Eastern Plaguelands"] = true
 L["Thorium Point, Searing Gorge"] = true
 L["Thrallmar, Hellfire Peninsula"] = true
 L["Thunder Bluff, Mulgore"] = true
-<<<<<<< HEAD
 L["Thunder Cleft, Krasarang Wilds"] = true
-=======
-L["Thunder Cleft, Krasarang Wilds"] = true 
->>>>>>> 8f6acfc6b50a3defb419e0de7a64368fb4e50023
 L["Thunderlord Stronghold, Blade's Edge Mountains"] = true
 L["Thundermar, Twilight Highlands"] = true
 L["Thunk's Abode, Desolace"] = true
@@ -305,7 +300,6 @@ L["Valiance Keep, Borean Tundra"] = true
 L["Valiance Landing Camp, Wintergrasp"] = true
 L["Valormok, Azshara"] = true
 L["Vendetta Point, Southern Barrens"] = true
-<<<<<<< HEAD
 L["Vengeance Landing, Howling Fjord"] = true
 L["Venomspite, Dragonblight"] = true
 L["Vermillion Redoubt, Twilight Highlands"] = true
@@ -313,15 +307,6 @@ L["Victor's Point, Twilight Highlands"] = true
 L["Voldrin's Hold, Vashj'ir"] = true
 L["Warsong Camp, Wintergrasp"] = true
 L["Warsong Hold, Borean Tundra"] = true
-=======
-L["Vengeance Landing, Howling Fjord"] = true 
-L["Venomspite, Dragonblight"] = true 
-L["Vermillion Redoubt, Twilight Highlands"] = true
-L["Victor's Point, Twilight Highlands"] = true
-L["Voldrin's Hold, Vashj'ir"] = true
-L["Warsong Camp, Wintergrasp"] = true 
-L["Warsong Hold, Borean Tundra"] = true 
->>>>>>> 8f6acfc6b50a3defb419e0de7a64368fb4e50023
 L["Westfall Brigade, Grizzly Hills"] = true
 L["Westguard Keep, Howling Fjord"] = true
 L["Westreach Summit, Thousand Needles"] = true
@@ -340,8 +325,4 @@ L["Zhu's Watch, Krasarang Wilds"] = true
 L["Zim'Torga, Zul'Drak"] = true
 L["Zoram'gar Outpost, Ashenvale"] = true
 L["Zouchin Village, Kun-Lai Summit"] = true
-<<<<<<< HEAD
 L["Zul'Aman, Ghostlands"] = true
-=======
-L["Zul'Aman, Ghostlands"] = true
->>>>>>> 8f6acfc6b50a3defb419e0de7a64368fb4e50023
